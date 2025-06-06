@@ -1,0 +1,34 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified map outline of Cameroon -->
+  <path d="M250 50 C150 100 100 200 120 300 C140 400 200 450 250 460 C300 450 360 400 380 300 C400 200 350 100 250 50Z" 
+        fill="#FFD700" 
+        stroke="#FFFFFF" 
+        stroke-width="4"
+        filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="250" cy="250" r="8" fill="#FFFFFF"/>
+  <text x="250" y="230" 
+        text-anchor="middle" 
+        fill="#FFFFFF" 
+        font-family="Arial" 
+        font-size="14px"
+        font-weight="bold">Yaoundé</text>
+  
+  <!-- Regional markers -->
+  <circle cx="200" cy="150" r="5" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="300" cy="200" r="5" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="250" cy="350" r="5" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Artistic pattern -->
+  <path d="M150 100 Q200 120 250 100 T350 100" 
+        stroke="#FFFFFF" 
+        stroke-width="2" 
+        fill="none" 
+        opacity="0.3"/>
+  <path d="M150 400 Q200 380 250 400 T350 400" 
+        stroke="#FFFFFF" 
+        stroke-width="2" 
+        fill="none" 
+        opacity="0.3"/>
+</svg>
