@@ -1,2 +1,58 @@
 @import "tailwindcss";
 
+* {
+    box-sizing: border-box;
+  }
+  :root {
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .map path {
+    fill: #a0512dab;
+    stroke: white;
+    stroke-width: 0.5;
+    transition: fill 0.3s ease;
+  }
+  
+  .map path:hover {
+    fill: #A0522D;
+    cursor: pointer;
+    position: relative;
+  }
+  .map-description {
+    position: absolute;
+    z-index: 900;
+    background: #a0512dab;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 2px 12px #0008;
+  }
+  .map-description h1 {
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+  }
+  .map-description button {
+    float: right;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    background-color: #A0522D;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .map-description button:last-child {
+    margin-top: 20px;
+  }
+  
