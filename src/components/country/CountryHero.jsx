@@ -1,8 +1,21 @@
-import { Globe, MapPin, Users } from 'lucide-react';
+import { Globe, MapPin, Users, Calendar } from 'lucide-react';
+import CountryDetails from '../../data/countryDetails';
+import Button from '../ui/Button';
+import Card from '../ui/Card';
 
-export default function CameroonHero() {
+export default function CountryHero({ countryCode = 'CM' }) {
+  const country = CountryDetails[countryCode];
+  
+  if (!country) {
+    return <div>Pays non trouvé</div>;
+  }
+
+  const gradientColors = country.flagColors ? 
+    `from-[${country.flagColors[0]}] via-[${country.flagColors[1]}] to-[${country.flagColors[2] || country.flagColors[1]}]` :
+    'from-green-700 via-red-600 to-yellow-500';
+
   return (
-    <div className="relative min-h-[70vh] bg-gradient-to-b from-green-700 via-red-600 to-yellow-500 overflow-hidden">
+    <div className={`relative min-h-[70vh] bg-gradient-to-b ${gradientColors} overflow-hidden`}>
       {/* Overlay pattern */}
       <div className="absolute inset-0 bg-[url('/african-pattern.svg')] opacity-10"></div>
       
@@ -12,49 +25,52 @@ export default function CameroonHero() {
         <div className="flex-1 text-white text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
             <MapPin className="text-yellow-400" />
-            <span className="text-lg">Central Africa</span>
+            <span className="text-lg">Africa</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Cameroon
+            {country.name}
             <span className="block text-2xl md:text-3xl text-yellow-400 mt-2">
-              Africa in Miniature
+              {country.nickname}
             </span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 text-gray-100">
-            Discover a country of a thousand facets, where ancestral traditions and modernity
-            blend in a unique cultural symphony.
+            Découvrez {country.name}, un pays aux mille facettes, où traditions ancestrales et modernité
+            se mêlent dans une symphonie culturelle unique.
           </p>
           
           {/* Quick facts */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+            <Card variant="glass" className="text-center">
               <Globe className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
-              <p className="text-sm">Yaoundé<br/>Capital</p>
-            </div>
-            <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+              <p className="text-sm">{country.capital}<br/>Capitale</p>
+            </Card>
+            <Card variant="glass" className="text-center">
               <Users className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
-              <p className="text-sm">+250 Ethnicities<br/>Diversity</p>
-            </div>
-            <div className="hidden md:block bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <Globe className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
-              <p className="text-sm">French & English<br/>Official Languages</p>
-            </div>
+              <p className="text-sm">{country.population}<br/>Population</p>
+            </Card>
+            <Card variant="glass" className="hidden md:block text-center">
+              <Calendar className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+              <p className="text-sm">{country.independence}<br/>Indépendance</p>
+            </Card>
           </div>
           
-          <button className="bg-yellow-400 text-green-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-300">
-            Explore Cameroon
-          </button>
+          <Button size="lg">
+              Explore {country.name}
+            </Button>
         </div>
         
         {/* Image/Map section */}
         <div className="flex-1 relative">
           <div className="aspect-square max-w-[500px] mx-auto bg-white/10 rounded-full p-8 backdrop-blur-sm">
             <img 
-              src="/cameroon-map.svg" 
-              alt="Map of Cameroon"
+              src={`/${countryCode.toLowerCase()}-map.svg`} 
+              alt={`Carte du ${country.name}`}
               className="w-full h-full object-contain"
+              onError={(e) => {
+                e.target.src = '/african-pattern.svg';
+              }}
             />
           </div>
         </div>

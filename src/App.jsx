@@ -1,18 +1,19 @@
-import CameroonHero from './components/CameroonHero'
-import InteractiveMap from './components/InteractiveMap'
-import Navbar from './components/NavBar'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import HomePage from './pages/HomePage';
+import CountryPage from './pages/CountryPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#FAF3E0]">
-      <Navbar />
-      <main>
-        <InteractiveMap />
-        <CameroonHero />
-        {/* Autres sections du pays à venir */}
-      </main>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/map" element={<HomePage />} />
+        <Route path="/country/:countryCode" element={<CountryPage />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;
