@@ -44,7 +44,7 @@ export default function Navbar() {
           </button>
 
           {cultureOpen && (
-            <div className="absolute top-10 left-0 bg-white border border-gray-200 shadow-lg rounded-md w-52 py-2 space-y-1 z-50">
+            <div className="absolute top-10 left-0 bg-[#FAF3E0] border border-gray-200 shadow-lg rounded-md w-52 py-2 space-y-1 z-50">
               <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                 History & Origins
               </a>
