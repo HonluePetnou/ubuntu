@@ -7,6 +7,8 @@ import FoodSection from '../components/FoodSection';
 import EventsSection from '../components/EventsSection';
 import TourismSection from '../components/TourismSection';
 import NewsSection from '../components/NewsSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import Footer from '../components/layout/Footer';
 
 const CountryTemplate = ({ countryData, theme }) => {
   return (
@@ -19,6 +21,8 @@ const CountryTemplate = ({ countryData, theme }) => {
       <FoodSection countryData={countryData} theme={theme} />
       <EventsSection countryData={countryData} theme={theme} />
       <NewsSection countryData={countryData} theme={theme} />
+      <TestimonialsSection countryData={countryData} theme={theme} />
+      <Footer />
     </div>
   );
 };

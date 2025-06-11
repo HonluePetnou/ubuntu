@@ -88,8 +88,8 @@ export default function HeroSection({ countryData, theme = 'blue' }) {
 
             {/* Description */}
             <p className="text-lg md:text-xl text-[#222]/80 max-w-2xl leading-relaxed">
-              Discover the rich heritage, vibrant culture, and breathtaking landscapes of {name}. 
-              A land where ancient traditions meet modern aspirations.
+              Welcome to {name}, a captivating destination where stunning natural beauty meets warm hospitality. 
+              Embark on an unforgettable journey through diverse landscapes and vibrant communities.
             </p>
 
             {/* Quick Stats */}
@@ -147,20 +147,24 @@ export default function HeroSection({ countryData, theme = 'blue' }) {
                 </div>
               )}
 
-              {/* Key Facts */}
-              {keyFacts && keyFacts.length > 0 && (
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-[#A0522D] mb-4">Did You Know?</h3>
-                  <div className="space-y-3">
-                    {keyFacts.slice(0, 3).map((fact, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <Star className="w-5 h-5 text-[#A0522D] mt-0.5 flex-shrink-0" />
-                        <p className="text-[#222]/80 text-sm leading-relaxed">{fact}</p>
-                      </div>
-                    ))}
+              {/* Welcome Message */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-[#A0522D] mb-4">Welcome to {name}</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Star className="w-5 h-5 text-[#A0522D] mt-0.5 flex-shrink-0" />
+                    <p className="text-[#222]/80 text-sm leading-relaxed">Experience authentic African culture and hospitality</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Star className="w-5 h-5 text-[#A0522D] mt-0.5 flex-shrink-0" />
+                    <p className="text-[#222]/80 text-sm leading-relaxed">Discover breathtaking landscapes and natural wonders</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Star className="w-5 h-5 text-[#A0522D] mt-0.5 flex-shrink-0" />
+                    <p className="text-[#222]/80 text-sm leading-relaxed">Immerse yourself in rich traditions and modern innovation</p>
                   </div>
                 </div>
-              )}
+              </div>
 
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>

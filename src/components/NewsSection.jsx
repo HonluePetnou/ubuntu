@@ -83,6 +83,30 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         image: '/api/placeholder/400/250',
         featured: false,
         icon: 'Newspaper'
+      },
+      {
+        id: 5,
+        title: `Contemporary African Art: Bridging Past and Present`,
+        excerpt: `Exploring how modern African artists are reinterpreting traditional themes and techniques in contemporary works.`,
+        author: 'Kwame Asante',
+        date: '2024-01-05',
+        category: 'Arts',
+        readTime: '4 min read',
+        image: '/api/placeholder/400/250',
+        featured: false,
+        icon: 'Star'
+      },
+      {
+        id: 6,
+        title: `Sacred Rituals and Modern Life: Finding Balance`,
+        excerpt: `How urban communities are adapting ancient spiritual practices to fit contemporary lifestyles while maintaining their essence.`,
+        author: 'Fatima Al-Zahra',
+        date: '2024-01-03',
+        category: 'Spirituality',
+        readTime: '5 min read',
+        image: '/api/placeholder/400/250',
+        featured: false,
+        icon: 'Heart'
       }
     ];
   };
@@ -105,6 +129,7 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
       Gastronomy: 'bg-orange-100 text-orange-800 border-orange-200',
       Language: 'bg-purple-100 text-purple-800 border-purple-200',
       Arts: 'bg-rose-100 text-rose-800 border-rose-200',
+      Spirituality: 'bg-indigo-100 text-indigo-800 border-indigo-200',
       default: 'bg-gray-100 text-gray-800 border-gray-200'
     };
     return colors[category] || colors.default;
@@ -138,60 +163,51 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
     <section className="py-16 px-4 bg-gradient-to-br from-[#FAF3E0] via-[#F5E6D3] to-[#E8D5B7]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-[#A0522D] rounded-full mb-6">
-            <Newspaper className="w-8 h-8 text-white" />
+        <div className="flex items-center justify-between mb-16">
+          <div>
+            <h2 className="text-5xl font-bold text-gray-900 mb-2">
+              Latest Stories
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#A0522D] to-[#8B4513] rounded-full"></div>
           </div>
-          <h2 className="text-5xl font-bold text-[#A0522D] mb-6 tracking-tight">
-            Cultural Stories
-          </h2>
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-12 h-1 bg-[#A0522D] rounded-full"></div>
-            <div className="w-3 h-3 bg-[#A0522D] rounded-full mx-4"></div>
-            <div className="w-12 h-1 bg-[#A0522D] rounded-full"></div>
-          </div>
-          <p className="text-xl text-[#8B4513] max-w-3xl mx-auto leading-relaxed">
-            Discover the vibrant tapestry of {countryData?.name || 'our nation\'s'} cultural heritage through compelling stories, 
-            traditional celebrations, and the voices that shape our identity.
-          </p>
+          <button className="group text-gray-600 hover:text-[#A0522D] transition-all duration-300 border border-gray-300 hover:border-[#A0522D] rounded-xl px-6 py-3 text-sm font-medium hover:shadow-lg transform hover:-translate-y-0.5">
+            <span className="flex items-center space-x-2">
+              <span>Read more articles</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
         </div>
 
-        {/* News Layout - Sidebar Style */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* News Layout - Enhanced aesthetic design */}
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* Main Featured Article */}
-          <div className="lg:col-span-2">
+          <div>
             {newsArticles.slice(0, 1).map((article) => (
-              <div key={article.id} className={`group ${currentTheme.hover} transition-all duration-300 hover:shadow-xl bg-white rounded-xl overflow-hidden border ${currentTheme.border} cursor-pointer h-full`}>
+              <div key={article.id} className="group cursor-pointer">
                 {/* Large Article Image */}
-                <div className="relative overflow-hidden h-64 lg:h-80">
-                  <div className="w-full h-full bg-gradient-to-br from-[#A0522D] via-[#8B4513] to-[#654321] flex items-center justify-center relative">
-                    {/* Cultural Pattern Overlay */}
-                    <div className="absolute inset-0 opacity-10">
+                <div className="relative overflow-hidden h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-8 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="w-full h-full bg-gradient-to-br from-[#A0522D]/10 via-[#8B4513]/5 to-[#654321]/10 flex items-center justify-center relative">
+                    {/* Decorative pattern overlay */}
+                    <div className="absolute inset-0 opacity-20">
                       <div className="w-full h-full" style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23A0522D' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
                         backgroundSize: '60px 60px'
                       }}></div>
                     </div>
-                    <div className="text-white text-center relative z-10">
-                      <div className="w-24 h-24 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white border-opacity-30">
-                        {React.createElement(getIconComponent(article.icon), { className: "w-12 h-12" })}
+                    <div className="text-center relative z-10">
+                      <div className="w-24 h-24 mx-auto mb-4 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 shadow-lg">
+                        <div className="w-12 h-12 bg-[#A0522D]/80 rounded-lg flex items-center justify-center">
+                          <Star className="w-6 h-6 text-white" />
+                        </div>
                       </div>
-                      <p className="text-xl font-semibold opacity-95">Featured Story</p>
-                      <p className="text-sm opacity-75 mt-1">Cultural Heritage</p>
+                      <p className="text-[#A0522D] font-semibold text-lg">Featured Story</p>
+                      <p className="text-gray-600 text-sm mt-1">Cultural Heritage</p>
                     </div>
                   </div>
                   
-                  {/* Category Badge */}
-                  <div className="absolute top-6 left-6">
-                    <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold border backdrop-blur-sm bg-white bg-opacity-90 ${getCategoryColor(article.category)}`}>
-                      <Tag className="w-4 h-4 mr-2" />
-                      {article.category}
-                    </span>
-                  </div>
-                  
-                  {/* Featured Badge */}
+                  {/* Featured badge */}
                   <div className="absolute top-6 right-6">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-lg">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-amber-400 to-orange-500 text-white shadow-lg">
                       <Star className="w-3 h-3 mr-1" />
                       Featured
                     </span>
@@ -199,37 +215,42 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
                 </div>
 
                 {/* Article Content */}
-                <div className="p-8">
+                <div className="space-y-4">
+                  {/* Category */}
+                  <div className="flex items-center space-x-2">
+                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${getCategoryColor(article.category)}`}>
+                      {article.category}
+                    </span>
+                    <div className="w-2 h-2 bg-[#A0522D] rounded-full"></div>
+                  </div>
+                  
                   {/* Article Title */}
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 group-hover:text-gray-900 transition-colors leading-tight">
+                  <h3 className="text-3xl font-bold text-gray-900 leading-tight group-hover:text-[#A0522D] transition-colors duration-300">
                     {article.title}
                   </h3>
 
+                  {/* Article Meta */}
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>{formatDate(article.date)}</span>
+                    </div>
+                    <span>•</span>
+                    <div className="flex items-center space-x-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{article.readTime}</span>
+                    </div>
+                  </div>
+                  
                   {/* Article Excerpt */}
-                  <p className="text-gray-600 text-base leading-relaxed mb-6">
+                  <p className="text-gray-600 text-lg leading-relaxed">
                     {article.excerpt}
                   </p>
-
-                  {/* Article Meta */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-6 text-sm text-gray-500">
-                      <div className="flex items-center space-x-2">
-                        <User className="w-4 h-4" />
-                        <span>{article.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{formatDate(article.date)}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Clock className="w-4 h-4" />
-                        <span>{article.readTime}</span>
-                      </div>
-                    </div>
-
-                    {/* Read More Link */}
-                    <button className={`inline-flex items-center space-x-2 ${currentTheme.accent} hover:underline font-medium transition-colors`}>
-                      <span>Learn More</span>
+                  
+                  {/* Read More Button */}
+                  <div className="pt-4">
+                    <button className="inline-flex items-center space-x-2 text-[#A0522D] hover:text-[#8B4513] font-semibold transition-colors group">
+                      <span>Read Full Story</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
@@ -239,118 +260,68 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
           </div>
 
           {/* Sidebar with smaller articles */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {newsArticles.slice(1, 4).map((article, index) => (
-              <div key={article.id} className={`group ${currentTheme.hover} transition-all duration-300 hover:shadow-lg bg-white rounded-lg overflow-hidden border ${currentTheme.border} cursor-pointer`}>
-                {/* Small Article Image */}
-                <div className="relative overflow-hidden h-32">
-                  <div className={`w-full h-full bg-gradient-to-br ${index === 0 ? 'from-emerald-500 to-teal-600' : index === 1 ? 'from-orange-500 to-red-600' : 'from-purple-500 to-indigo-600'} flex items-center justify-center relative`}>
-                    {/* Mini Cultural Pattern */}
-                    <div className="absolute inset-0 opacity-20">
-                      <div className="w-full h-full" style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
-                        backgroundSize: '40px 40px'
-                      }}></div>
-                    </div>
-                    <div className="text-white text-center relative z-10">
-                      <div className="w-14 h-14 mx-auto mb-2 bg-white bg-opacity-25 rounded-full flex items-center justify-center backdrop-blur-sm">
-                        {React.createElement(getIconComponent(article.icon), { className: "w-7 h-7" })}
+              <div key={article.id} className="group cursor-pointer bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 hover:border-[#A0522D]/20">
+                <div className="flex space-x-5">
+                  {/* Small Article Image */}
+                  <div className="flex-shrink-0">
+                    <div className={`w-20 h-20 rounded-xl flex items-center justify-center shadow-lg ${
+                      index === 0 ? 'bg-gradient-to-br from-emerald-400 to-teal-500' :
+                      index === 1 ? 'bg-gradient-to-br from-orange-400 to-red-500' :
+                      index === 2 ? 'bg-gradient-to-br from-purple-400 to-indigo-500' :
+                      'bg-gradient-to-br from-pink-400 to-rose-500'
+                    }`}>
+                      <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                        <div className="w-4 h-4 bg-white rounded"></div>
                       </div>
-                      <p className="text-xs font-medium opacity-90">Story {index + 2}</p>
                     </div>
                   </div>
-                  
-                  {/* Mini Category Badge */}
-                  <div className="absolute top-2 left-2">
-                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border backdrop-blur-sm bg-white bg-opacity-90 ${getCategoryColor(article.category)}`}>
+
+                  {/* Article Content */}
+                  <div className="flex-1 min-w-0 space-y-2">
+                    {/* Category */}
+                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(article.category)}`}>
                       {article.category}
                     </span>
-                  </div>
-                </div>
+                    
+                    {/* Article Title */}
+                    <h4 className="text-lg font-bold text-gray-900 group-hover:text-[#A0522D] transition-colors line-clamp-2 leading-tight">
+                      {article.title}
+                    </h4>
 
-                {/* Article Content */}
-                <div className="p-4">
-                  {/* Article Title */}
-                  <h4 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-gray-900 transition-colors line-clamp-2">
-                    {article.title}
-                  </h4>
-
-                  {/* Article Excerpt */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-3 line-clamp-2">
-                    {article.excerpt}
-                  </p>
-
-                  {/* Article Meta */}
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center space-x-3">
-                      <span>{article.author}</span>
+                    {/* Article Meta */}
+                    <div className="flex items-center space-x-3 text-xs text-gray-500">
+                      <div className="flex items-center space-x-1">
+                        <User className="w-3 h-3" />
+                        <span>{article.author}</span>
+                      </div>
                       <span>•</span>
                       <span>{formatDate(article.date)}</span>
+                      <span>•</span>
+                      <span>{article.readTime}</span>
                     </div>
-                    <button className={`${currentTheme.accent} hover:underline font-medium transition-colors`}>
-                      Learn More
-                    </button>
+                    
+                    {/* Article Excerpt */}
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                      {article.excerpt}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
-
-            {/* View All Stories Button */}
+            
+            {/* View All Button */}
             <div className="pt-4">
-              <button className={`w-full inline-flex items-center justify-center space-x-2 px-6 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-md`}>
+              <button className="w-full bg-gradient-to-r from-[#A0522D] to-[#8B4513] text-white rounded-xl py-4 px-6 font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
                 <span>View All Stories</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
         </div>
 
-        {/* View All News Button */}
-        <div className="text-center mt-12">
-          <button className={`inline-flex items-center space-x-2 px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg`}>
-            <span>View All News</span>
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
 
-        {/* Cultural Insights Statistics */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-[#A0522D] mb-4">Cultural Insights</h3>
-            <p className="text-lg text-[#8B4513] max-w-2xl mx-auto">
-              Connecting communities through shared stories and cultural understanding
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className={`group text-center p-8 rounded-2xl ${currentTheme.secondary} border-2 ${currentTheme.border} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-[#A0522D] to-[#8B4513] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Newspaper className="w-8 h-8 text-white" />
-              </div>
-              <h3 className={`text-2xl font-bold mb-3 ${currentTheme.accent}`}>Latest Stories</h3>
-              <p className="text-gray-600 text-lg">{newsArticles.length} cultural articles</p>
-              <p className="text-sm text-gray-500 mt-2">Updated weekly</p>
-            </div>
-            
-            <div className={`group text-center p-8 rounded-2xl ${currentTheme.secondary} border-2 ${currentTheme.border} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h3 className={`text-2xl font-bold mb-3 ${currentTheme.accent}`}>Community Voices</h3>
-              <p className="text-gray-600 text-lg">Local storytellers & historians</p>
-              <p className="text-sm text-gray-500 mt-2">Preserving heritage</p>
-            </div>
-            
-            <div className={`group text-center p-8 rounded-2xl ${currentTheme.secondary} border-2 ${currentTheme.border} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className={`text-2xl font-bold mb-3 ${currentTheme.accent}`}>Cultural Topics</h3>
-              <p className="text-gray-600 text-lg">Heritage, Arts, Traditions & More</p>
-              <p className="text-sm text-gray-500 mt-2">Diverse perspectives</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
