@@ -18,10 +18,12 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-[#FAF3E0] shadow-sm fixed w-full z-1000">
       {/* Logo */}
-      <div className="text-2xl font-bold text-[#A0522D] flex items-center space-x-2">
-        <Leaf size={28} />
-        <span className="tracking-wide">Ubuntu</span>
-      </div>
+      <a href="">
+        <div className="text-2xl font-bold text-[#A0522D] flex items-center space-x-2">
+          <Leaf size={28} />
+          <span className="tracking-wide">Ubuntu</span>
+        </div>
+      </a>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-8 font-medium text-[#222]">
@@ -70,6 +72,7 @@ export default function Navbar() {
         >
           Event
         </a>
+        
         <a
           href="#"
           className="hover:text-[#A0522D] border-b-2 border-transparent hover:border-[#A0522D] pb-1"
@@ -100,11 +103,7 @@ export default function Navbar() {
           id="mobileMenu"
           className="md:hidden fixed top-0 right-0 w-64 h-full bg-[#FAF3E0] shadow-lg z-50 flex flex-col p-6 space-y-6"
         >
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-[#276749] flex items-center space-x-2">
-              <Leaf size={28} />
-              <span>Ubuntu</span>
-            </div>
+          <div className="flex justify-end">
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="text-[#276749]"

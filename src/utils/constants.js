@@ -23,8 +23,8 @@ export const BREAKPOINTS = {
 export const MAP_CONFIG = {
   MODAL_WIDTH: 350,
   MODAL_HEIGHT: 320,
-  MARGIN: 20,
-  VIEW_BOX: '280 315 520 265'
+  MARGIN: 10,
+  VIEW_BOX: '280 335 520 265'
 };
 
 // African Regions

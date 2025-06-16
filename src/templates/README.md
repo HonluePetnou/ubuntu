@@ -91,18 +91,24 @@ import MonPaysPage from './pages/MonPaysPage';
 ## Propriétés du Template
 
 ### `countryData`
+
 Objet contenant les informations du pays (nom, capitale, population, etc.)
 
 ### `sections`
+
 Tableau des sections standard à afficher :
+
 - `'hero'` : Section héro avec informations principales
 - `'overview'` : Vue d'ensemble du pays
 
 ### `customSections`
+
 Tableau de composants React personnalisés pour le pays
 
 ### `theme`
+
 Objet de configuration des couleurs :
+
 - `primaryColor` : Couleur principale
 - `secondaryColor` : Couleur secondaire
 - `accentColor` : Couleur d'accent
@@ -110,21 +116,25 @@ Objet de configuration des couleurs :
 ## Bonnes Pratiques
 
 ### 1. Cohérence Visuelle
+
 - Utilisez les couleurs du drapeau pour le thème
 - Maintenez une structure similaire entre les sections
 - Utilisez les icônes Lucide React pour la cohérence
 
 ### 2. Contenu Pertinent
+
 - Mettez en avant les spécificités uniques du pays
 - Utilisez des données factuelles et vérifiées
 - Adaptez le ton au contexte culturel
 
 ### 3. Performance
+
 - Limitez le nombre de sections personnalisées (3-4 max)
 - Optimisez les images et animations
 - Utilisez le lazy loading si nécessaire
 
 ### 4. Responsive Design
+
 - Testez sur différentes tailles d'écran
 - Utilisez les classes Tailwind responsive
 - Adaptez les grilles selon l'écran
@@ -132,6 +142,7 @@ Objet de configuration des couleurs :
 ## Exemples de Sections Personnalisées
 
 ### Section Économie
+
 ```jsx
 function EconomieSection({ countryData, sectionIndex }) {
   const indicateurs = [
@@ -148,6 +159,7 @@ function EconomieSection({ countryData, sectionIndex }) {
 ```
 
 ### Section Culture
+
 ```jsx
 function CultureSection({ countryData, sectionIndex }) {
   return (
@@ -159,6 +171,7 @@ function CultureSection({ countryData, sectionIndex }) {
 ```
 
 ### Section Géographie
+
 ```jsx
 function GeographieSection({ countryData, sectionIndex }) {
   return (
@@ -171,7 +184,6 @@ function GeographieSection({ countryData, sectionIndex }) {
 
 ## Structure des Fichiers
 
-```
 src/
 ├── templates/
 │   ├── CountryTemplate.jsx
@@ -185,7 +197,6 @@ src/
 │   └── countryDetails.js
 └── components/
     └── [ComposantsRéutilisables]
-```
 
 ## Maintenance et Évolution
 
