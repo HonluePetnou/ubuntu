@@ -1,7 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, MapPin, Users, Star, Clock } from 'lucide-react';
 
 const EventsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
+  const navigate = useNavigate();
+
+  const handleViewAllEvents = () => {
+    const countryCode = countryData?.countryCode;
+    if (countryCode) {
+      navigate(`/country/${countryCode.toLowerCase()}/events`);
+    }
+  };
 
   // Theme configurations matching site's design system
   const themes = {
@@ -210,6 +219,16 @@ const EventsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => 
             <h3 className={`text-xl font-semibold mb-2 ${currentTheme.accent}`}>Community Events</h3>
             <p className="text-gray-600">Year-round celebrations</p>
           </div>
+        </div>
+
+        {/* View All Events Button */}
+        <div className="text-center mt-8">
+          <button
+            onClick={handleViewAllEvents}
+            className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
+          >
+            View All Events
+          </button>
         </div>
       </div>
     </section>

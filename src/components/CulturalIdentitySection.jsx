@@ -1,11 +1,13 @@
 import React from 'react';
 import { Star, Globe, Users, Heart, Sparkles } from 'lucide-react';
+import { Link, useParams } from 'react-router-dom';
 
 /**
  * Cultural Identity Section Component
  * Displays cultural information about a country with key facts sidebar
  */
 export default function CulturalIdentitySection({ countryData, theme = 'blue' }) {
+  const { countryCode } = useParams();
   const {
     name,
     nickname,
@@ -133,7 +135,10 @@ export default function CulturalIdentitySection({ countryData, theme = 'blue' })
 
             {/* More History Button */}
             <div className="pt-6">
-              <button className="group relative bg-gradient-to-r from-[#A0522D] to-[#D2691E] text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden">
+              <Link 
+                to={`/country/${countryCode ? countryCode.toLowerCase() : 'cameroon'}/history`}
+                className="group relative bg-gradient-to-r from-[#A0522D] to-[#D2691E] text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden inline-flex items-center"
+              >
                 <span className="relative z-10 flex items-center">
                   Explore More History
                   <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,7 +146,7 @@ export default function CulturalIdentitySection({ countryData, theme = 'blue' })
                   </svg>
                 </span>
                 <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-              </button>
+              </Link>
             </div>
           </div>
 

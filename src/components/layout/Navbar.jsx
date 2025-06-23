@@ -1,9 +1,29 @@
-import { ChevronDown, Menu, X, Leaf } from "lucide-react";
+import React from 'react';
 import { useState, useEffect } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
+import { ChevronDown, Menu, X, Leaf } from "lucide-react";
 
 export default function Navbar() {
   const [cultureOpen, setCultureOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const location = useLocation();
+  
+
+  
+  // Extract country code from URL
+  const getCurrentCountry = () => {
+    const path = location.pathname;
+    const countryMatch = path.match(/\/country\/([a-z]{2})/);
+    return countryMatch ? countryMatch[1] : 'cm'; // Default to Cameroon
+  };
+  
+  const currentCountry = getCurrentCountry();
+  
+  // Generate country-specific links
+  const getCountryLink = (section) => {
+    return `/country/${currentCountry}/${section}`;
+  };
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -18,21 +38,21 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-[#FAF3E0] shadow-sm fixed w-full z-1000">
       {/* Logo */}
-      <a href="">
-        <div className="text-2xl font-bold text-[#A0522D] flex items-center space-x-2">
-          <Leaf size={28} />
-          <span className="tracking-wide">Ubuntu</span>
-        </div>
-      </a>
+       <Link to={`/country/${currentCountry}`}>
+         <div className="text-2xl font-bold text-[#A0522D] flex items-center space-x-2">
+           <Leaf size={28} />
+           <span className="tracking-wide">Ubuntu</span>
+         </div>
+       </Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-8 font-medium text-[#222]">
-        <a
-          href="#"
+        <Link
+          to={`/country/${currentCountry}`}
           className="hover:text-[#A0522D] border-b-2 border-transparent hover:border-[#A0522D] pb-1"
         >
           Home
-        </a>
+        </Link>
 
         <div className="relative" id="cultureMenu">
           <button
@@ -47,38 +67,41 @@ export default function Navbar() {
 
           {cultureOpen && (
             <div className="absolute top-10 left-0 bg-[#FAF3E0] border border-gray-200 shadow-lg rounded-md w-52 py-2 space-y-1 z-50">
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              <Link to={getCountryLink('history')} className="block px-4 py-2 hover:bg-gray-100">
                 History & Origins
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                Ethnies & Languages
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                Arts & Music
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                Gastronomy
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                Beliefs
-              </a>
+              </Link>
+              <Link to={getCountryLink('arts')} className="block px-4 py-2 hover:bg-gray-100">
+                Arts & Craft
+              </Link>
+              <Link to={getCountryLink('music')} className="block px-4 py-2 hover:bg-gray-100">
+                Music
+              </Link>
+              <Link to={getCountryLink('dance')} className="block px-4 py-2 hover:bg-gray-100">
+                Dance
+              </Link>
+              <Link to={getCountryLink('food')} className="block px-4 py-2 hover:bg-gray-100">
+                Food & Gastronomy
+              </Link>
+              <Link to={getCountryLink('news')} className="block px-4 py-2 hover:bg-gray-100">
+                News
+              </Link>
             </div>
           )}
         </div>
 
-        <a
-          href="#"
+        <Link
+          to={getCountryLink('events')}
           className="hover:text-[#A0522D] border-b-2 border-transparent hover:border-[#A0522D] pb-1"
         >
-          Event
-        </a>
+          Events
+        </Link>
         
-        <a
-          href="#"
+        <Link
+          to={getCountryLink('destinations')}
           className="hover:text-[#A0522D] border-b-2 border-transparent hover:border-[#A0522D] pb-1"
         >
-          Blog
-        </a>
+          Destinations
+        </Link>
       </div>
 
       {/* Actions */}
@@ -112,12 +135,13 @@ export default function Navbar() {
             </button>
           </div>
 
-          <a
-            href="#"
+          <Link
+            to={`/country/${currentCountry}`}
             className="text-lg font-medium text-[#222] hover:text-[#A0522D]"
+            onClick={() => setMobileMenuOpen(false)}
           >
             Home
-          </a>
+          </Link>
 
           <div className="flex flex-col space-y-2">
             <button
@@ -128,43 +152,50 @@ export default function Navbar() {
             </button>
             {cultureOpen && (
               <div className="flex flex-col pl-4 space-y-2">
-                <a href="#" className="text-[#222] hover:text-[#A0522D]">
+                <Link to={getCountryLink('history')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
                   History & Origins
-                </a>
-                <a href="#" className="text-[#222] hover:text-[#A0522D]">
-                  Ethnies & Languages
-                </a>
-                <a href="#" className="text-[#222] hover:text-[#A0522D]">
-                  Arts & Music
-                </a>
-                <a href="#" className="text-[#222] hover:text-[#A0522D]">
-                  Gastronomy
-                </a>
-                <a href="#" className="text-[#222] hover:text-[#A0522D]">
-                  Beliefs
-                </a>
+                </Link>
+                <Link to={getCountryLink('arts')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+                  Arts & Craft
+                </Link>
+                <Link to={getCountryLink('music')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+                  Music
+                </Link>
+                <Link to={getCountryLink('dance')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+                  Dance
+                </Link>
+                <Link to={getCountryLink('food')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+                  Food & Gastronomy
+                </Link>
+                <Link to={getCountryLink('news')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+                  News
+                </Link>
               </div>
             )}
           </div>
 
-          <a
-            href="#"
+          <Link
+            to={getCountryLink('events')}
             className="text-lg font-medium text-[#222] hover:text-[#A0522D]"
+            onClick={() => setMobileMenuOpen(false)}
           >
-            Event
-          </a>
-          <a
-            href="#"
+            Events
+          </Link>
+          <Link
+            to={getCountryLink('destinations')}
             className="text-lg font-medium text-[#222] hover:text-[#A0522D]"
+            onClick={() => setMobileMenuOpen(false)}
           >
-            Blog
-          </a>
+            Destinations
+          </Link>
 
-          <div className="pt-4 border-t border-gray-300 flex items-center space-x-4">
-            <span className="text-sm font-semibold text-[#222]">ENG</span>
-            <button className="bg-[#276749] text-white px-4 py-2 rounded-lg hover:bg-[#22543D] transition duration-200">
-              Community
-            </button>
+          <div className="pt-4 border-t border-gray-300">
+            <div className="flex items-center space-x-4">
+              <span className="text-sm font-semibold text-[#222]">ENG</span>
+              <button className="bg-[#A0522D] text-white px-4 py-2 rounded-lg hover:bg-[#22543D] transition duration-200">
+                Join Community
+              </button>
+            </div>
           </div>
         </div>
       )}

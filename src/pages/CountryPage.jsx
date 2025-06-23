@@ -9,6 +9,7 @@ export default function CountryPage() {
   return (
     <CountryTemplate 
       countryData={CountryDetails[countryCode?.toUpperCase()]} 
+      countryCode={countryCode}
       sections={['hero', 'overview', 'culture', 'gastronomy', 'geography']}
     />
   );

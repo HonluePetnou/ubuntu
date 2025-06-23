@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import Navbar from "../components/layout/Navbar";
 import HeroSection from "../components/HeroSection";
 import CulturalIdentitySection from "../components/CulturalIdentitySection";
@@ -11,8 +11,9 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import Footer from "../components/layout/Footer";
 import { useNavigate } from "react-router-dom";
 import { Compass } from "lucide-react";
+import CountryDetails from "../data/countryDetails";
 
-const CountryTemplate = ({ countryData, theme }) => {
+const CountryTemplate = ({ countryData, countryCode, theme }) => {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
   const handleExploreMap = () => {
@@ -39,11 +40,11 @@ const CountryTemplate = ({ countryData, theme }) => {
       </button>
       <HeroSection countryData={countryData} theme={theme} />
       <CulturalIdentitySection countryData={countryData} theme={theme} />
-      <TourismSection countryData={countryData} theme={theme} />
-      <ArtsSection countryData={countryData} theme={theme} />
-      <FoodSection countryData={countryData} theme={theme} />
-      <EventsSection countryData={countryData} theme={theme} />
-      <NewsSection countryData={countryData} theme={theme} />
+      <TourismSection countryData={{...countryData, countryCode}} theme={theme} />
+      <ArtsSection countryData={{...countryData, countryCode}} theme={theme} />
+      <FoodSection countryData={{...countryData, countryCode}} theme={theme} />
+      <EventsSection countryData={{...countryData, countryCode}} theme={theme} />
+      <NewsSection countryData={{...countryData, countryCode}} theme={theme} />
       <TestimonialsSection countryData={countryData} theme={theme} />
       <Footer />
     </div>

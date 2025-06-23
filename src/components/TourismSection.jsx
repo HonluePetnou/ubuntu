@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MapPin, Star, Clock, Users } from 'lucide-react';
 
 const TourismSection = ({ countryData, theme }) => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const navigate = useNavigate();
+
+  const handleViewAllDestinations = () => {
+    // Navigate to country-specific destinations if countryData has a code
+    const countryCode = countryData?.code || countryData?.countryCode;
+    if (countryCode) {
+      navigate(`/country/${countryCode.toLowerCase()}/destinations`);
+    }
+  };
 
   // Sample tourism data - this would ideally come from your data files
   const tourismCategories = [
@@ -176,7 +186,10 @@ const TourismSection = ({ countryData, theme }) => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <button className="bg-[#A0522D] text-white px-8 py-3 rounded-full font-medium hover:bg-[#8B4513] transition-colors duration-300 shadow-lg">
+          <button 
+            onClick={handleViewAllDestinations}
+            className="bg-[#A0522D] text-white px-8 py-3 rounded-full font-medium hover:bg-[#8B4513] transition-colors duration-300 shadow-lg"
+          >
             View All Destinations
           </button>
         </div>

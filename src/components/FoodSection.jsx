@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ChefHat, Coffee, Wheat, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
+
+  const handleViewAllFood = () => {
+    const countryCode = countryData?.countryCode;
+    if (countryCode) {
+      navigate(`/country/${countryCode.toLowerCase()}/food`);
+    }
+  };
 
   // Theme configurations matching site's design system
   const themes = {
@@ -198,6 +207,16 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
             <h3 className={`text-xl font-semibold mb-2 ${currentTheme.accent}`}>Ingredients</h3>
             <p className="text-gray-600">{countryData?.gastronomy?.ingredients?.length || 0} essential ingredients</p>
           </div>
+        </div>
+
+        {/* View All Food Button */}
+        <div className="text-center mt-8">
+          <button
+            onClick={handleViewAllFood}
+            className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
+          >
+            View All Food & Cuisine
+          </button>
         </div>
       </div>
     </section>

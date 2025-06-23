@@ -1,7 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Clock, Tag, Globe, Heart, Star, Newspaper } from 'lucide-react';
 
 const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
+  const navigate = useNavigate();
+
+  const handleViewAllNews = () => {
+    const countryCode = countryData?.countryCode;
+    if (countryCode) {
+      navigate(`/country/${countryCode.toLowerCase()}/news`);
+    }
+  };
   // Theme configurations matching site's design system
   const themes = {
     blue: {
@@ -313,7 +322,10 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
             
             {/* View All Button */}
             <div className="pt-4">
-              <button className="w-full bg-gradient-to-r from-[#A0522D] to-[#8B4513] text-white rounded-xl py-4 px-6 font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+              <button 
+                onClick={handleViewAllNews}
+                className="w-full bg-gradient-to-r from-[#A0522D] to-[#8B4513] text-white rounded-xl py-4 px-6 font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+              >
                 <span>View All Stories</span>
                 <ArrowRight className="w-5 h-5" />
               </button>

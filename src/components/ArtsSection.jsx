@@ -1,8 +1,31 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Palette, Music, Users } from 'lucide-react';
 
 const ArtsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
   const [activeTab, setActiveTab] = useState('art');
+  const navigate = useNavigate();
+
+  const handleViewAllArts = () => {
+    const countryCode = countryData?.countryCode;
+    if (countryCode) {
+      navigate(`/country/${countryCode.toLowerCase()}/arts`);
+    }
+  };
+
+  const handleViewAllDances = () => {
+    const countryCode = countryData?.countryCode;
+    if (countryCode) {
+      navigate(`/country/${countryCode.toLowerCase()}/dance`);
+    }
+  };
+
+  const handleViewAllMusic = () => {
+    const countryCode = countryData?.countryCode;
+    if (countryCode) {
+      navigate(`/country/${countryCode.toLowerCase()}/music`);
+    }
+  };
 
   // Theme configurations matching site's design system
   const themes = {
@@ -249,6 +272,33 @@ const ArtsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
           {renderContent()}
         </div>
 
+        {/* View All Button */}
+        <div className="text-center mt-8">
+          {activeTab === 'art' && (
+            <button
+              onClick={handleViewAllArts}
+              className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
+            >
+              View All Arts & Crafts
+            </button>
+          )}
+          {activeTab === 'dance' && (
+            <button
+              onClick={handleViewAllDances}
+              className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
+            >
+              View All Dances
+            </button>
+          )}
+          {activeTab === 'music' && (
+            <button
+              onClick={handleViewAllMusic}
+              className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
+            >
+              View All Music
+            </button>
+          )}
+        </div>
 
       </div>
     </section>

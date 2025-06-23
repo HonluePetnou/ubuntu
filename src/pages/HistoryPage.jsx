@@ -23,86 +23,242 @@ export default function HistoryPage() {
     culture = {}
   } = countryData || {};
 
-  // Generate comprehensive historical timeline
+  // Generate country-specific historical timeline
   const generateHistoricalTimeline = () => {
-    const timeline = [
-      {
-        period: "Ancient Era",
-        timeframe: "Before 1000 CE",
-        icon: Scroll,
-        description: `The ancient history of ${name} is rich with diverse civilizations and kingdoms that flourished across the region. Archaeological evidence suggests human habitation dating back thousands of years, with sophisticated societies developing complex trade networks, agricultural systems, and cultural practices.`,
-        highlights: [
-          "Early human settlements and agricultural development",
-          "Formation of ancient kingdoms and chiefdoms",
-          "Development of traditional crafts and metallurgy",
-          "Establishment of trade routes across the region"
-        ]
-      },
-      {
-        period: "Medieval Kingdoms",
-        timeframe: "1000 - 1500 CE",
-        icon: Crown,
-        description: `During the medieval period, ${name} witnessed the rise of powerful kingdoms and empires that shaped the political and cultural landscape. These kingdoms established sophisticated governance systems, promoted arts and learning, and facilitated extensive trade networks.`,
-        highlights: [
-          "Rise of major kingdoms and empires",
-          "Development of complex political systems",
-          "Flourishing of arts, crafts, and architecture",
-          "Expansion of trade and cultural exchange"
-        ]
-      },
-      {
-        period: "Colonial Period",
-        timeframe: "1500 - 1960",
-        icon: MapPin,
-        description: `The colonial era brought significant changes to ${name}, with European powers establishing control over the region. This period saw the introduction of new administrative systems, religions, and economic structures, while traditional societies adapted and resisted colonial rule.`,
-        highlights: [
-          "European exploration and colonization",
-          "Introduction of Christianity and Western education",
-          "Development of colonial administrative systems",
-          "Emergence of nationalist movements"
-        ]
-      },
-      {
-        period: "Independence Era",
-        timeframe: `${independence || '1960'} - Present`,
-        icon: Star,
-        description: `${name} gained independence in ${independence || '1960'}, marking the beginning of a new chapter in its history. The post-independence era has been characterized by nation-building efforts, political development, economic growth, and the preservation of cultural heritage while embracing modernity.`,
-        highlights: [
-          `Independence achieved in ${independence || '1960'}\`,
-          "Formation of modern governmental institutions",
-          "Economic development and modernization",
-          "Cultural renaissance and preservation efforts"
-        ]
-      }
-    ];
+    const countryCode = (countryData?.name || 'CAMEROON').toUpperCase();
+    
+    const countryTimelines = {
+      CAMEROON: [
+        {
+          period: "Ancient Kingdoms",
+          timeframe: "Before 1000 CE",
+          icon: Scroll,
+          description: `Ancient Cameroon was home to diverse ethnic groups including the Sao civilization around Lake Chad, and the Tikar people who established powerful kingdoms. The region's strategic location made it a crossroads of African civilizations.`,
+          highlights: [
+            "Sao civilization around Lake Chad (6th century BCE)",
+            "Tikar kingdoms and chiefdoms establishment",
+            "Development of iron working and agriculture",
+            "Trans-Saharan trade route connections"
+          ]
+        },
+        {
+          period: "Medieval Empires",
+          timeframe: "1000 - 1500 CE",
+          icon: Crown,
+          description: `The medieval period saw the rise of the Kanem-Bornu Empire in the north and various Bantu kingdoms in the south. The Bamoun Kingdom emerged as a major power, developing its own writing system and sophisticated governance.`,
+          highlights: [
+            "Kanem-Bornu Empire expansion into northern regions",
+            "Bamoun Kingdom establishment in western highlands",
+            "Development of Bamoun script and architecture",
+            "Islamic influence in northern regions"
+          ]
+        },
+        {
+          period: "Colonial Era",
+          timeframe: "1884 - 1960",
+          icon: MapPin,
+          description: `German colonization began in 1884, followed by French and British mandates after WWI. This period saw the introduction of cash crops, infrastructure development, and the emergence of nationalist movements led by figures like Ruben Um Nyobé.`,
+          highlights: [
+            "German protectorate established (1884-1916)",
+            "French and British League of Nations mandates",
+            "Introduction of cocoa and coffee plantations",
+            "Rise of independence movements (UPC formation)"
+          ]
+        },
+        {
+          period: "Independence & Modern Era",
+          timeframe: "1960 - Present",
+          icon: Star,
+          description: `Cameroon gained independence in 1960 under Ahmadou Ahidjo, followed by reunification with British Southern Cameroons in 1961. Paul Biya has led the country since 1982, overseeing economic development and democratic transitions.`,
+          highlights: [
+            "Independence achieved on January 1, 1960",
+            "Reunification with British Cameroons (1961)",
+            "Ahmadou Ahidjo presidency (1960-1982)",
+            "Paul Biya era and democratic reforms (1982-present)"
+          ]
+        }
+      ],
+      NIGERIA: [
+        {
+          period: "Ancient Civilizations",
+          timeframe: "Before 1000 CE",
+          icon: Scroll,
+          description: `Nigeria is home to some of Africa's oldest civilizations, including the Nok culture (1000 BCE - 300 CE) known for terracotta sculptures, and early Igbo-Ukwu bronze works that demonstrate sophisticated metallurgy.`,
+          highlights: [
+            "Nok culture terracotta art (1000 BCE - 300 CE)",
+            "Igbo-Ukwu bronze casting civilization (9th century)",
+            "Early iron working and agriculture",
+            "Development of complex societies"
+          ]
+        },
+        {
+          period: "Great Kingdoms",
+          timeframe: "1000 - 1800 CE",
+          icon: Crown,
+          description: `The medieval period witnessed the rise of powerful kingdoms: the Benin Empire with its famous bronze plaques, the Oyo Empire of the Yoruba people, and the Sokoto Caliphate in the north, each contributing to Nigeria's rich cultural heritage.`,
+          highlights: [
+            "Benin Empire and bronze casting mastery",
+            "Oyo Empire expansion and Yoruba culture",
+            "Sokoto Caliphate and Islamic scholarship",
+            "Trans-Saharan and Atlantic trade networks"
+          ]
+        },
+        {
+          period: "Colonial Period",
+          timeframe: "1800 - 1960",
+          icon: MapPin,
+          description: `British colonial rule unified diverse ethnic groups into modern Nigeria. The period saw the amalgamation of Northern and Southern Nigeria in 1914, development of railways, and the emergence of nationalist leaders like Nnamdi Azikiwe and Obafemi Awolowo.`,
+          highlights: [
+            "British conquest and indirect rule system",
+            "Amalgamation of North and South (1914)",
+            "Development of railways and infrastructure",
+            "Rise of nationalist movements and leaders"
+          ]
+        },
+        {
+          period: "Independence & Republic",
+          timeframe: "1960 - Present",
+          icon: Star,
+          description: `Nigeria gained independence in 1960 and became a republic in 1963. Despite challenges including civil war (1967-1970), military coups, and regional tensions, Nigeria has emerged as Africa's largest economy and most populous nation.`,
+          highlights: [
+            "Independence achieved October 1, 1960",
+            "Nigerian Civil War (1967-1970)",
+            "Return to democracy (1999)",
+            "Emergence as Africa's largest economy"
+          ]
+        }
+      ],
+      GHANA: [
+        {
+          period: "Ancient Gold Coast",
+          timeframe: "Before 1000 CE",
+          icon: Scroll,
+          description: `Ancient Ghana region was inhabited by various ethnic groups who developed sophisticated societies. Archaeological evidence shows early iron working, agriculture, and the beginnings of gold mining that would later make the region famous.`,
+          highlights: [
+            "Early Akan settlements and gold mining",
+            "Development of iron working technology",
+            "Agricultural communities establishment",
+            "Traditional religious and cultural practices"
+          ]
+        },
+        {
+          period: "Great Kingdoms",
+          timeframe: "1000 - 1800 CE",
+          icon: Crown,
+          description: `The rise of powerful Akan kingdoms, particularly the Ashanti Empire, dominated this period. The Ashanti developed sophisticated political systems, military organization, and became wealthy through gold trade and craftsmanship.`,
+          highlights: [
+            "Ashanti Empire establishment and expansion",
+            "Development of the Golden Stool tradition",
+            "Sophisticated military and political systems",
+            "Trans-Saharan and coastal trade networks"
+          ]
+        },
+        {
+          period: "Colonial Gold Coast",
+          timeframe: "1800 - 1957",
+          icon: MapPin,
+          description: `British colonial rule transformed the Gold Coast through cocoa cultivation, education, and infrastructure. The period saw the rise of educated elites and nationalist movements led by figures like Kwame Nkrumah who would lead the independence struggle.`,
+          highlights: [
+            "British colonial administration establishment",
+            "Introduction of cocoa farming",
+            "Development of Western education",
+            "Rise of independence movement under Nkrumah"
+          ]
+        },
+        {
+          period: "Independence Pioneer",
+          timeframe: "1957 - Present",
+          icon: Star,
+          description: `Ghana became the first African country to gain independence in 1957 under Kwame Nkrumah. Despite political challenges and military coups, Ghana has emerged as a stable democracy and a leader in African development.`,
+          highlights: [
+            "First African independence (March 6, 1957)",
+            "Kwame Nkrumah's Pan-African leadership",
+            "Return to stable democracy (1992)",
+            "Economic growth and democratic consolidation"
+          ]
+        }
+      ]
+    };
 
-    return timeline;
+    // Return country-specific timeline or default to Cameroon
+    return countryTimelines[countryCode] || countryTimelines.CAMEROON;
   };
 
-  // Generate historical figures section
+  // Generate country-specific historical figures
   const generateHistoricalFigures = () => {
-    return [
-      {
-        name: "Ancient Rulers",
-        description: "Legendary kings and queens who established the foundations of civilization in the region.",
-        contribution: "Political organization and cultural development"
-      },
-      {
-        name: "Independence Leaders",
-        description: "Visionary leaders who fought for and achieved independence from colonial rule.",
-        contribution: "National liberation and political freedom"
-      },
-      {
-        name: "Cultural Icons",
-        description: "Artists, writers, and intellectuals who preserved and promoted cultural heritage.",
-        contribution: "Cultural preservation and artistic expression"
-      },
-      {
-        name: "Modern Pioneers",
-        description: "Contemporary leaders who have shaped the nation's development and international standing.",
-        contribution: "Modernization and global engagement"
-      }
-    ];
+    const countryCode = (countryData?.name || 'CAMEROON').toUpperCase();
+    
+    const countryFigures = {
+      CAMEROON: [
+        {
+          name: "Ahmadou Ahidjo",
+          description: "First President of Cameroon who led the country to independence and reunification.",
+          contribution: "Independence and national unity"
+        },
+        {
+          name: "Ruben Um Nyobé",
+          description: "Nationalist leader and founder of the UPC (Union of the Peoples of Cameroon).",
+          contribution: "Independence movement leadership"
+        },
+        {
+          name: "Sultan Njoya",
+          description: "Bamoun King who created the Bamoun script and modernized his kingdom.",
+          contribution: "Cultural innovation and literacy"
+        },
+        {
+          name: "Mongo Beti",
+          description: "Renowned writer and intellectual who chronicled colonial and post-colonial Africa.",
+          contribution: "Literature and social criticism"
+        }
+      ],
+      NIGERIA: [
+        {
+          name: "Nnamdi Azikiwe",
+          description: "First President of Nigeria and leading figure in the independence movement.",
+          contribution: "Pan-Africanism and independence"
+        },
+        {
+          name: "Obafemi Awolowo",
+          description: "Premier of Western Nigeria and advocate for free education and healthcare.",
+          contribution: "Education and social development"
+        },
+        {
+          name: "Queen Amina of Zaria",
+          description: "16th-century warrior queen who expanded the Hausa kingdom of Zazzau.",
+          contribution: "Military leadership and expansion"
+        },
+        {
+          name: "Chinua Achebe",
+          description: "World-renowned author of 'Things Fall Apart' and voice of African literature.",
+          contribution: "Literature and cultural identity"
+        }
+      ],
+      GHANA: [
+        {
+          name: "Kwame Nkrumah",
+          description: "First President of Ghana and leading Pan-Africanist who achieved independence.",
+          contribution: "Independence and Pan-Africanism"
+        },
+        {
+          name: "Yaa Asantewaa",
+          description: "Queen Mother of Ejisu who led the Ashanti resistance against British colonialism.",
+          contribution: "Anti-colonial resistance"
+        },
+        {
+          name: "J.B. Danquah",
+          description: "Lawyer, politician, and scholar who played a key role in Ghana's independence.",
+          contribution: "Legal scholarship and politics"
+        },
+        {
+          name: "Kofi Annan",
+          description: "Former UN Secretary-General and Nobel Peace Prize laureate from Ghana.",
+          contribution: "International diplomacy and peace"
+        }
+      ]
+    };
+
+    // Return country-specific figures or default to Cameroon
+    return countryFigures[countryCode] || countryFigures.CAMEROON;
   };
 
   const timeline = generateHistoricalTimeline();
@@ -288,13 +444,13 @@ export default function HistoryPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to={`/country/${countryCode ? countryCode.toLowerCase() : 'cameroon'}`}
+              to={`/country/${countryPath}`}
               className="bg-white text-[#A0522D] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
             >
               Back to Overview
             </Link>
             <Link 
-              to={`/country/${countryCode ? countryCode.toLowerCase() : 'cameroon'}/culture`}
+              to={`/country/${countryPath}/culture`}
               className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#A0522D] transition-all duration-300"
             >
               Explore Culture

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Eye, MousePointer, Globe } from 'lucide-react';
+import { ArrowLeft, Eye, MousePointer, Globe, MapPin, Star, Clock, Users } from 'lucide-react';
 import InteractiveMap from '../components/map/InteractiveMap';
 
 export default function HomePage() {
@@ -13,6 +13,10 @@ export default function HomePage() {
 
   const handleBackToLanding = () => {
     navigate('/');
+  };
+
+  const handleViewDestinations = () => {
+    navigate('/destinations');
   };
 
   return (
@@ -67,6 +71,141 @@ export default function HomePage() {
                   Hover for Label
                 </span>
               </div>
+              <button
+                onClick={handleViewDestinations}
+                className="flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-full hover:bg-purple-100 transition-colors duration-200 hover:scale-105 transform"
+              >
+                <MapPin className="w-4 h-4 text-purple-600" />
+                <span className="text-sm font-medium text-gray-700">
+                  View All Destinations
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Top Destinations Section */}
+      <div className="mx-4 mb-6">
+        <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-white/30">
+          <div className="bg-gradient-to-r from-[#A0522D] to-[#D2691E] text-white p-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
+              Top African Destinations
+            </h2>
+            <p className="text-center opacity-90">
+              Discover the most spectacular places across our featured countries
+            </p>
+          </div>
+          
+          <div className="p-6">
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Cameroon - Mount Cameroon */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Cameroon
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                    <span className="text-sm font-medium">4.9</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Mount Cameroon</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  West Africa's highest peak with challenging hiking trails and breathtaking views
+                </p>
+                <div className="flex items-center gap-4 text-xs text-gray-500">
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    <span>2-3 days</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-3 h-3" />
+                    <span>5-20 people</span>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => navigate('/country/cameroon')}
+                  className="mt-4 w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors duration-200 text-sm font-medium"
+                >
+                  Explore Cameroon
+                </button>
+              </div>
+
+              {/* Nigeria - Obudu Mountain Resort */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Nigeria
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                    <span className="text-sm font-medium">4.9</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Obudu Mountain Resort</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Mountain resort with cable car and stunning views of the Cross River landscape
+                </p>
+                <div className="flex items-center gap-4 text-xs text-gray-500">
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    <span>2-4 days</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-3 h-3" />
+                    <span>2-12 people</span>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => navigate('/country/nigeria')}
+                  className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium"
+                >
+                  Explore Nigeria
+                </button>
+              </div>
+
+              {/* Ghana - Mole National Park */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Ghana
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                    <span className="text-sm font-medium">4.8</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Mole National Park</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Ghana's largest wildlife refuge with elephants, antelopes and diverse ecosystems
+                </p>
+                <div className="flex items-center gap-4 text-xs text-gray-500">
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    <span>2-3 days</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-3 h-3" />
+                    <span>4-12 people</span>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => navigate('/country/ghana')}
+                  className="mt-4 w-full bg-amber-600 text-white py-2 rounded-lg hover:bg-amber-700 transition-colors duration-200 text-sm font-medium"
+                >
+                  Explore Ghana
+                </button>
+              </div>
+            </div>
+            
+            <div className="text-center mt-6">
+              <button
+                onClick={handleViewDestinations}
+                className="bg-gradient-to-r from-[#A0522D] to-[#D2691E] text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105 font-medium"
+              >
+                View All Destinations
+              </button>
             </div>
           </div>
         </div>
