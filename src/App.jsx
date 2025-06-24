@@ -6,6 +6,9 @@ import CountryPage from './pages/CountryPage';
 import CameroonPage from './pages/CameroonPage';
 import NigeriaPage from './pages/NigeriaPage';
 import GhanaPage from './pages/GhanaPage';
+import EgyptPage from './pages/EgyptPage';
+import KenyaPage from './pages/KenyaPage';
+import SouthAfricaPage from './pages/SouthAfricaPage';
 import HistoryPage from './pages/HistoryPage';
 import DestinationsPage from './pages/DestinationsPage';
 import ArtsPage from './pages/ArtsPage';
@@ -49,6 +52,9 @@ function App() {
         <Route path="/cameroon" element={<CameroonPage />} />
         <Route path="/nigeria" element={<NigeriaPage />} />
         <Route path="/ghana" element={<GhanaPage />} />
+        <Route path="/egypt" element={<EgyptPage />} />
+        <Route path="/kenya" element={<KenyaPage />} />
+        <Route path="/south-africa" element={<SouthAfricaPage />} />
       </Routes>
     </Router>
   );

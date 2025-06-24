@@ -222,48 +222,42 @@ const CountryDetails = {
   GH: {
     name: "Ghana",
     fullName: "Republic of Ghana",
+    nickname: "Gateway to Africa",
     capital: "Accra",
-    population: "32 million",
-    languages: ["English", "Akan", "Ewe", "Ga", "Dagbani", "Hausa", "Gonja"],
-    currency: "Ghanaian Cedi",
+    population: "34 million",
     independence: "1957",
+    flagColors: ["#CE1126", "#FCD116", "#006B3F", "#000000"],
+    languages: ["English", "Akan", "Ewe"],
+    currency: "Cedi",
     motto: "Freedom and Justice",
-    nickname: "Gateway to West Africa",
-    flagColors: ["#CE1126", "#FCD116", "#006B3F"],
-    regions: [
-      "Greater Accra", "Ashanti", "Western", "Central", "Eastern",
-      "Volta", "Northern", "Upper East", "Upper West", "Brong-Ahafo",
-      "Western North", "Ahafo", "Bono East", "Oti", "North East", "Savannah"
-    ],
     keyFacts: [
-      "First African country to gain independence",
-      "Birthplace of Pan-Africanism",
-      "Leading cocoa producer",
-      "Stable democracy",
-      "Second largest gold producer in Africa",
-      "Home to Lake Volta, world's largest artificial lake"
+      "First sub-Saharan country to gain independence",
+      "World's second largest cocoa producer",
+      "Home to Elmina and Cape Coast castles",
+      "Pioneer of Pan-Africanism"
     ],
+    regions: ["Coastal", "Ashanti", "Northern"],
     geography: {
-      area: "238,533 km²",
-      climate: "Tropical; warm and comparatively dry along southeast coast",
-      highestPoint: "Mount Afadja (885m)",
-      majorRivers: ["Volta", "Pra", "Ankobra", "Tano"]
+      area: "238,535 km²",
+      climate: "Tropical",
+      highestPoint: "Mount Afadjato (885m)",
+      majorRivers: ["Volta River", "Ankobra", "Tano"]
     },
     culture: {
-      music: ["Highlife", "Hiplife", "Azonto", "Adowa", "Kpanlogo"],
-      dances: ["Adowa", "Kpanlogo", "Bamaya", "Agbadza", "Fontomfrom"],
-      instruments: ["Atumpan", "Kagan", "Seperewa", "Gyil", "Dawuro"],
-      festivals: ["Homowo", "Aboakyir", "Yam Festival", "Panafest", "Chale Wote"]
+      music: ["Highlife", "Hiplife", "Gospel"],
+      dances: ["Adowa", "Kpanlogo", "Agbadza"],
+      instruments: ["Fontomfrom", "Atumpan", "Gome"],
+      festivals: ["Homowo", "Aboakyer", "Panafest"]
     },
     gastronomy: {
-      mainDishes: ["Jollof Rice", "Banku", "Fufu", "Kelewele", "Red Red"],
-      beverages: ["Palm wine", "Sobolo", "Asana", "Pito"],
-      ingredients: ["Cassava", "Yam", "Plantain", "Cocoyam", "Palm nut"]
+      mainDishes: ["Jollof rice", "Banku", "Fufu"],
+      beverages: ["Palm wine", "Sobolo", "Asaana"],
+      ingredients: ["Plantain", "Cassava", "Peanuts"]
     },
     arts: {
-      crafts: ["Kente weaving", "Wood carving", "Pottery", "Beadmaking"],
-      materials: ["Kente cloth", "Wood", "Clay", "Gold", "Beads"],
-      styles: ["Ashanti Art", "Akan Goldweights", "Stools and Chairs", "Adinkra Symbols"]
+      crafts: ["Kente weaving", "Adinkra symbols", "Bead making"],
+      materials: ["Silk", "Cotton", "Wood"],
+      styles: ["Symbolic patterns", "Figurative sculpture"]
     },
     tourism: {
       destinations: [

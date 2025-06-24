@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChefHat, Coffee, Wheat, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -44,33 +44,90 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
     ...themeOverrides
   };
 
-  // Get all food items for carousel
-  const getAllFoodItems = () => {
+  // Helper function to get image path for food items
+  const getFoodImage = (foodName, countryCode) => {
+    if (!countryCode) {
+      return null;
+    }
+    
+    // Mapping for specific food names to image filenames (based on actual files)
+    const foodImageMap = {
+      'cm': {
+        'Ndolé': 'ndolet',
+        'Poulet DG': 'cornchaff',
+        'Koki': 'koki',
+        'Achu': 'achu',
+        'Eru': 'eru',
+        'Okok': 'okok',
+        'Sanga': 'sanga',
+        'Bil-bil': 'fufu',
+        'Matango': 'egusi pudding',
+        'Palm wine': 'fufu',
+        'Plantain': 'fufu',
+        'Cassava': 'fufu',
+        'Yam': 'achu',
+        'Peanuts': 'cornchaff'
+      }
+    };
+    
+    const countryKey = countryCode.toLowerCase();
+    const imageFilename = foodImageMap[countryKey]?.[foodName];
+    
+    if (imageFilename) {
+      // Properly encode the filename for URL
+      const encodedFilename = encodeURIComponent(imageFilename);
+      return `/images/foods/${countryKey}/${encodedFilename}.jpg`;
+    } else {
+      // Fallback: convert food name to filename format (lowercase, replace spaces with nothing)
+      const filename = foodName.toLowerCase().replace(/\s+/g, '');
+      return `/images/foods/${countryKey}/${filename}.jpg`;
+    }
+  };
+
+  // Get all food items for carousel - memoized to prevent infinite re-renders
+  const foodItems = useMemo(() => {
     const items = [];
     const gastronomy = countryData?.gastronomy;
+    const countryCode = countryData?.countryCode;
     
     if (gastronomy?.mainDishes) {
       gastronomy.mainDishes.forEach(dish => {
-        items.push({ type: 'dish', name: dish, icon: ChefHat, category: 'Main Dish' });
+        items.push({ 
+          type: 'dish', 
+          name: dish, 
+          icon: ChefHat, 
+          category: 'Main Dish',
+          image: getFoodImage(dish, countryCode)
+        });
       });
     }
     
     if (gastronomy?.beverages) {
       gastronomy.beverages.forEach(beverage => {
-        items.push({ type: 'beverage', name: beverage, icon: Coffee, category: 'Beverage' });
+        items.push({ 
+          type: 'beverage', 
+          name: beverage, 
+          icon: Coffee, 
+          category: 'Beverage',
+          image: getFoodImage(beverage, countryCode)
+        });
       });
     }
     
     if (gastronomy?.ingredients) {
       gastronomy.ingredients.forEach(ingredient => {
-        items.push({ type: 'ingredient', name: ingredient, icon: Wheat, category: 'Ingredient' });
+        items.push({ 
+          type: 'ingredient', 
+          name: ingredient, 
+          icon: Wheat, 
+          category: 'Ingredient',
+          image: getFoodImage(ingredient, countryCode)
+        });
       });
     }
     
     return items;
-  };
-  
-  const foodItems = getAllFoodItems();
+  }, [countryData?.gastronomy, countryData?.countryCode]);
   const itemsPerSlide = 3;
   const totalSlides = Math.ceil(foodItems.length / itemsPerSlide);
 
@@ -114,63 +171,81 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
           </p>
         </div>
 
-        {/* Carousel */}
+        {/* Food Carousel */}
         <div className="relative">
+          {/* Navigation Buttons */}
+          {totalSlides > 1 && (
+            <>
+              <button
+                onClick={prevSlide}
+                className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 ${currentTheme.primary} text-white rounded-full shadow-lg hover:opacity-90 transition-opacity flex items-center justify-center`}
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 ${currentTheme.primary} text-white rounded-full shadow-lg hover:opacity-90 transition-opacity flex items-center justify-center`}
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </>
+          )}
+
           {/* Carousel Container */}
-          <div className="overflow-hidden rounded-xl">
-            <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-              {Array.from({ length: totalSlides }).map((_, slideIndex) => {
-                const slideItems = foodItems.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide);
+          <div className="overflow-hidden mx-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {getCurrentSlideItems().map((item, index) => {
+                const IconComponent = item.icon;
                 return (
-                  <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-3 gap-6 px-4">
-                      {slideItems.map((item, itemIndex) => {
-                        const Icon = item.icon;
-                        return (
-                          <div key={itemIndex} className={`group p-6 rounded-xl border ${currentTheme.border} ${currentTheme.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white cursor-pointer`}>
-                            <div className="flex items-center space-x-3 mb-4">
-                              <div className={`w-12 h-12 rounded-full ${currentTheme.primary} flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
-                                <Icon className="w-6 h-6 text-white" />
-                              </div>
-                              <div>
-                                <h3 className="text-lg font-semibold group-hover:text-gray-800 transition-colors">{item.name}</h3>
-                                <span className={`text-xs font-medium ${currentTheme.accent} uppercase tracking-wide`}>
-                                  {item.category}
-                                </span>
-                              </div>
-                            </div>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                              {item.type === 'dish' && `Traditional dish representing the rich culinary heritage of ${countryData?.name}`}
-                              {item.type === 'beverage' && `Traditional beverage that complements the cuisine of ${countryData?.name}`}
-                              {item.type === 'ingredient' && `Essential ingredient used in ${countryData?.name}'s distinctive cuisine`}
-                            </p>
-                          </div>
-                        );
-                      })}
+                  <div
+                    key={`${item.name}-${index}`}
+                    className={`${currentTheme.secondary} rounded-xl shadow-lg overflow-hidden ${currentTheme.hover} transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${currentTheme.border} border`}
+                  >
+                    {/* Food Image */}
+                    <div className="h-48 bg-gray-200 overflow-hidden relative">
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                          onError={(e) => {
+                            // If image fails to load, try placeholder
+                            if (!e.target.src.includes('placeholder-food.jpg')) {
+                              e.target.src = '/images/placeholder-food.jpg';
+                            } else {
+                              // If placeholder also fails, hide the image
+                              e.target.style.display = 'none';
+                            }
+                          }}
+                        />
+                      )}
+                      {!item.image && (
+                        <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                          <IconComponent className={`w-16 h-16 ${currentTheme.accent}`} />
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Card Content */}
+                    <div className="p-6">
+                      <div className="flex items-center mb-3">
+                        <div className={`w-10 h-10 rounded-full ${currentTheme.primary} flex items-center justify-center mr-3`}>
+                          <IconComponent className="w-5 h-5 text-white" />
+                        </div>
+                        <span className={`text-sm font-medium ${currentTheme.accent} uppercase tracking-wide`}>
+                          {item.category}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">{item.name}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Traditional {item.type} representing the rich culinary heritage of {countryData?.name}
+                      </p>
                     </div>
                   </div>
                 );
               })}
             </div>
           </div>
-
-          {/* Navigation Buttons */}
-          {totalSlides > 1 && (
-            <>
-              <button
-                onClick={prevSlide}
-                className={`absolute left-4 top-1/2 transform -translate-y-1/2 ${currentTheme.primary} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110`}
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className={`absolute right-4 top-1/2 transform -translate-y-1/2 ${currentTheme.primary} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110`}
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </>
-          )}
 
           {/* Slide Indicators */}
           {totalSlides > 1 && (
@@ -179,7 +254,7 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
                     index === currentSlide
                       ? currentTheme.primary
                       : 'bg-gray-300 hover:bg-gray-400'
@@ -190,24 +265,7 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
           )}
         </div>
 
-        {/* Food Categories Summary */}
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className={`text-center p-6 rounded-xl ${currentTheme.secondary} border ${currentTheme.border}`}>
-            <ChefHat className={`w-12 h-12 mx-auto mb-4 ${currentTheme.accent}`} />
-            <h3 className={`text-xl font-semibold mb-2 ${currentTheme.accent}`}>Main Dishes</h3>
-            <p className="text-gray-600">{countryData?.gastronomy?.mainDishes?.length || 0} traditional recipes</p>
-          </div>
-          <div className={`text-center p-6 rounded-xl ${currentTheme.secondary} border ${currentTheme.border}`}>
-            <Coffee className={`w-12 h-12 mx-auto mb-4 ${currentTheme.accent}`} />
-            <h3 className={`text-xl font-semibold mb-2 ${currentTheme.accent}`}>Beverages</h3>
-            <p className="text-gray-600">{countryData?.gastronomy?.beverages?.length || 0} traditional drinks</p>
-          </div>
-          <div className={`text-center p-6 rounded-xl ${currentTheme.secondary} border ${currentTheme.border}`}>
-            <Wheat className={`w-12 h-12 mx-auto mb-4 ${currentTheme.accent}`} />
-            <h3 className={`text-xl font-semibold mb-2 ${currentTheme.accent}`}>Ingredients</h3>
-            <p className="text-gray-600">{countryData?.gastronomy?.ingredients?.length || 0} essential ingredients</p>
-          </div>
-        </div>
+
 
         {/* View All Food Button */}
         <div className="text-center mt-8">

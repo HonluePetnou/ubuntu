@@ -1,0 +1,1396 @@
+{
+    "CM": {
+      "name": "Cameroun",
+      "fullName": "République du Cameroun",
+      "nickname": "L'Afrique en miniature",
+      "capital": "Yaoundé",
+      "population": "27 million",
+      "independence": "1960",
+      "flagColors": ["#007A5E", "#CE1126", "#FCD116"],
+      "languages": ["Français", "Anglais"],
+      "currency": "Franc CFA (XAF)",
+      "motto": "Paix – Travail – Patrie",
+      "keyFacts": [
+        "Pays d'Afrique centrale et de l'ouest",
+        "Possède plus de 250 groupes ethniques",
+        "Riche en diversité géographique et climatique",
+        "Berceau de nombreux genres musicaux africains"
+      ],
+      "regions": ["Adamaoua", "Centre", "Est", "Extrême-Nord", "Littoral", "Nord", "Nord-Ouest", "Ouest", "Sud", "Sud-Ouest"],
+      "geography": {
+        "area": "475,442 km²",
+        "climate": "Tropical et équatorial",
+        "highestPoint": "Mont Cameroun (4,040m)",
+        "majorRivers": ["Sanaga", "Wouri", "Benue"]
+      },
+      "culture": {
+        "music": ["Makossa", "Bikutsi", "Assiko"],
+        "dances": ["Ekang", "Mangambeu", "Ngondo"],
+        "instruments": ["Balafon", "Mvet", "Tam-tam"],
+        "festivals": ["FESTAC", "Ngondo", "Fomaric"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Ndolé", "Achu", "Kati-Kati"],
+        "beverages": ["Bil-bil", "Top", "Foléré"],
+        "ingredients": ["Arachide", "Plantain", "Gnetum (Eru)"]
+      },
+      "arts": {
+        "crafts": ["Sculpture sur bois", "Poterie", "Masques traditionnels"],
+        "materials": ["Bois", "Argile", "Perles"],
+        "styles": ["Art Bamiléké", "Art Tikar", "Art Fang-Beti"]
+      }
+    },
+  
+    "SN": {
+      "name": "Sénégal",
+      "fullName": "République du Sénégal",
+      "nickname": "La porte de l'Afrique",
+      "capital": "Dakar",
+      "population": "17 million",
+      "independence": "1960",
+      "flagColors": ["#00853F", "#FDEF42", "#E31B23"],
+      "languages": ["Français", "Wolof", "Pulaar", "Serer"],
+      "currency": "Franc CFA (XOF)",
+      "motto": "Un Peuple – Un But – Une Foi",
+      "keyFacts": [
+        "Connu pour son hospitalité légendaire 'Teranga'",
+        "Pays du célèbre musicien Youssou N'Dour",
+        "Possède le lac rose (Retba)",
+        "Forte tradition de lutte sénégalaise"
+      ],
+      "regions": ["Dakar", "Thiès", "Saint-Louis", "Ziguinchor", "Fatick"],
+      "geography": {
+        "area": "196,722 km²",
+        "climate": "Sahélien à tropical",
+        "highestPoint": "Néant (Point le plus haut : 581m)",
+        "majorRivers": ["Sénégal", "Casamance", "Gambia"]
+      },
+      "culture": {
+        "music": ["Mbalax", "Sabar", "Hip-hop sénégalais"],
+        "dances": ["Sabar", "Simpi", "Ndeup"],
+        "instruments": ["Tama", "Kora", "Balafon"],
+        "festivals": ["Dak'Art", "FESNAC", "Saint-Louis Jazz"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Thieboudienne", "Yassa", "Mafé"],
+        "beverages": ["Bissap", "Gingembre", "Attaya"],
+        "ingredients": ["Riz", "Poisson", "Hibiscus"]
+      },
+      "arts": {
+        "crafts": ["Teinture batik", "Bronze", "Bois sculpté"],
+        "materials": ["Tissu", "Bronze", "Cuivre"],
+        "styles": ["Art contemporain sénégalais", "Art Sabar", "Art de Gorée"]
+      }
+    },
+  
+    "ZA": {
+      "name": "Afrique du Sud",
+      "fullName": "République d'Afrique du Sud",
+      "nickname": "La nation arc-en-ciel",
+      "capital": "Pretoria (administrative)",
+      "population": "60 million",
+      "independence": "1910 (Union), 1961 (République)",
+      "flagColors": ["#000000", "#FF0000", "#007847", "#FFFFFF", "#002395", "#FFFF00"],
+      "languages": ["Anglais", "Zulu", "Xhosa", "Afrikaans"],
+      "currency": "Rand (ZAR)",
+      "motto": "ǃke e: ǀxarra ǁke (Le peuple uni dans sa diversité)",
+      "keyFacts": [
+        "Pays de Nelson Mandela",
+        "Possède 3 capitales officielles",
+        "Destination phare pour le safari",
+        "L'un des plus grands producteurs d'or au monde"
+      ],
+      "regions": ["Gauteng", "Western Cape", "KwaZulu-Natal", "Eastern Cape"],
+      "geography": {
+        "area": "1,221,037 km²",
+        "climate": "Semi-aride à tempéré",
+        "highestPoint": "Mafadi (3,450m)",
+        "majorRivers": ["Orange", "Limpopo", "Vaal"]
+      },
+      "culture": {
+        "music": ["Kwaito", "Jazz sud-africain", "Afropop"],
+        "dances": ["Gumboot dance", "Pantsula", "Zulu Dance"],
+        "instruments": ["Marimba", "Mbira", "Djembe"],
+        "festivals": ["Cape Town Jazz Festival", "Oppikoppi", "Durban July"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Bobotie", "Biltong", "Boerewors"],
+        "beverages": ["Amarula", "Rooibos", "Umqombothi"],
+        "ingredients": ["Viande de bœuf", "Maïs", "Épices locales"]
+      },
+      "arts": {
+        "crafts": ["Perlage Zoulou", "Sculpture sur pierre", "Poterie Ndebele"],
+        "materials": ["Perles", "Argile", "Bois"],
+        "styles": ["Art Ndebele", "Art contemporain sud-africain", "Peinture rupestre San"]
+      }
+    }
+    {
+        "NG": {
+          "name": "Nigéria",
+          "fullName": "République fédérale du Nigéria",
+          "nickname": "Le géant de l'Afrique",
+          "capital": "Abuja",
+          "population": "223 million",
+          "independence": "1960",
+          "flagColors": ["#008753", "#FFFFFF"],
+          "languages": ["Anglais", "Hausa", "Yoruba", "Igbo"],
+          "currency": "Naira (NGN)",
+          "motto": "Unité et Foi, Paix et Progrès",
+          "keyFacts": [
+            "Pays le plus peuplé d'Afrique",
+            "Industrie cinématographique 'Nollywood'",
+            "Grand producteur de pétrole en Afrique",
+            "Berceau de nombreux rythmes afrobeat"
+          ],
+          "regions": ["Lagos", "Kano", "Kaduna", "Abuja"],
+          "geography": {
+            "area": "923,769 km²",
+            "climate": "Tropical et savane",
+            "highestPoint": "Chappal Waddi (2,419m)",
+            "majorRivers": ["Niger", "Benue", "Kaduna"]
+          },
+          "culture": {
+            "music": ["Afrobeat", "Highlife", "Fuji"],
+            "dances": ["Bata", "Sharo", "Ekombi"],
+            "instruments": ["Talking drum", "Ogene", "Shekere"],
+            "festivals": ["FESTAC", "Eyo Festival", "Osun-Osogbo"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Jollof rice", "Egusi soup", "Suya"],
+            "beverages": ["Zobo", "Palm wine", "Chapman"],
+            "ingredients": ["Igname", "Poisson séché", "Piment"]
+          },
+          "arts": {
+            "crafts": ["Sculpture en bronze", "Textiles Aso Oke", "Masques yoruba"],
+            "materials": ["Bronze", "Tissu", "Argile"],
+            "styles": ["Art Ife", "Art Bénin", "Art contemporain nigérian"]
+          }
+        },
+      
+        "EG": {
+          "name": "Égypte",
+          "fullName": "République arabe d'Égypte",
+          "nickname": "Le don du Nil",
+          "capital": "Le Caire",
+          "population": "110 million",
+          "independence": "1922",
+          "flagColors": ["#CE1126", "#FFFFFF", "#000000"],
+          "languages": ["Arabe"],
+          "currency": "Livre égyptienne (EGP)",
+          "motto": "Le peuple, l'armée et la patrie",
+          "keyFacts": [
+            "Possède les pyramides de Gizeh",
+            "Ancienne civilisation pharaonique",
+            "Pays du canal de Suez",
+            "Haut lieu du cinéma arabe"
+          ],
+          "regions": ["Le Caire", "Alexandrie", "Assouan", "Louqsor"],
+          "geography": {
+            "area": "1,010,408 km²",
+            "climate": "Désertique et méditerranéen",
+            "highestPoint": "Mont Sainte-Catherine (2,629m)",
+            "majorRivers": ["Nil"]
+          },
+          "culture": {
+            "music": ["Shaabi", "Tarab", "Mahraganat"],
+            "dances": ["Baladi", "Tanoura", "Raqs Sharqi"],
+            "instruments": ["Oud", "Nay", "Tabla"],
+            "festivals": ["Cairo Film Festival", "Pharaonic Wedding", "Spring Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Koshari", "Molokhia", "Ful medames"],
+            "beverages": ["Karkadé", "Thé à la menthe", "Asab"],
+            "ingredients": ["Lentilles", "Riz", "Pois chiches"]
+          },
+          "arts": {
+            "crafts": ["Papyrus", "Tapis orientaux", "Bijoux bédouins"],
+            "materials": ["Papyrus", "Laine", "Métal"],
+            "styles": ["Art pharaonique", "Art copte", "Art islamique"]
+          }
+        },
+      
+        "GH": {
+          "name": "Ghana",
+          "fullName": "République du Ghana",
+          "nickname": "L'étoile noire de l'Afrique",
+          "capital": "Accra",
+          "population": "34 million",
+          "independence": "1957",
+          "flagColors": ["#EF3340", "#FCD116", "#009639"],
+          "languages": ["Anglais", "Akan", "Ewe", "Ga"],
+          "currency": "Cedi ghanéen (GHS)",
+          "motto": "Liberté et Justice",
+          "keyFacts": [
+            "Première colonie africaine à obtenir l’indépendance",
+            "Célèbre pour ses châteaux côtiers",
+            "Pays d’origine de Kofi Annan",
+            "Berceau du Highlife africain"
+          ],
+          "regions": ["Greater Accra", "Ashanti", "Northern", "Volta"],
+          "geography": {
+            "area": "238,533 km²",
+            "climate": "Tropical",
+            "highestPoint": "Mont Afadjato (885m)",
+            "majorRivers": ["Volta", "Pra", "Ankobra"]
+          },
+          "culture": {
+            "music": ["Highlife", "Hiplife", "Gospel"],
+            "dances": ["Adowa", "Kpanlogo", "Agbadza"],
+            "instruments": ["Fontomfrom", "Atumpan", "Seperewa"],
+            "festivals": ["Homowo", "Panafest", "Aboakyer"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Fufu", "Banku", "Waakye"],
+            "beverages": ["Palm wine", "Sobolo", "Pito"],
+            "ingredients": ["Plantain", "Igname", "Poisson fumé"]
+          },
+          "arts": {
+            "crafts": ["Tissu Kente", "Perlage", "Masques Akan"],
+            "materials": ["Tissu", "Bois", "Argile"],
+            "styles": ["Art Akan", "Art Ashanti", "Art contemporain ghanéen"]
+          }
+        },
+      
+        "KE": {
+          "name": "Kenya",
+          "fullName": "République du Kenya",
+          "nickname": "Le pays du safari",
+          "capital": "Nairobi",
+          "population": "54 million",
+          "independence": "1963",
+          "flagColors": ["#000000", "#FF0000", "#006600", "#FFFFFF"],
+          "languages": ["Anglais", "Swahili"],
+          "currency": "Shilling kényan (KES)",
+          "motto": "Harambee (Tous ensemble)",
+          "keyFacts": [
+            "Pays des Big Five en safari",
+            "Mont Kenya, 2e sommet d'Afrique",
+            "Berceau du coureur Eliud Kipchoge",
+            "La grande vallée du Rift traverse le pays"
+          ],
+          "regions": ["Nairobi", "Mombasa", "Kisumu", "Nakuru"],
+          "geography": {
+            "area": "580,367 km²",
+            "climate": "Tropical à tempéré",
+            "highestPoint": "Mont Kenya (5,199m)",
+            "majorRivers": ["Tana", "Athi", "Ewaso Ng'iro"]
+          },
+          "culture": {
+            "music": ["Benga", "Gengetone", "Taarab"],
+            "dances": ["Isukuti", "Kikuyu Dance", "Maasai Jump"],
+            "instruments": ["Nyatiti", "Orutu", "Kayamba"],
+            "festivals": ["Lamu Cultural Festival", "Lake Turkana Festival", "Nairobi Film Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Nyama Choma", "Ugali", "Githeri"],
+            "beverages": ["Mursik", "Tusker", "Chai"],
+            "ingredients": ["Maïs", "Haricots", "Viande grillée"]
+          },
+          "arts": {
+            "crafts": ["Perlage Maasai", "Poterie Kisii", "Bois sculpté"],
+            "materials": ["Perles", "Bois", "Argile"],
+            "styles": ["Art Maasai", "Art contemporain kényan", "Tapisseries de Lamu"]
+          }
+        },
+      
+        "CI": {
+          "name": "Côte d'Ivoire",
+          "fullName": "République de Côte d'Ivoire",
+          "nickname": "Pays de l'hospitalité",
+          "capital": "Yamoussoukro",
+          "population": "29 million",
+          "independence": "1960",
+          "flagColors": ["#FF8200", "#FFFFFF", "#008751"],
+          "languages": ["Français", "Baoulé", "Dioula", "Bété"],
+          "currency": "Franc CFA (XOF)",
+          "motto": "Union – Discipline – Travail",
+          "keyFacts": [
+            "Plus grand producteur mondial de cacao",
+            "Célèbre basilique Notre-Dame de la Paix à Yamoussoukro",
+            "Pays d’origine d’Alpha Blondy",
+            "Berceau du coupé-décalé"
+          ],
+          "regions": ["Abidjan", "Yamoussoukro", "Bouaké", "San Pedro"],
+          "geography": {
+            "area": "322,463 km²",
+            "climate": "Équatorial et tropical humide",
+            "highestPoint": "Mont Nimba (1,752m)",
+            "majorRivers": ["Bandama", "Comoé", "Sassandra"]
+          },
+          "culture": {
+            "music": ["Coupé-décalé", "Zouglou", "Mapouka"],
+            "dances": ["Zaouli", "Gbégbé", "Mapouka"],
+            "instruments": ["Balafon", "Kora", "Djembe"],
+            "festivals": ["FEMUA", "Popo Carnaval", "Fête des Masques"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Garba", "Attiéké", "Sauce graine"],
+            "beverages": ["Bangui", "Bissap", "Thé vert"],
+            "ingredients": ["Manioc", "Cacao", "Aubergine africaine"]
+          },
+          "arts": {
+            "crafts": ["Sculpture Sénoufo", "Masques Dan", "Perlage Baoulé"],
+            "materials": ["Bois", "Perles", "Argile"],
+            "styles": ["Art Sénoufo", "Art Dan", "Peinture contemporaine ivoirienne"]
+          }
+        }
+      }
+      {
+        "DZ": {
+          "name": "Algérie",
+          "fullName": "République algérienne démocratique et populaire",
+          "nickname": "Le géant du Maghreb",
+          "capital": "Alger",
+          "population": "45 million",
+          "independence": "1962",
+          "flagColors": ["#006233", "#FFFFFF", "#D21034"],
+          "languages": ["Arabe", "Tamazight"],
+          "currency": "Dinar algérien (DZD)",
+          "motto": "Par le peuple et pour le peuple",
+          "keyFacts": [
+            "Plus grand pays d'Afrique en superficie",
+            "Sahara algérien couvre 80% du territoire",
+            "Pays de la Casbah d'Alger, classée UNESCO",
+            "Richesse en gaz naturel et pétrole"
+          ],
+          "regions": ["Alger", "Oran", "Constantine", "Tamanrasset"],
+          "geography": {
+            "area": "2,381,741 km²",
+            "climate": "Méditerranéen et désertique",
+            "highestPoint": "Mont Tahat (3,003m)",
+            "majorRivers": ["Chelif", "Soummam", "Oued M'zi"]
+          },
+          "culture": {
+            "music": ["Raï", "Chaâbi", "Gnawa"],
+            "dances": ["Allaoui", "Kabyle", "Targuie"],
+            "instruments": ["Guedra", "Mandole", "Bendir"],
+            "festivals": ["DimaJazz", "Festival du Raï", "Yennayer"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Couscous", "Chorba", "Mhadjeb"],
+            "beverages": ["Thé à la menthe", "Lben", "Café"],
+            "ingredients": ["Semoule", "Pois chiches", "Agneau"]
+          },
+          "arts": {
+            "crafts": ["Tapis berbères", "Céramique Kabyle", "Bijoux touaregs"],
+            "materials": ["Laine", "Argile", "Argent"],
+            "styles": ["Art berbère", "Miniatures arabesques", "Artisanat saharien"]
+          }
+        },
+      
+        "AO": {
+          "name": "Angola",
+          "fullName": "République d'Angola",
+          "nickname": "Terre du Kizomba",
+          "capital": "Luanda",
+          "population": "36 million",
+          "independence": "1975",
+          "flagColors": ["#FF0000", "#000000", "#FFCC00"],
+          "languages": ["Portugais", "Kimbundu", "Umbundu"],
+          "currency": "Kwanza (AOA)",
+          "motto": "Unité, Travail, Vigilance",
+          "keyFacts": [
+            "Riche en pétrole et diamants",
+            "Musique et danse kizomba reconnues mondialement",
+            "Côte atlantique de 1 600 km",
+            "Pays de vastes plateaux et savanes"
+          ],
+          "regions": ["Luanda", "Benguela", "Huambo", "Cabinda"],
+          "geography": {
+            "area": "1,246,700 km²",
+            "climate": "Tropical à désertique",
+            "highestPoint": "Morro de Môco (2,620m)",
+            "majorRivers": ["Cuanza", "Cunene", "Cuando"]
+          },
+          "culture": {
+            "music": ["Kizomba", "Semba", "Kuduro"],
+            "dances": ["Kizomba", "Rebita", "Semba"],
+            "instruments": ["Dikanza", "Marimba", "Ngoma"],
+            "festivals": ["Festival Luanda Jazz", "Carnaval de Luanda", "FestiKiz"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Muamba de Galinha", "Calulu", "Funge"],
+            "beverages": ["Cuca", "Palm wine", "Kissângua"],
+            "ingredients": ["Manioc", "Arachide", "Poisson fumé"]
+          },
+          "arts": {
+            "crafts": ["Sculpture en bois", "Poterie Ovimbundu", "Masques Tchokwe"],
+            "materials": ["Bois", "Argile", "Fibres végétales"],
+            "styles": ["Art Tchokwe", "Art contemporain angolais", "Peinture abstraite"]
+          }
+        },
+      
+        "BJ": {
+          "name": "Bénin",
+          "fullName": "République du Bénin",
+          "nickname": "Berceau du vaudou",
+          "capital": "Porto-Novo",
+          "population": "13 million",
+          "independence": "1960",
+          "flagColors": ["#008751", "#FFCD00", "#E8112D"],
+          "languages": ["Français", "Fon", "Yoruba"],
+          "currency": "Franc CFA (XOF)",
+          "motto": "Fraternité – Justice – Travail",
+          "keyFacts": [
+            "Berceau mondial du vaudou",
+            "Célèbre cité lacustre de Ganvié",
+            "Ancien royaume du Dahomey",
+            "Culture musicale très diversifiée"
+          ],
+          "regions": ["Cotonou", "Abomey", "Natitingou", "Parakou"],
+          "geography": {
+            "area": "112,622 km²",
+            "climate": "Tropical",
+            "highestPoint": "Mont Sokbaro (658m)",
+            "majorRivers": ["Ouémé", "Mono", "Niger"]
+          },
+          "culture": {
+            "music": ["Tchingounmè", "Agbadja", "Zinli"],
+            "dances": ["Sato", "Zinli", "Adjogbo"],
+            "instruments": ["Gong", "Tama", "Kora"],
+            "festivals": ["Fête du Vaudou", "Festival des masques Egungun", "Festival International de Porto-Novo"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Amiwo", "Pâte noire", "Agouti"],
+            "beverages": ["Tchoukoutou", "Sodabi", "Bissap"],
+            "ingredients": ["Maïs", "Arachide", "Poisson fumé"]
+          },
+          "arts": {
+            "crafts": ["Bronze d'Abomey", "Masques Yoruba", "Tapisseries artisanales"],
+            "materials": ["Bronze", "Bois", "Tissu"],
+            "styles": ["Art Dahoméen", "Art Yoruba béninois", "Art contemporain béninois"]
+          }
+        },
+      
+        "BW": {
+          "name": "Botswana",
+          "fullName": "République du Botswana",
+          "nickname": "Pays du delta de l'Okavango",
+          "capital": "Gaborone",
+          "population": "2.6 million",
+          "independence": "1966",
+          "flagColors": ["#75AADB", "#FFFFFF", "#000000"],
+          "languages": ["Anglais", "Tswana"],
+          "currency": "Pula (BWP)",
+          "motto": "Unité, Développement",
+          "keyFacts": [
+            "Delta de l'Okavango classé UNESCO",
+            "L'une des démocraties les plus stables d'Afrique",
+            "Réserves animalières de renommée mondiale",
+            "Pays enclavé d'Afrique australe"
+          ],
+          "regions": ["Gaborone", "Francistown", "Maun", "Kasane"],
+          "geography": {
+            "area": "581,730 km²",
+            "climate": "Semi-aride",
+            "highestPoint": "Tsodilo Hills (1,489m)",
+            "majorRivers": ["Okavango", "Chobe", "Limpopo"]
+          },
+          "culture": {
+            "music": ["Setapa", "Kwasa Kwasa", "Jazz botswanais"],
+            "dances": ["Dikakapa", "Borankana", "Phathisi"],
+            "instruments": ["Segaba", "Drums", "Marimba"],
+            "festivals": ["Maun Festival", "President's Day", "Dithubaruba Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Seswaa", "Bogobe", "Vetkoek"],
+            "beverages": ["Bojalwa", "Mageu", "Thobo"],
+            "ingredients": ["Viande de bœuf", "Sorgho", "Maïs"]
+          },
+          "arts": {
+            "crafts": ["Perlage San", "Tapisseries", "Paniers tressés"],
+            "materials": ["Perles", "Fibres", "Bois"],
+            "styles": ["Art San", "Art décoratif botswanais", "Peinture naturaliste"]
+          }
+        },
+      
+        "BF": {
+          "name": "Burkina Faso",
+          "fullName": "République du Burkina Faso",
+          "nickname": "Pays des hommes intègres",
+          "capital": "Ouagadougou",
+          "population": "23 million",
+          "independence": "1960",
+          "flagColors": ["#EF2B2D", "#009E49", "#FFCD00"],
+          "languages": ["Français", "Mooré", "Dioula"],
+          "currency": "Franc CFA (XOF)",
+          "motto": "Unité – Progrès – Justice",
+          "keyFacts": [
+            "Pays des grands festivals du cinéma africain (FESPACO)",
+            "Forte culture artisanale et musicale",
+            "Régions sahéliennes et savanes",
+            "Réputé pour ses masques traditionnels"
+          ],
+          "regions": ["Ouagadougou", "Bobo-Dioulasso", "Koudougou", "Fada N'Gourma"],
+          "geography": {
+            "area": "272,967 km²",
+            "climate": "Sahélien et tropical",
+            "highestPoint": "Ténakourou (747m)",
+            "majorRivers": ["Mouhoun", "Nazinon", "Nakanbé"]
+          },
+          "culture": {
+            "music": ["Warba", "Djembe", "Balafon"],
+            "dances": ["Warba", "Liwaga", "Mask Dance"],
+            "instruments": ["Balafon", "Djembe", "Bendré"],
+            "festivals": ["FESPACO", "SIAO", "Festival des masques de Dédougou"]
+          },
+          "gastronomy": {
+            "mainDishes": ["To", "Riz gras", "Poulet bicyclette"],
+            "beverages": ["Zoom-kom", "Dolo", "Bissap"],
+            "ingredients": ["Mil", "Sorgho", "Arachide"]
+          },
+          "arts": {
+            "crafts": ["Bronze de Bobo", "Masques Mossi", "Tissage Faso Dan Fani"],
+            "materials": ["Bronze", "Tissu", "Bois"],
+            "styles": ["Art Mossi", "Art Gourounsi", "Art contemporain burkinabè"]
+          }
+        }
+      }
+      {
+        "BI": {
+          "name": "Burundi",
+          "fullName": "République du Burundi",
+          "nickname": "Cœur de l'Afrique",
+          "capital": "Gitega",
+          "population": "13 million",
+          "independence": "1962",
+          "flagColors": ["#FF0000", "#006600", "#FFFFFF"],
+          "languages": ["Kirundi", "Français", "Anglais"],
+          "currency": "Franc burundais (BIF)",
+          "motto": "Unité, Travail, Progrès",
+          "keyFacts": [
+            "Pays enclavé des Grands Lacs",
+            "Lac Tanganyika au sud-ouest",
+            "Berceau de la danse royale du Tambour",
+            "L’une des plus petites nations d'Afrique"
+          ],
+          "regions": ["Gitega", "Bujumbura", "Ngozi", "Muyinga"],
+          "geography": {
+            "area": "27,834 km²",
+            "climate": "Équatorial tempéré",
+            "highestPoint": "Mont Heha (2,670m)",
+            "majorRivers": ["Ruvubu", "Ruzizi", "Malagarasi"]
+          },
+          "culture": {
+            "music": ["Ingoma", "Burundi beat", "Taarab"],
+            "dances": ["Danse des Tambours", "Intore", "Abatimbo"],
+            "instruments": ["Tambour royal", "Inanga", "Umuduri"],
+            "festivals": ["Fête du Tambour", "Burundi Music Festival", "Kigingi Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Ugali", "Mukeke grillé", "Isombe"],
+            "beverages": ["Urwarwa", "Thé noir", "Bananwine"],
+            "ingredients": ["Banane plantain", "Manioc", "Haricots"]
+          },
+          "arts": {
+            "crafts": ["Paniers tissés", "Bijoux artisanaux", "Tapisseries"],
+            "materials": ["Fibre de raphia", "Bois", "Perles"],
+            "styles": ["Art tambourinaire", "Artisanat traditionnel burundais", "Peinture naïve"]
+          }
+        },
+      
+        "CV": {
+          "name": "Cap-Vert",
+          "fullName": "République du Cap-Vert",
+          "nickname": "L'archipel du morna",
+          "capital": "Praia",
+          "population": "0.6 million",
+          "independence": "1975",
+          "flagColors": ["#003893", "#FFFFFF", "#FF0000", "#FFCC00"],
+          "languages": ["Portugais", "Capverdien (Kriolu)"],
+          "currency": "Escudo capverdien (CVE)",
+          "motto": "Unité, Travail, Progrès",
+          "keyFacts": [
+            "Archipel volcanique au large de l'Afrique de l'Ouest",
+            "Terre natale de Cesária Évora",
+            "Pays fortement tourné vers la diaspora",
+            "Connue pour ses plages et montagnes"
+          ],
+          "regions": ["Santiago", "São Vicente", "Sal", "Boa Vista"],
+          "geography": {
+            "area": "4,033 km²",
+            "climate": "Semi-aride",
+            "highestPoint": "Pico do Fogo (2,829m)",
+            "majorRivers": []
+          },
+          "culture": {
+            "music": ["Morna", "Funana", "Coladeira"],
+            "dances": ["Batuque", "Tabanka", "Mazurca"],
+            "instruments": ["Cavaquinho", "Violão", "Gaita"],
+            "festivals": ["Festival Baía das Gatas", "Fogo Music Festival", "Gamboa Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Cachupa", "Pastel de milho", "Caldo de peixe"],
+            "beverages": ["Grogue", "Vinho do Fogo", "Café capverdien"],
+            "ingredients": ["Maïs", "Haricots", "Poisson séché"]
+          },
+          "arts": {
+            "crafts": ["Poterie", "Broderie", "Art mural"],
+            "materials": ["Argile", "Tissu", "Bois"],
+            "styles": ["Art naïf capverdien", "Peinture expressive", "Art populaire créole"]
+          }
+        },
+      
+        "CF": {
+          "name": "Centrafrique",
+          "fullName": "République centrafricaine",
+          "nickname": "Le cœur vert de l'Afrique",
+          "capital": "Bangui",
+          "population": "6.1 million",
+          "independence": "1960",
+          "flagColors": ["#003893", "#FFFFFF", "#FF0000", "#009E49", "#FFCD00"],
+          "languages": ["Sango", "Français"],
+          "currency": "Franc CFA (XAF)",
+          "motto": "Unité, Dignité, Travail",
+          "keyFacts": [
+            "Pays forestier enclavé",
+            "Riche en diamants et or",
+            "Danse des Ngbaka et Banda",
+            "Diversité ethnique importante"
+          ],
+          "regions": ["Bangui", "Bambari", "Berbérati", "Bria"],
+          "geography": {
+            "area": "622,984 km²",
+            "climate": "Équatorial",
+            "highestPoint": "Mont Ngaoui (1,420m)",
+            "majorRivers": ["Oubangui", "Mbomou", "Kotto"]
+          },
+          "culture": {
+            "music": ["Mbala", "Banda", "Makala"],
+            "dances": ["Danse Ngbaka", "Yakoma Dance", "Banda steps"],
+            "instruments": ["Sanza", "Balafon", "Tambours de brousse"],
+            "festivals": ["Festival des danses traditionnelles", "Fête nationale du 1er décembre", "Festival Bangui Lumière"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Gozo", "Mboui", "Sauce feuille"],
+            "beverages": ["Lotoko", "Vin de palme", "Bissap"],
+            "ingredients": ["Manioc", "Arachide", "Feuilles d'oseille"]
+          },
+          "arts": {
+            "crafts": ["Sculptures Ngbaka", "Masques Banda", "Panier tressé"],
+            "materials": ["Bois", "Argile", "Raphia"],
+            "styles": ["Art Gbaya", "Art Banda", "Peinture naïve centrafricaine"]
+          }
+        },
+      
+        "KM": {
+          "name": "Comores",
+          "fullName": "Union des Comores",
+          "nickname": "Les îles parfumées",
+          "capital": "Moroni",
+          "population": "0.9 million",
+          "independence": "1975",
+          "flagColors": ["#FFD200", "#FFFFFF", "#3A75C4", "#E03C31", "#3AA74E"],
+          "languages": ["Comorien", "Français", "Arabe"],
+          "currency": "Franc comorien (KMF)",
+          "motto": "Unité – Solidarité – Développement",
+          "keyFacts": [
+            "Archipel volcanique de l'océan Indien",
+            "Célèbre pour ses cultures d'ylang-ylang",
+            "Diversité culturelle arabo-swahili-africaine",
+            "Paradis naturel préservé"
+          ],
+          "regions": ["Ngazidja", "Anjouan", "Mohéli"],
+          "geography": {
+            "area": "2,235 km²",
+            "climate": "Tropical maritime",
+            "highestPoint": "Mont Karthala (2,361m)",
+            "majorRivers": []
+          },
+          "culture": {
+            "music": ["Twarab", "Dzia", "Gaboussi"],
+            "dances": ["Mbiwi", "Shigoma", "Deba"],
+            "instruments": ["Gaboussi", "Ndzendze", "Tambours"],
+            "festivals": ["Fête de l'ylang-ylang", "Festival des îles", "Fête nationale"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Langouste grillée", "Poulet coco", "Mataba"],
+            "beverages": ["Jus de tamarin", "Thé à la menthe", "Coco frais"],
+            "ingredients": ["Riz", "Noix de coco", "Poisson"]
+          },
+          "arts": {
+            "crafts": ["Poterie", "Broderie Mahoré", "Objets en coquillages"],
+            "materials": ["Argile", "Tissu", "Coquillages"],
+            "styles": ["Art comorien", "Décor floral", "Artisanat swahili"]
+          }
+        },
+      
+        "CG": {
+          "name": "Congo",
+          "fullName": "République du Congo",
+          "nickname": "Congo-Brazzaville",
+          "capital": "Brazzaville",
+          "population": "6.2 million",
+          "independence": "1960",
+          "flagColors": ["#009543", "#FBDE4A", "#DC241F"],
+          "languages": ["Français", "Lingala", "Kikongo"],
+          "currency": "Franc CFA (XAF)",
+          "motto": "Unité, Travail, Progrès",
+          "keyFacts": [
+            "Forêts équatoriales immenses",
+            "Pays de la rumba congolaise",
+            "Frontière avec le fleuve Congo",
+            "Paradis pour l'écotourisme"
+          ],
+          "regions": ["Brazzaville", "Pointe-Noire", "Dolisie", "Owando"],
+          "geography": {
+            "area": "342,000 km²",
+            "climate": "Équatorial",
+            "highestPoint": "Mont Nabemba (1,020m)",
+            "majorRivers": ["Congo", "Oubangui", "Sangha"]
+          },
+          "culture": {
+            "music": ["Rumba congolaise", "Soukous", "Ndombolo"],
+            "dances": ["Ebina", "Ndombolo", "Ballet Bantou"],
+            "instruments": ["Likembe", "Ngoma", "Balafon"],
+            "festivals": ["Fespam", "Festival Rumba", "Festival des arts bantous"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Moambe", "Liboké", "Saka-saka"],
+            "beverages": ["Palm wine", "Nguli", "Bissap"],
+            "ingredients": ["Feuilles de manioc", "Arachide", "Poisson fumé"]
+          },
+          "arts": {
+            "crafts": ["Sculpture sur bois", "Masques Kongo", "Tissage"],
+            "materials": ["Bois", "Argile", "Perles"],
+            "styles": ["Art Kongo", "Art Téké", "Art contemporain congolais"]
+          }
+        }
+      }
+      {
+        "CD": {
+          "name": "RD Congo",
+          "fullName": "République Démocratique du Congo",
+          "nickname": "Le géant d'Afrique centrale",
+          "capital": "Kinshasa",
+          "population": "102 million",
+          "independence": "1960",
+          "flagColors": ["#007FFF", "#F7D618", "#CE1021"],
+          "languages": ["Français", "Lingala", "Swahili", "Kikongo", "Tshiluba"],
+          "currency": "Franc congolais (CDF)",
+          "motto": "Justice – Paix – Travail",
+          "keyFacts": [
+            "Deuxième plus grand pays d’Afrique",
+            "Fleuve Congo, deuxième plus long d'Afrique",
+            "Pays de la rumba congolaise",
+            "Vaste biodiversité tropicale"
+          ],
+          "regions": ["Kinshasa", "Lubumbashi", "Goma", "Kisangani"],
+          "geography": {
+            "area": "2,345,409 km²",
+            "climate": "Équatorial à tropical",
+            "highestPoint": "Pic Marguerite (5,109m)",
+            "majorRivers": ["Congo", "Ubangi", "Lualaba"]
+          },
+          "culture": {
+            "music": ["Rumba", "Ndombolo", "Soukous"],
+            "dances": ["Ndombolo", "Mutuashi", "Ekonda"],
+            "instruments": ["Likembe", "Ngoma", "Balafon"],
+            "festivals": ["FESPAM", "Jazz Kif", "Amani Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Pondu", "Liboké", "Moambe"],
+            "beverages": ["Palm wine", "Lotoko", "Café congolais"],
+            "ingredients": ["Manioc", "Arachide", "Poisson fumé"]
+          },
+          "arts": {
+            "crafts": ["Masques Kuba", "Sculptures Kongo", "Textiles Kasai"],
+            "materials": ["Bois", "Raphia", "Argile"],
+            "styles": ["Art Kuba", "Art Kongo", "Peinture contemporaine congolaise"]
+          }
+        },
+      
+        "DJ": {
+          "name": "Djibouti",
+          "fullName": "République de Djibouti",
+          "nickname": "La porte de l’Afrique",
+          "capital": "Djibouti",
+          "population": "1.1 million",
+          "independence": "1977",
+          "flagColors": ["#6AB2E7", "#FFFFFF", "#12AD2B", "#D7141A"],
+          "languages": ["Français", "Arabe", "Afar", "Somali"],
+          "currency": "Franc djiboutien (DJF)",
+          "motto": "Unité – Égalité – Paix",
+          "keyFacts": [
+            "Position stratégique au carrefour de l’Afrique et de l’Arabie",
+            "Pays volcanique et désertique",
+            "Lac Assal, point le plus bas d'Afrique",
+            "Forte influence arabo-africaine"
+          ],
+          "regions": ["Djibouti-ville", "Tadjourah", "Obock", "Ali Sabieh"],
+          "geography": {
+            "area": "23,200 km²",
+            "climate": "Aride et désertique",
+            "highestPoint": "Moussa Ali (2,028m)",
+            "majorRivers": []
+          },
+          "culture": {
+            "music": ["Balwo", "Heelo", "Afro-Arabe fusion"],
+            "dances": ["Danse Afar", "Danse Issa"],
+            "instruments": ["Oud", "Tambours", "Qanun"],
+            "festivals": ["Fête de l’indépendance", "Festival culturel des nomades"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Skoudehkaris", "Fah-fah", "Lahoh"],
+            "beverages": ["Thé épicé", "Café au gingembre"],
+            "ingredients": ["Agneau", "Cardamome", "Riz"]
+          },
+          "arts": {
+            "crafts": ["Tapis tissés", "Bijoux afars", "Objets en cuir"],
+            "materials": ["Laine", "Cuir", "Argile"],
+            "styles": ["Artisanat nomade", "Calligraphie arabe djiboutienne"]
+          }
+        },
+      
+        "ER": {
+          "name": "Érythrée",
+          "fullName": "État d'Érythrée",
+          "nickname": "Perle de la mer Rouge",
+          "capital": "Asmara",
+          "population": "3.7 million",
+          "independence": "1993",
+          "flagColors": ["#007A5E", "#FF0000", "#FFC726", "#007A5E"],
+          "languages": ["Tigrigna", "Arabe", "Anglais"],
+          "currency": "Nakfa (ERN)",
+          "motto": "Justice – Unité – Dignité",
+          "keyFacts": [
+            "Indépendante de l’Éthiopie depuis 1993",
+            "Côte de la mer Rouge de 1 200 km",
+            "Asmara, ville art déco classée UNESCO",
+            "Mix de cultures africaine et arabe"
+          ],
+          "regions": ["Asmara", "Massawa", "Keren", "Assab"],
+          "geography": {
+            "area": "117,600 km²",
+            "climate": "Désertique à semi-aride",
+            "highestPoint": "Soira (3,018m)",
+            "majorRivers": ["Setit", "Baraka"]
+          },
+          "culture": {
+            "music": ["Tigrigna", "Afro-Arabe", "Ethio-jazz"],
+            "dances": ["Guayla", "Kunama dance"],
+            "instruments": ["Krar", "Watat", "Tambours"],
+            "festivals": ["Fête de l’indépendance", "Festival de la mer Rouge"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Zigni", "Injera", "Shiro"],
+            "beverages": ["Suwa", "Thé épicé", "Café"],
+            "ingredients": ["Lentilles", "Viande épicée", "Berbéré"]
+          },
+          "arts": {
+            "crafts": ["Bijoux traditionnels", "Tapis artisanaux", "Poterie"],
+            "materials": ["Argile", "Tissu", "Cuivre"],
+            "styles": ["Art tigrigna", "Art islamique érythréen"]
+          }
+        },
+      
+        "SZ": {
+          "name": "Eswatini",
+          "fullName": "Royaume d'Eswatini",
+          "nickname": "La dernière monarchie absolue d'Afrique",
+          "capital": "Mbabane",
+          "population": "1.2 million",
+          "independence": "1968",
+          "flagColors": ["#3E5EB9", "#FFD900", "#E30A17"],
+          "languages": ["Anglais", "Swati"],
+          "currency": "Lilangeni (SZL)",
+          "motto": "Dieu est notre Seigneur",
+          "keyFacts": [
+            "Seul royaume monarchique d'Afrique subsaharienne",
+            "Célèbre pour l’Umhlanga (danse des roseaux)",
+            "Forte tradition artisanale",
+            "Petite nation enclavée"
+          ],
+          "regions": ["Mbabane", "Manzini", "Lobamba", "Siteki"],
+          "geography": {
+            "area": "17,364 km²",
+            "climate": "Subtropical",
+            "highestPoint": "Emlembe (1,862m)",
+            "majorRivers": ["Great Usuthu", "Komati"]
+          },
+          "culture": {
+            "music": ["Sibhaca", "Maskandi"],
+            "dances": ["Umhlanga", "Incwala"],
+            "instruments": ["Marimba", "Drums", "Flûte Swazi"],
+            "festivals": ["Umhlanga", "Incwala", "Marula Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Sidvudvu", "Emahewu", "Braai"],
+            "beverages": ["Marula brew", "Emahewu"],
+            "ingredients": ["Maïs", "Viande de bœuf", "Arachide"]
+          },
+          "arts": {
+            "crafts": ["Tissage de paniers", "Perles", "Sculptures en bois"],
+            "materials": ["Fibre végétale", "Bois", "Argile"],
+            "styles": ["Artisanat swazi", "Art tribal traditionnel"]
+          }
+        },
+      
+        "ET": {
+          "name": "Éthiopie",
+          "fullName": "République fédérale démocratique d'Éthiopie",
+          "nickname": "Terre des origines",
+          "capital": "Addis-Abeba",
+          "population": "129 million",
+          "independence": "Ancienne (seul pays africain jamais colonisé)",
+          "flagColors": ["#078930", "#FCDD09", "#DA121A"],
+          "languages": ["Amharique", "Oromo", "Tigrigna", "Anglais"],
+          "currency": "Birr (ETB)",
+          "motto": "Unité dans la diversité",
+          "keyFacts": [
+            "Berceau de l’humanité (Lucy)",
+            "Paysage montagneux exceptionnel",
+            "Église de Lalibela taillée dans la roche",
+            "Patrie du café"
+          ],
+          "regions": ["Addis-Abeba", "Gondar", "Dire Dawa", "Mekele"],
+          "geography": {
+            "area": "1,104,300 km²",
+            "climate": "Montagnard tropical",
+            "highestPoint": "Ras Dashen (4,550m)",
+            "majorRivers": ["Nil Bleu", "Omo", "Awash"]
+          },
+          "culture": {
+            "music": ["Ethio-jazz", "Tizita", "Gurage"],
+            "dances": ["Eskista", "Shelela"],
+            "instruments": ["Masenqo", "Krar", "Washint"],
+            "festivals": ["Timkat", "Meskel", "Enkutatash"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Injera", "Doro Wat", "Shiro"],
+            "beverages": ["T'ej", "Buna (café)", "Tela"],
+            "ingredients": ["Berbéré", "Lentilles", "Poulet"]
+          },
+          "arts": {
+            "crafts": ["Croix coptes", "Tissages", "Miniatures religieuses"],
+            "materials": ["Argent", "Tissu", "Papyrus"],
+            "styles": ["Art éthiopien médiéval", "Peinture sacrée", "Manuscrits enluminés"]
+          }
+        }
+      }
+      {
+        "GA": {
+          "name": "Gabon",
+          "fullName": "République gabonaise",
+          "nickname": "Le pays de la forêt",
+          "capital": "Libreville",
+          "population": "2.3 million",
+          "independence": "1960",
+          "flagColors": ["#41B6E6", "#FAD201", "#009543", "#000000"],
+          "languages": ["Français", "Fang", "Myene"],
+          "currency": "Franc CFA (XAF)",
+          "motto": "Unité, Travail, Justice",
+          "keyFacts": [
+            "Forêts couvrent 85 % du territoire",
+            "9 réserves classées UNESCO",
+            "Économie basée sur le pétrole et le bois",
+            "Diversité ethnique importante"
+          ],
+          "regions": ["Libreville", "Port-Gentil", "Franceville", "Oyem"],
+          "geography": {
+            "area": "267,667 km²",
+            "climate": "Équatorial",
+            "highestPoint": "Mont Iboundji (1 575 m)",
+            "majorRivers": ["Ogooué", "Ngounié", "Ivindo"]
+          },
+          "culture": {
+            "music": ["Bwiti music", "Mvet", "Fang chanting"],
+            "dances": ["Bwiti dances", "Mask dance", "Teke dance"],
+            "instruments": ["Mvet", "Ngombi", "Balafon"],
+            "festivals": ["Fête du Bwiti", "Gabon International Music Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Poulet Nyembwe", "Saka Saka", "Poisson fumé"],
+            "beverages": ["Bissap", "Vin de raffia"],
+            "ingredients": ["Manioc", "Huile de palme", "Poisson"]
+          },
+          "arts": {
+            "crafts": ["Masques Fang", "Sculptures de bois"],
+            "materials": ["Bois", "Raphia", "Pierre"],
+            "styles": ["Art Fang", "Art Kota"]
+          }
+        },
+      
+        "GN": {
+          "name": "Guinée",
+          "fullName": "République de Guinée",
+          "nickname": "La perle de l’Afrique de l’Ouest",
+          "capital": "Conakry",
+          "population": "13 million",
+          "independence": "1958",
+          "flagColors": ["#D21034", "#FFD700", "#009E49"],
+          "languages": ["Français", "Soussou", "Peul", "Malinké"],
+          "currency": "Franc CFA (GNF)",
+          "motto": "Travail, Justice, Solidarité",
+          "keyFacts": [
+            "Riche en bauxite (2e réserve mondiale)",
+            "Mont Nimba inscrit à l’UNESCO",
+            "Place culturelle de la musique Mandingue",
+            "Présence de Bassari et Peuls"
+          ],
+          "regions": ["Conakry", "Kindia", "Nzérékoré", "Kankan"],
+          "geography": {
+            "area": "245,857 km²",
+            "climate": "Tropical humide",
+            "highestPoint": "Mont Nimba (1,752 m)",
+            "majorRivers": ["Niger", "Sankarani", "Bafing"]
+          },
+          "culture": {
+            "music": ["Mandingue", "Guinée jazz", "Soukous"],
+            "dances": ["Doundoun", "Kassa", "Awassa"],
+            "instruments": ["Djembe", "Balafon", "Kora"],
+            "festivals": ["Festival des arts du Mandingue", "Fête de l’indépendance"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Poulet Yassa guinéen", "Riz au lait de palmiste"],
+            "beverages": ["Bissap", "Thiakry"],
+            "ingredients": ["Mil", "Arachide", "Piment"]
+          },
+          "arts": {
+            "crafts": ["Bijoux peuls", "Tissus bogolan"],
+            "materials": ["Tissu", "Soie", "Argile"],
+            "styles": ["Art Mandingue", "Art peul"]
+          }
+        },
+      
+        "GW": {
+          "name": "Guinée-Bissau",
+          "fullName": "République de Guinée-Bissau",
+          "nickname": "Le pays des îles Bijagós",
+          "capital": "Bissau",
+          "population": "2 million",
+          "independence": "1973",
+          "flagColors": ["#009E49", "#FFD700", "#D21034", "#000000"],
+          "languages": ["Portugais", "Crioulo"],
+          "currency": "Franc CFA (XOF)",
+          "motto": "Unité – Paix – Progrès",
+          "keyFacts": [
+            "Archipel de Bijagós classé UNESCO",
+            "Culture créole forte",
+            "Lutte pour l’indépendance notable",
+            "Économie modeste basée sur la pêche"
+          ],
+          "regions": ["Bissau", "Gabú", "Cacheu", "Bolama"],
+          "geography": {
+            "area": "36,125 km²",
+            "climate": "Tropical",
+            "highestPoint": "Monte Torin (300 m)",
+            "majorRivers": ["Corubal", "Cacheu", "Rio Grande de Buba"]
+          },
+          "culture": {
+            "music": ["Gumbe", "Tchapeu di padja"],
+            "dances": ["Bijagó traditional dance"],
+            "instruments": ["Balafon", "Djembé", "Kora"],
+            "festivals": ["Carnaval de Bissau", "Festival de Bijagós"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Caldo de mancarra", "Peixe banda"],
+            "beverages": ["Caju wine", "Palm wine"],
+            "ingredients": ["Poisson", "Noix de cajou", "Riz"]
+          },
+          "arts": {
+            "crafts": ["Masques Bijagós", "Bois sculpté"],
+            "materials": ["Bois", "Perles", "Fibres"],
+            "styles": ["Art Bijagós", "Art rustic"]
+          }
+        },
+      
+        "GW": {
+          "name": "Guinée équatoriale",
+          "fullName": "République de Guinée équatoriale",
+          "nickname": "La perle du golfe de Guinée",
+          "capital": "Malabo",
+          "population": "1.4 million",
+          "independence": "1968",
+          "flagColors": ["#007A5E", "#FFFFFF", "#D21034"],
+          "languages": ["Espagnol", "Français", "Portugais", "Fang"],
+          "currency": "Franc CFA (XAF)",
+          "motto": "Unidad, Paz, Justicia",
+          "keyFacts": [
+            "Seul pays hispanophone d’Afrique subsaharienne",
+            "Pétrole abondant",
+            "Île de Bioko et Río Muni",
+            "Forêts tropicales denses"
+          ],
+          "regions": ["Malabo", "Bata", "Ebebiyín"],
+          "geography": {
+            "area": "28,050 km²",
+            "climate": "Équatorial",
+            "highestPoint": "Pico Basilé (3 011 m)",
+            "majorRivers": ["Río Muni", "Mbini"]
+          },
+          "culture": {
+            "music": ["Fang music", "Bis·mbás", "Reggaeton local"],
+            "dances": ["Fang dance", "Bubi dance"],
+            "instruments": ["Mvet", "Balafon", "Maracas"],
+            "festivals": ["Festival national de la musique", "Fête de la libération"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Pepe soup", "Fish Moambe"],
+            "beverages": ["Palm wine", "Cocada"],
+            "ingredients": ["Plantain", "Poisson", "Arachide"]
+          },
+          "arts": {
+            "crafts": ["Sculptures Fang", "Textiles traditionnels"],
+            "materials": ["Bois", "Argile", "Cuir"],
+            "styles": ["Art Fang", "Art Bubi"]
+          }
+        },
+      
+        "GN": {
+          "name": "Guinée-Bissau",
+          "fullName": "République de Guinée-Bissau",
+          "nickname": "Le pays des îles Bijagós",
+          "capital": "Bissau",
+          "population": "2 million",
+          "independence": "1973",
+          "flagColors": ["#009E49", "#FFD700", "#D21034", "#000000"],
+          "languages": ["Portugais", "Crioulo"],
+          "currency": "Franc CFA (XOF)",
+          "motto": "Unité – Paix – Progrès",
+          "keyFacts": [
+            "Archipel de Bijagós classé UNESCO",
+            "Culture créole forte",
+            "Lutte pour l’indépendance notable",
+            "Économie modeste basée sur la pêche"
+          ],
+          "regions": ["Bissau", "Gabú", "Cacheu", "Bolama"],
+          "geography": {
+            "area": "36,125 km²",
+            "climate": "Tropical",
+            "highestPoint": "Monte Torin (300 m)",
+            "majorRivers": ["Corubal", "Cacheu", "Rio Grande de Buba"]
+          },
+          "culture": {
+            "music": ["Gumbe", "Tchapeu di padja"],
+            "dances": ["Bijagó traditional dance"],
+            "instruments": ["Balafon", "Djembé", "Kora"],
+            "festivals": ["Carnaval de Bissau", "Festival de Bijagós"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Caldo de mancarra", "Peixe banda"],
+            "beverages": ["Caju wine", "Palm wine"],
+            "ingredients": ["Poisson", "Noix de cajou", "Riz"]
+          },
+          "arts": {
+            "crafts": ["Masques Bijagós", "Bois sculpté"],
+            "materials": ["Bois", "Perles", "Fibres"],
+            "styles": ["Art Bijagós", "Art rustic"]
+          }
+        }
+      }
+      {
+        "KE": {
+          "name": "Kenya",
+          "fullName": "République du Kenya",
+          "nickname": "Berceau du safari",
+          "capital": "Nairobi",
+          "population": "56 million",
+          "independence": "1963",
+          "flagColors": ["#000000", "#FF0000", "#FFFFFF", "#006600"],
+          "languages": ["Anglais", "Swahili"],
+          "currency": "Shilling kényan (KES)",
+          "motto": "Harambee (Tous ensemble)",
+          "keyFacts": [
+            "Célèbre pour ses parcs nationaux et safaris",
+            "Berceau de l’athlétisme de fond",
+            "Présence du Mont Kenya",
+            "Grand pays d’Afrique de l’Est anglophone"
+          ],
+          "regions": ["Nairobi", "Mombasa", "Kisumu", "Nakuru"],
+          "geography": {
+            "area": "580,367 km²",
+            "climate": "Tropical à équatorial",
+            "highestPoint": "Mont Kenya (5,199m)",
+            "majorRivers": ["Tana", "Athi", "Mara"]
+          },
+          "culture": {
+            "music": ["Benga", "Ohangla", "Afro-fusion"],
+            "dances": ["Isukuti", "Adumu (danse des guerriers masaï)"],
+            "instruments": ["Nyatiti", "Orutu", "Percussions"],
+            "festivals": ["Safari Sevens", "Lake Turkana Festival", "Maulidi Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Nyama Choma", "Ugali", "Sukuma Wiki"],
+            "beverages": ["Chai", "Tusker", "Mursik"],
+            "ingredients": ["Maïs", "Chou kale", "Viande de chèvre"]
+          },
+          "arts": {
+            "crafts": ["Paniers kikapu", "Colliers masaï", "Bois sculpté"],
+            "materials": ["Perles", "Bois", "Raphia"],
+            "styles": ["Art masaï", "Art contemporain kényan"]
+          }
+        },
+      
+        "LS": {
+          "name": "Lesotho",
+          "fullName": "Royaume du Lesotho",
+          "nickname": "Le Royaume dans le ciel",
+          "capital": "Maseru",
+          "population": "2.3 million",
+          "independence": "1966",
+          "flagColors": ["#00209F", "#FFFFFF", "#009543"],
+          "languages": ["Sesotho", "Anglais"],
+          "currency": "Loti (LSL)",
+          "motto": "Paix, Pluie, Prospérité",
+          "keyFacts": [
+            "Seul pays africain totalement en altitude",
+            "Climat montagnard et neige en hiver",
+            "Culture du Basotho riche en traditions",
+            "Chapiteaux ronds typiques : 'rondavels'"
+          ],
+          "regions": ["Maseru", "Leribe", "Mafeteng"],
+          "geography": {
+            "area": "30,355 km²",
+            "climate": "Montagnard",
+            "highestPoint": "Thabana Ntlenyana (3,482m)",
+            "majorRivers": ["Orange", "Caledon"]
+          },
+          "culture": {
+            "music": ["Famo", "Jazz Sesotho"],
+            "dances": ["Mokhibo", "Mohobelo"],
+            "instruments": ["Setolo-tolo", "Drums"],
+            "festivals": ["Morija Arts Festival", "King’s Birthday Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Motoho", "Papa", "Likhobe"],
+            "beverages": ["Joala (bière traditionnelle)", "Thé aux herbes"],
+            "ingredients": ["Maïs", "Haricots", "Choux"]
+          },
+          "arts": {
+            "crafts": ["Chapeaux basotho", "Tapisseries", "Sculptures en pierre"],
+            "materials": ["Fibre végétale", "Laine", "Pierre"],
+            "styles": ["Art basotho", "Tissages artisanaux"]
+          }
+        },
+      
+        "LR": {
+          "name": "Libéria",
+          "fullName": "République du Libéria",
+          "nickname": "La patrie de la liberté",
+          "capital": "Monrovia",
+          "population": "5.3 million",
+          "independence": "1847",
+          "flagColors": ["#D7141A", "#FFFFFF", "#002868"],
+          "languages": ["Anglais"],
+          "currency": "Dollar libérien (LRD)",
+          "motto": "L'amour de la liberté nous a amenés ici",
+          "keyFacts": [
+            "Première république africaine indépendante",
+            "Fondée par des esclaves affranchis américains",
+            "Côte atlantique de 580 km",
+            "Célèbre pour son beurre de karité et cacao"
+          ],
+          "regions": ["Monrovia", "Buchanan", "Harper"],
+          "geography": {
+            "area": "111,369 km²",
+            "climate": "Tropical humide",
+            "highestPoint": "Mont Wuteve (1,440m)",
+            "majorRivers": ["Saint Paul", "Cestos", "Cavalla"]
+          },
+          "culture": {
+            "music": ["Gbema", "Hipco", "Afrobeat"],
+            "dances": ["Kru dance", "Vai dance"],
+            "instruments": ["Talking drum", "Balafon"],
+            "festivals": ["National Flag Day", "Independence Day"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Palm butter stew", "Fufu", "Pepper soup"],
+            "beverages": ["Palm wine", "Ginger beer"],
+            "ingredients": ["Arachide", "Piment", "Riz"]
+          },
+          "arts": {
+            "crafts": ["Masques Dan", "Textiles Kru"],
+            "materials": ["Bois", "Coton", "Perles"],
+            "styles": ["Art Kpelle", "Art contemporain libérien"]
+          }
+        },
+      
+        "LY": {
+          "name": "Libye",
+          "fullName": "État de Libye",
+          "nickname": "La perle du désert",
+          "capital": "Tripoli",
+          "population": "6.7 million",
+          "independence": "1951",
+          "flagColors": ["#FF0000", "#000000", "#008000", "#FFFFFF"],
+          "languages": ["Arabe"],
+          "currency": "Dinar libyen (LYD)",
+          "motto": "Liberté – Unité – Justice",
+          "keyFacts": [
+            "Pays désertique riche en pétrole",
+            "Frontière méditerranéenne importante",
+            "Berceau de la civilisation antique de Cyrène",
+            "Site classé UNESCO : Leptis Magna"
+          ],
+          "regions": ["Tripoli", "Benghazi", "Misrata"],
+          "geography": {
+            "area": "1,759,540 km²",
+            "climate": "Désertique",
+            "highestPoint": "Bikku Bitti (2,267m)",
+            "majorRivers": []
+          },
+          "culture": {
+            "music": ["Malouf", "Tuareg blues"],
+            "dances": ["Danse bédouine"],
+            "instruments": ["Oud", "Tambours"],
+            "festivals": ["Tripoli International Festival", "Ghadames Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Bazeen", "Couscous libyen", "Sharba"],
+            "beverages": ["Thé à la menthe", "Café libyen"],
+            "ingredients": ["Semoule", "Agneau", "Harissa"]
+          },
+          "arts": {
+            "crafts": ["Bijoux touaregs", "Céramique berbère"],
+            "materials": ["Argent", "Cuir", "Tissu"],
+            "styles": ["Art saharien", "Calligraphie arabe"]
+          }
+        },
+      
+        "MG": {
+          "name": "Madagascar",
+          "fullName": "République de Madagascar",
+          "nickname": "L’île rouge",
+          "capital": "Antananarivo",
+          "population": "30 million",
+          "independence": "1960",
+          "flagColors": ["#FFFFFF", "#FF0000", "#007A5E"],
+          "languages": ["Malagasy", "Français"],
+          "currency": "Ariary (MGA)",
+          "motto": "Patrie – Progrès – Liberté",
+          "keyFacts": [
+            "Quatrième plus grande île au monde",
+            "Biodiversité unique avec 80% d'espèces endémiques",
+            "Lémuriens emblématiques",
+            "Terre de traditions et de rituels"
+          ],
+          "regions": ["Antananarivo", "Toamasina", "Fianarantsoa"],
+          "geography": {
+            "area": "587,041 km²",
+            "climate": "Tropical",
+            "highestPoint": "Maromokotro (2,876m)",
+            "majorRivers": ["Betsiboka", "Mangoky"]
+          },
+          "culture": {
+            "music": ["Salegy", "Hiragasy", "Tsapiky"],
+            "dances": ["Kilalaky", "Afindrafindrao"],
+            "instruments": ["Valiha", "Kabosy", "Sodina"],
+            "festivals": ["Donia Festival", "Famadihana"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Ravitoto", "Romazava", "Koba"],
+            "beverages": ["Ranovola", "Betsa-betsa"],
+            "ingredients": ["Porc", "Feuilles de manioc", "Riz"]
+          },
+          "arts": {
+            "crafts": ["Objets en corne de zébu", "Vannerie"],
+            "materials": ["Bois", "Soie", "Raphia"],
+            "styles": ["Art malgache", "Peinture naïve"]
+          }
+        }
+      }
+      
+                        
+}
+  

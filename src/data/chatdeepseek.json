@@ -1,0 +1,1242 @@
+{
+    "DZ": {
+      "name": "Algeria",
+      "fullName": "People's Democratic Republic of Algeria",
+      "nickname": "The Land of Martyrs",
+      "capital": "Algiers",
+      "population": "44 million",
+      "independence": "1962",
+      "flagColors": ["#006633", "#FFFFFF", "#D21034"],
+      "languages": ["Arabic", "Tamazight", "French"],
+      "currency": "Algerian dinar",
+      "motto": "By the people and for the people",
+      "keyFacts": [
+        "Largest country in Africa",
+        "90% of the country is desert",
+        "Rich in oil and gas reserves",
+        "Home to ancient Roman ruins"
+      ],
+      "regions": ["Sahara", "Tell Atlas", "High Plateaus"],
+      "geography": {
+        "area": "2,381,741 km²",
+        "climate": "Arid to semi-arid",
+        "highestPoint": "Mount Tahat (3,003m)",
+        "majorRivers": ["Chelif River", "Seybouse River"]
+      },
+      "culture": {
+        "music": ["Rai", "Chaabi", "Andalusian classical"],
+        "dances": ["Allaoui", "Kabyle dance", "Rai dance"],
+        "instruments": ["Mandole", "Gasba", "Darbuka"],
+        "festivals": ["International Rai Festival", "Timgad Festival"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Couscous", "Tajine", "Chakhchoukha"],
+        "beverages": ["Mint tea", "Ahwa", "Jus d'abricot"],
+        "ingredients": ["Semolina", "Lamb", "Chickpeas"]
+      },
+      "arts": {
+        "crafts": ["Pottery", "Carpet weaving", "Leatherwork"],
+        "materials": ["Clay", "Wool", "Copper"],
+        "styles": ["Berber motifs", "Islamic geometric"]
+      }
+    },
+    "EG": {
+      "name": "Egypt",
+      "fullName": "Arab Republic of Egypt",
+      "nickname": "The Gift of the Nile",
+      "capital": "Cairo",
+      "population": "109 million",
+      "independence": "1922",
+      "flagColors": ["#CE1126", "#FFFFFF", "#000000"],
+      "languages": ["Arabic", "English", "French"],
+      "currency": "Egyptian pound",
+      "motto": "Long live my country",
+      "keyFacts": [
+        "Home to one of the Seven Wonders of the Ancient World",
+        "95% of population lives along the Nile",
+        "Oldest continuous civilization",
+        "Suez Canal connects Mediterranean and Red Sea"
+      ],
+      "regions": ["Nile Valley", "Western Desert", "Sinai Peninsula"],
+      "geography": {
+        "area": "1,010,408 km²",
+        "climate": "Desert, hot dry summers",
+        "highestPoint": "Mount Catherine (2,629m)",
+        "majorRivers": ["Nile River"]
+      },
+      "culture": {
+        "music": ["Shaabi", "Mahraganat", "Classical Arabic"],
+        "dances": ["Tanoura", "Baladi", "Raqs sharqi"],
+        "instruments": ["Oud", "Ney", "Riq"],
+        "festivals": ["Eid al-Fitr", "Abu Simbel Sun Festival"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Koshari", "Ful medames", "Molokhia"],
+        "beverages": ["Hibiscus tea", "Sahlab", "Sugarcane juice"],
+        "ingredients": ["Fava beans", "Rice", "Garlic"]
+      },
+      "arts": {
+        "crafts": ["Papyrus art", "Glassblowing", "Jewelry making"],
+        "materials": ["Gold", "Lapis lazuli", "Alabaster"],
+        "styles": ["Pharaonic", "Coptic", "Islamic"]
+      }
+    },
+    "NG": {
+      "name": "Nigeria",
+      "fullName": "Federal Republic of Nigeria",
+      "nickname": "Giant of Africa",
+      "capital": "Abuja",
+      "population": "223 million",
+      "independence": "1960",
+      "flagColors": ["#008751", "#FFFFFF", "#008751"],
+      "languages": ["English", "Hausa", "Yoruba", "Igbo"],
+      "currency": "Naira",
+      "motto": "Unity and Faith, Peace and Progress",
+      "keyFacts": [
+        "Most populous country in Africa",
+        "Largest economy in Africa",
+        "Home to Nollywood film industry",
+        "Over 250 ethnic groups"
+      ],
+      "regions": ["South", "North", "East", "West"],
+      "geography": {
+        "area": "923,768 km²",
+        "climate": "Equatorial in south, tropical in center, arid in north",
+        "highestPoint": "Chappal Waddi (2,419m)",
+        "majorRivers": ["Niger River", "Benue River"]
+      },
+      "culture": {
+        "music": ["Afrobeats", "Highlife", "Juju"],
+        "dances": ["Bata", "Atilogwu", "Ekombi"],
+        "instruments": ["Talking drum", "Ogene", "Goje"],
+        "festivals": ["Eyo Festival", "Argungu Fishing Festival"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Jollof rice", "Pounded yam", "Suya"],
+        "beverages": ["Palm wine", "Zobo", "Kunu"],
+        "ingredients": ["Peppers", "Yams", "Plantains"]
+      },
+      "arts": {
+        "crafts": ["Beadwork", "Wood carving", "Textile weaving"],
+        "materials": ["Bronze", "Raffia", "Indigo"],
+        "styles": ["Benin bronze", "Adire textile", "Nsibidi symbols"]
+      }
+    },
+    "ZA": {
+      "name": "South Africa",
+      "fullName": "Republic of South Africa",
+      "nickname": "Rainbow Nation",
+      "capital": "Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial)",
+      "population": "60 million",
+      "independence": "1910 (from UK), 1994 (end of apartheid)",
+      "flagColors": ["#000000", "#FFB612", "#007A4D", "#FFFFFF", "#DE3831", "#002395"],
+      "languages": ["Zulu", "Xhosa", "Afrikaans", "English"],
+      "currency": "Rand",
+      "motto": "Unity in Diversity",
+      "keyFacts": [
+        "Three capital cities",
+        "11 official languages",
+        "World's largest producer of platinum",
+        "Home to Table Mountain"
+      ],
+      "regions": ["Gauteng", "Western Cape", "KwaZulu-Natal"],
+      "geography": {
+        "area": "1,221,037 km²",
+        "climate": "Varied from Mediterranean to subtropical",
+        "highestPoint": "Mafadi (3,450m)",
+        "majorRivers": ["Orange River", "Limpopo River"]
+      },
+      "culture": {
+        "music": ["Kwaito", "Mbube", "Afropop"],
+        "dances": ["Gumboot dance", "Indlamu", "Pantsula"],
+        "instruments": ["Vuvuzela", "Marimba", "Uhadi"],
+        "festivals": ["Cape Town Jazz Festival", "National Arts Festival"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Braai", "Bobotie", "Bunny chow"],
+        "beverages": ["Rooibos tea", "Amarula", "Mageu"],
+        "ingredients": ["Maize", "Game meat", "Chakalaka"]
+      },
+      "arts": {
+        "crafts": ["Wire art", "Beadwork", "Sand art"],
+        "materials": ["Recycled materials", "Beads", "Soapstone"],
+        "styles": ["Ndebele patterns", "San rock art"]
+      }
+    },
+    "KE": {
+      "name": "Kenya",
+      "fullName": "Republic of Kenya",
+      "nickname": "Cradle of Humanity",
+      "capital": "Nairobi",
+      "population": "55 million",
+      "independence": "1963",
+      "flagColors": ["#000000", "#FFFFFF", "#006600", "#BB0000"],
+      "languages": ["Swahili", "English"],
+      "currency": "Kenyan shilling",
+      "motto": "Harambee (Let us all pull together)",
+      "keyFacts": [
+        "Home to the Maasai Mara",
+        "Great Rift Valley runs through country",
+        "World's leading safari destination",
+        "Major tea and coffee producer"
+      ],
+      "regions": ["Coastal", "Rift Valley", "Central Highlands"],
+      "geography": {
+        "area": "580,367 km²",
+        "climate": "Tropical along coast, arid in interior",
+        "highestPoint": "Mount Kenya (5,199m)",
+        "majorRivers": ["Tana River", "Athi River"]
+      },
+      "culture": {
+        "music": ["Benga", "Taarab", "Gospel"],
+        "dances": ["Isukuti", "Chakacha", "Mugithi"],
+        "instruments": ["Nyatiti", "Orutu", "Kayamba"],
+        "festivals": ["Lamu Cultural Festival", "Maralal Camel Derby"]
+      },
+      "gastronomy": {
+        "mainDishes": ["Ugali", "Nyama choma", "Sukuma wiki"],
+        "beverages": ["Chai", "Tusker beer", "Mursik"],
+        "ingredients": ["Maize flour", "Beef", "Kale"]
+      },
+      "arts": {
+        "crafts": ["Soapstone carving", "Basket weaving", "Beadwork"],
+        "materials": ["Soapstone", "Sisal", "Recycled glass"],
+        "styles": ["Kamba carvings", "Maasai beadwork"]
+      }
+    }
+    {
+        "ET": {
+          "name": "Ethiopia",
+          "fullName": "Federal Democratic Republic of Ethiopia",
+          "nickname": "Land of Origins",
+          "capital": "Addis Ababa",
+          "population": "123 million",
+          "independence": "Ancient (never colonized)",
+          "flagColors": ["#078930", "#FCDD09", "#DA121A", "#0F47AF"],
+          "languages": ["Amharic", "Oromo", "Tigrinya"],
+          "currency": "Birr",
+          "motto": "Ethiopia Stretches Her Hands unto God",
+          "keyFacts": [
+            "Oldest independent country in Africa",
+            "Origin of the Blue Nile",
+            "Home to Lucy (3.2 million-year-old hominid)",
+            "Inventor of coffee"
+          ],
+          "regions": ["Northern Highlands", "Rift Valley", "Ogaden"],
+          "geography": {
+            "area": "1,104,300 km²",
+            "climate": "Tropical monsoon to arid",
+            "highestPoint": "Ras Dejen (4,550m)",
+            "majorRivers": ["Blue Nile", "Awash", "Omo"]
+          },
+          "culture": {
+            "music": ["Ethio-jazz", "Zema", "Tizita"],
+            "dances": ["Eskista", "Gurage", "Oromo dance"],
+            "instruments": ["Krar", "Masenqo", "Kebero"],
+            "festivals": ["Timkat", "Meskel", "Irreecha"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Injera with wat", "Tibs", "Kitfo"],
+            "beverages": ["Coffee", "Tej", "Tella"],
+            "ingredients": ["Teff", "Berbere spice", "Niter kibbeh"]
+          },
+          "arts": {
+            "crafts": ["Coptic crosses", "Basket weaving", "Church art"],
+            "materials": ["Parchment", "Silver", "Colorful threads"],
+            "styles": ["Religious iconography", "Geometric patterns"]
+          }
+        },
+        "GH": {
+          "name": "Ghana",
+          "fullName": "Republic of Ghana",
+          "nickname": "Gateway to Africa",
+          "capital": "Accra",
+          "population": "34 million",
+          "independence": "1957",
+          "flagColors": ["#CE1126", "#FCD116", "#006B3F", "#000000"],
+          "languages": ["English", "Akan", "Ewe"],
+          "currency": "Cedi",
+          "motto": "Freedom and Justice",
+          "keyFacts": [
+            "First sub-Saharan country to gain independence",
+            "World's second largest cocoa producer",
+            "Home to Elmina and Cape Coast castles",
+            "Pioneer of Pan-Africanism"
+          ],
+          "regions": ["Coastal", "Ashanti", "Northern"],
+          "geography": {
+            "area": "238,535 km²",
+            "climate": "Tropical",
+            "highestPoint": "Mount Afadjato (885m)",
+            "majorRivers": ["Volta River", "Ankobra", "Tano"]
+          },
+          "culture": {
+            "music": ["Highlife", "Hiplife", "Gospel"],
+            "dances": ["Adowa", "Kpanlogo", "Agbadza"],
+            "instruments": ["Fontomfrom", "Atumpan", "Gome"],
+            "festivals": ["Homowo", "Aboakyer", "Panafest"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Jollof rice", "Banku", "Fufu"],
+            "beverages": ["Palm wine", "Sobolo", "Asaana"],
+            "ingredients": ["Plantain", "Cassava", "Peanuts"]
+          },
+          "arts": {
+            "crafts": ["Kente weaving", "Adinkra symbols", "Bead making"],
+            "materials": ["Silk", "Cotton", "Wood"],
+            "styles": ["Symbolic patterns", "Figurative sculpture"]
+          }
+        },
+        "CI": {
+          "name": "Côte d'Ivoire",
+          "fullName": "Republic of Côte d'Ivoire",
+          "nickname": "The Elephant Country",
+          "capital": "Yamoussoukro",
+          "population": "28 million",
+          "independence": "1960",
+          "flagColors": ["#F77F00", "#FFFFFF", "#009E60"],
+          "languages": ["French", "Baoulé", "Dioula"],
+          "currency": "West African CFA franc",
+          "motto": "Union, Discipline, Labour",
+          "keyFacts": [
+            "World's largest cocoa producer",
+            "Home to the Basilica of Our Lady of Peace (largest church)",
+            "Birthplace of Coupe-Décalé music",
+            "Diverse with 60+ ethnic groups"
+          ],
+          "regions": ["Lagunes", "Savanes", "Forêt"],
+          "geography": {
+            "area": "322,463 km²",
+            "climate": "Tropical along coast, semi-arid in north",
+            "highestPoint": "Mount Nimba (1,752m)",
+            "majorRivers": ["Bandama", "Sassandra", "Comoé"]
+          },
+          "culture": {
+            "music": ["Coupe-Décalé", "Zouglou", "Gbégbé"],
+            "dances": ["Zaouli", "Abodan", "Goly"],
+            "instruments": ["Balafon", "Djembe", "Kora"],
+            "festivals": ["Fêtes des Masques", "Fête du Dipri"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Attiéké", "Kedjenou", "Alloco"],
+            "beverages": ["Bissap", "Bandji", "Gnamakoudji"],
+            "ingredients": ["Cassava", "Plantain", "Chicken"]
+          },
+          "arts": {
+            "crafts": ["Wood carving", "Bronze casting", "Basket weaving"],
+            "materials": ["Mahogany", "Bronze", "Raffia"],
+            "styles": ["Dan masks", "Senufo sculptures"]
+          }
+        },
+        "TZ": {
+          "name": "Tanzania",
+          "fullName": "United Republic of Tanzania",
+          "nickname": "Land of Kilimanjaro",
+          "capital": "Dodoma",
+          "population": "63 million",
+          "independence": "1961 (Tanganyika), 1963 (Zanzibar)",
+          "flagColors": ["#1EB53A", "#00A3DD", "#FCD116", "#000000"],
+          "languages": ["Swahili", "English"],
+          "currency": "Tanzanian shilling",
+          "motto": "Freedom and Unity",
+          "keyFacts": [
+            "Home to Mount Kilimanjaro (Africa's highest peak)",
+            "Contains Serengeti National Park",
+            "Zanzibar's spice islands",
+            "Over 120 ethnic groups"
+          ],
+          "regions": ["Mainland", "Zanzibar Archipelago"],
+          "geography": {
+            "area": "947,303 km²",
+            "climate": "Varies from tropical to temperate",
+            "highestPoint": "Mount Kilimanjaro (5,895m)",
+            "majorRivers": ["Rufiji", "Pangani", "Ruvuma"]
+          },
+          "culture": {
+            "music": ["Taarab", "Bongo Flava", "Singeli"],
+            "dances": ["Ngoma", "Makonde", "Mwaka Kogwa"],
+            "instruments": ["Zeze", "Kayamba", "Marimba"],
+            "festivals": ["Sauti za Busara", "Mwaka Kogwa"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Ugali", "Nyama choma", "Pilau"],
+            "beverages": ["Chai", "Konyagi", "Mbege"],
+            "ingredients": ["Coconut", "Plantains", "Cloves"]
+          },
+          "arts": {
+            "crafts": ["Makonde carvings", "Tinga Tinga paintings", "Beadwork"],
+            "materials": ["Ebony", "Acrylic paints", "Recycled materials"],
+            "styles": ["Surreal wildlife art", "Abstract sculpture"]
+          }
+        },
+        "MA": {
+          "name": "Morocco",
+          "fullName": "Kingdom of Morocco",
+          "nickname": "Gateway to Africa",
+          "capital": "Rabat",
+          "population": "37 million",
+          "independence": "1956",
+          "flagColors": ["#C1272D", "#000000", "#006233"],
+          "languages": ["Arabic", "Tamazight", "French"],
+          "currency": "Moroccan dirham",
+          "motto": "God, Homeland, King",
+          "keyFacts": [
+            "Only African country with both Atlantic and Mediterranean coastlines",
+            "Home to the oldest university in the world (University of Al Quaraouiyine)",
+            "Famous for its imperial cities",
+            "Largest exporter of phosphates"
+          ],
+          "regions": ["Atlas Mountains", "Sahara", "Mediterranean Coast"],
+          "geography": {
+            "area": "446,550 km² (excluding Western Sahara)",
+            "climate": "Mediterranean to desert",
+            "highestPoint": "Toubkal (4,167m)",
+            "majorRivers": ["Draa", "Moulouya", "Sebou"]
+          },
+          "culture": {
+            "music": ["Gnawa", "Chaabi", "Andalusian"],
+            "dances": ["Ahwach", "Guedra", "Shikhat"],
+            "instruments": ["Oud", "Qraqeb", "Bendir"],
+            "festivals": ["Gnaoua World Music Festival", "Rose Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Tagine", "Couscous", "Pastilla"],
+            "beverages": ["Mint tea", "Amlou", "Mahia"],
+            "ingredients": ["Olives", "Saffron", "Preserved lemons"]
+          },
+          "arts": {
+            "crafts": ["Zellige tilework", "Leatherwork", "Pottery"],
+            "materials": ["Ceramic", "Brass", "Argan wood"],
+            "styles": ["Geometric patterns", "Islamic calligraphy"]
+          }
+        }
+      }
+      {
+        "UG": {
+          "name": "Uganda",
+          "fullName": "Republic of Uganda",
+          "nickname": "Pearl of Africa",
+          "capital": "Kampala",
+          "population": "47 million",
+          "independence": "1962",
+          "flagColors": ["#000000", "#FCDC04", "#DA121A"],
+          "languages": ["English", "Swahili", "Luganda"],
+          "currency": "Ugandan shilling",
+          "motto": "For God and My Country",
+          "keyFacts": [
+            "Source of the Nile River",
+            "Home to half of the world's mountain gorillas",
+            "Over 50% of population under 15 years old",
+            "Most biodiverse country per square kilometer in Africa"
+          ],
+          "regions": ["Central", "Eastern", "Western", "Northern"],
+          "geography": {
+            "area": "241,038 km²",
+            "climate": "Tropical",
+            "highestPoint": "Margherita Peak (5,109m)",
+            "majorRivers": ["Nile", "Katonga", "Kafu"]
+          },
+          "culture": {
+            "music": ["Kadongo Kamu", "Kidandali", "Gospel"],
+            "dances": ["Bwola", "Amaggunju", "Runyege"],
+            "instruments": ["Endingidi", "Adungu", "Ennanga"],
+            "festivals": ["Nyege Nyege Festival", "Kampala City Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Matooke", "Luwombo", "Rolex"],
+            "beverages": ["Waragi", "Malwa", "Munanasi juice"],
+            "ingredients": ["Plantains", "Groundnuts", "Simsim"]
+          },
+          "arts": {
+            "crafts": ["Bark cloth", "Basket weaving", "Pottery"],
+            "materials": ["Banana fibers", "Clay", "Recycled paper"],
+            "styles": ["Geometric patterns", "Figurative sculpture"]
+          }
+        },
+        "SN": {
+          "name": "Senegal",
+          "fullName": "Republic of Senegal",
+          "nickname": "Land of Teranga",
+          "capital": "Dakar",
+          "population": "17 million",
+          "independence": "1960",
+          "flagColors": ["#00853F", "#FDEF42", "#E31B23"],
+          "languages": ["French", "Wolof", "Serer"],
+          "currency": "West African CFA franc",
+          "motto": "One People, One Goal, One Faith",
+          "keyFacts": [
+            "Westernmost point of Africa (Cap-Vert)",
+            "Home to the African Renaissance Monument",
+            "Third largest producer of peanuts",
+            "Hosts the Dakar Rally (formerly Paris-Dakar)"
+          ],
+          "regions": ["Cap-Vert", "Casamance", "Ferlo"],
+          "geography": {
+            "area": "196,712 km²",
+            "climate": "Tropical to Sahelian",
+            "highestPoint": "unnamed feature near Nepen Diakha (648m)",
+            "majorRivers": ["Senegal", "Gambia", "Casamance"]
+          },
+          "culture": {
+            "music": ["Mbalax", "Sabar", "Tassu"],
+            "dances": ["Sabarr", "Ndut", "Bougarabou"],
+            "instruments": ["Tama", "Kora", "Xalam"],
+            "festivals": ["Saint-Louis Jazz Festival", "Fanal"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Thieboudienne", "Yassa", "Mafé"],
+            "beverages": ["Bissap", "Café Touba", "Ginger juice"],
+            "ingredients": ["Rice", "Fish", "Peanuts"]
+          },
+          "arts": {
+            "crafts": ["Glass painting", "Jewelry making", "Batik"],
+            "materials": ["Recycled glass", "Silver", "Cotton"],
+            "styles": ["Sous-verre", "Abstract symbolism"]
+          }
+        },
+        "CM": {
+          "name": "Cameroon",
+          "fullName": "Republic of Cameroon",
+          "nickname": "Africa in Miniature",
+          "capital": "Yaoundé",
+          "population": "27 million",
+          "independence": "1960 (French), 1961 (British)",
+          "flagColors": ["#007A5E", "#CE1126", "#FCD116"],
+          "languages": ["French", "English", "Cameroonian Pidgin"],
+          "currency": "Central African CFA franc",
+          "motto": "Peace - Work - Fatherland",
+          "keyFacts": [
+            "Over 250 ethnic groups",
+            "Home to Mount Cameroon (active volcano)",
+            "First African country to reach FIFA World Cup quarter-finals",
+            "Dual colonial heritage (French and British)"
+          ],
+          "regions": ["Littoral", "Grassfields", "Sahelian"],
+          "geography": {
+            "area": "475,442 km²",
+            "climate": "Varies from equatorial to Sahelian",
+            "highestPoint": "Mount Cameroon (4,040m)",
+            "majorRivers": ["Sanaga", "Wouri", "Benue"]
+          },
+          "culture": {
+            "music": ["Makossa", "Bikutsi", "Assiko"],
+            "dances": ["Bikutsi", "Njang", "Mangambeu"],
+            "instruments": ["Balafon", "Mvet", "Tamtam"],
+            "festivals": ["Ngondo Festival", "Nyem-Nyem Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Ndolé", "Eru", "Achu soup"],
+            "beverages": ["Palm wine", "Sha", "Foléré"],
+            "ingredients": ["Bitterleaf", "Cassava", "Plantains"]
+          },
+          "arts": {
+            "crafts": ["Bamoun bronze", "Wood carving", "Beadwork"],
+            "materials": ["Bronze", "Raffia", "Clay"],
+            "styles": ["Royal symbols", "Ancestral figures"]
+          }
+        },
+        "MW": {
+          "name": "Malawi",
+          "fullName": "Republic of Malawi",
+          "nickname": "The Warm Heart of Africa",
+          "capital": "Lilongwe",
+          "population": "20 million",
+          "independence": "1964",
+          "flagColors": ["#CE1126", "#000000", "#339E35"],
+          "languages": ["English", "Chichewa"],
+          "currency": "Malawian kwacha",
+          "motto": "Unity and Freedom",
+          "keyFacts": [
+            "20% of country is Lake Malawi",
+            "Home to the 'Lake of Stars' (Lake Malawi)",
+            "Major producer of tea and tobacco",
+            "Named after the Maravi people"
+          ],
+          "regions": ["Northern", "Central", "Southern"],
+          "geography": {
+            "area": "118,484 km²",
+            "climate": "Subtropical",
+            "highestPoint": "Mount Mulanje (3,002m)",
+            "majorRivers": ["Shire", "Ruo", "Bua"]
+          },
+          "culture": {
+            "music": ["Malawian jazz", "Kwela", "Gule Wamkulu"],
+            "dances": ["Tchopa", "Vimbuza", "Ingoma"],
+            "instruments": ["Kalimba", "Bangwe", "Mambilira"],
+            "festivals": ["Lake of Stars Festival", "Umtheto"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Nsima", "Chambo", "Kachumbari"],
+            "beverages": ["Thobwa", "Masese", "Chibuku"],
+            "ingredients": ["Maize", "Fish", "Tomatoes"]
+          },
+          "arts": {
+            "crafts": ["Wood carving", "Basket weaving", "Pottery"],
+            "materials": ["Ebony", "Raffia", "Clay"],
+            "styles": ["Chewa masks", "Geometric patterns"]
+          }
+        },
+        "AO": {
+          "name": "Angola",
+          "fullName": "Republic of Angola",
+          "nickname": "Land of the Palaces",
+          "capital": "Luanda",
+          "population": "36 million",
+          "independence": "1975",
+          "flagColors": ["#FF0000", "#000000", "#FECB00"],
+          "languages": ["Portuguese", "Umbundu", "Kimbundu"],
+          "currency": "Kwanza",
+          "motto": "Virtue is Stronger When United",
+          "keyFacts": [
+            "Second largest oil producer in Africa",
+            "Home to the giant sable antelope",
+            "Portuguese is the official language",
+            "Kalandula Falls among Africa's largest waterfalls"
+          ],
+          "regions": ["Coastal", "Highlands", "Desert"],
+          "geography": {
+            "area": "1,246,700 km²",
+            "climate": "Semiarid in south to tropical in north",
+            "highestPoint": "Mount Moco (2,620m)",
+            "majorRivers": ["Cuanza", "Cubango", "Zambezi"]
+          },
+          "culture": {
+            "music": ["Kizomba", "Semba", "Kuduro"],
+            "dances": ["Rebita", "Kazukuta", "Dizanda"],
+            "instruments": ["Marimba", "Dikanza", "Ngoma"],
+            "festivals": ["Luanda Island Festival", "Muxima Pilgrimage"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Muamba de galinha", "Calulu", "Funge"],
+            "beverages": ["Cuca beer", "Palm wine", "Ginguba drink"],
+            "ingredients": ["Cassava", "Okra", "Palm oil"]
+          },
+          "arts": {
+            "crafts": ["Pottery", "Wood carving", "Textile weaving"],
+            "materials": ["Sandstone", "Mahogany", "Raffia"],
+            "styles": ["Chokwe masks", "Contemporary abstract"]
+          }
+        }
+      }
+      {
+        "RW": {
+          "name": "Rwanda",
+          "fullName": "Republic of Rwanda",
+          "nickname": "Land of a Thousand Hills",
+          "capital": "Kigali",
+          "population": "13 million",
+          "independence": "1962",
+          "flagColors": ["#03C04A", "#FEDD00", "#20603D", "#00A1DE"],
+          "languages": ["Kinyarwanda", "French", "English", "Swahili"],
+          "currency": "Rwandan franc",
+          "motto": "Unity, Work, Patriotism",
+          "keyFacts": [
+            "Cleanest city in Africa (Kigali)",
+            "First country with majority female parliament",
+            "Mountain gorilla sanctuary",
+            "Ban on non-biodegradable plastic since 2008"
+          ],
+          "regions": ["Eastern Province", "Southern Province", "Western Province"],
+          "geography": {
+            "area": "26,338 km²",
+            "climate": "Temperate due to high elevation",
+            "highestPoint": "Mount Karisimbi (4,507m)",
+            "majorRivers": ["Nyabarongo", "Akanyaru", "Rusizi"]
+          },
+          "culture": {
+            "music": ["Amakondera", "Ikinimba", "Modern Rwandan pop"],
+            "dances": ["Intore", "Umushayayo", "Amaraba"],
+            "instruments": ["Inanga", "Umuduri", "Ikembe"],
+            "festivals": ["Kwita Izina", "Rwanda Film Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Ugali", "Isombe", "Brochettes"],
+            "beverages": ["Ikigage", "Urwagwa", "Akandi"],
+            "ingredients": ["Beans", "Plantains", "Cassava leaves"]
+          },
+          "arts": {
+            "crafts": ["Imigongo art", "Basket weaving", "Pottery"],
+            "materials": ["Cow dung", "Banana fibers", "Clay"],
+            "styles": ["Geometric patterns", "Natural dyes"]
+          }
+        },
+        "BW": {
+          "name": "Botswana",
+          "fullName": "Republic of Botswana",
+          "nickname": "Africa's Success Story",
+          "capital": "Gaborone",
+          "population": "2.4 million",
+          "independence": "1966",
+          "flagColors": ["#75AADB", "#000000", "#FFFFFF"],
+          "languages": ["English", "Setswana"],
+          "currency": "Pula",
+          "motto": "Rain",
+          "keyFacts": [
+            "World's largest diamond producer by value",
+            "40% of land dedicated to wildlife conservation",
+            "One of Africa's most stable democracies",
+            "Home to the Kalahari Desert"
+          ],
+          "regions": ["Kalahari", "Okavango Delta", "Makgadikgadi Pans"],
+          "geography": {
+            "area": "581,730 km²",
+            "climate": "Semi-arid",
+            "highestPoint": "Tsodilo Hills (1,489m)",
+            "majorRivers": ["Okavango", "Limpopo", "Chobe"]
+          },
+          "culture": {
+            "music": ["Tswana folk", "Jazz", "Hip hop"],
+            "dances": ["Setapa", "Phathisi", "Tsutsube"],
+            "instruments": ["Segaba", "Moropa", "Dipela"],
+            "festivals": ["Maun Festival", "President's Day Competitions"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Seswaa", "Bogobe", "Dikgobe"],
+            "beverages": ["Bojalwa", "Madila", "Tea"],
+            "ingredients": ["Sorghum", "Beef", "Melon"]
+          },
+          "arts": {
+            "crafts": ["Basket weaving", "San rock art", "Jewelry making"],
+            "materials": ["Mokola palm", "Silver", "Ostrich eggshell"],
+            "styles": ["Geometric patterns", "Wildlife motifs"]
+          }
+        },
+        "ML": {
+          "name": "Mali",
+          "fullName": "Republic of Mali",
+          "nickname": "Land of the Sundiata",
+          "capital": "Bamako",
+          "population": "21 million",
+          "independence": "1960",
+          "flagColors": ["#CE1126", "#FCD116", "#14B53A"],
+          "languages": ["French", "Bambara", "Songhai"],
+          "currency": "West African CFA franc",
+          "motto": "One People, One Goal, One Faith",
+          "keyFacts": [
+            "Home of Timbuktu's ancient manuscripts",
+            "Once Africa's largest empire (Mali Empire)",
+            "Rich musical traditions influenced blues",
+            "Major gold producer"
+          ],
+          "regions": ["Sahel", "Niger River Valley", "Sahara"],
+          "geography": {
+            "area": "1,240,192 km²",
+            "climate": "Tropical to arid",
+            "highestPoint": "Hombori Tondo (1,155m)",
+            "majorRivers": ["Niger", "Senegal", "Bani"]
+          },
+          "culture": {
+            "music": ["Wassoulou", "Djembe", "Griot traditions"],
+            "dances": ["Dogon mask dances", "Sogoninkun", "Didadi"],
+            "instruments": ["Kora", "Balafon", "Ngoni"],
+            "festivals": ["Festival au Désert", "Bamako Encounters"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Tiga Dégué", "Fufu", "Maafe"],
+            "beverages": ["Bissap", "Dabileni", "Jus de baobab"],
+            "ingredients": ["Millet", "Peanuts", "Okra"]
+          },
+          "arts": {
+            "crafts": ["Bogolan cloth", "Wood carving", "Jewelry"],
+            "materials": ["Mud cloth", "Bronze", "Leather"],
+            "styles": ["Abstract patterns", "Ancestral figures"]
+          }
+        },
+        "NA": {
+          "name": "Namibia",
+          "fullName": "Republic of Namibia",
+          "nickname": "Land of the Brave",
+          "capital": "Windhoek",
+          "population": "2.6 million",
+          "independence": "1990",
+          "flagColors": ["#003580", "#D21033", "#FFFFFF", "#009543", "#FFCE00"],
+          "languages": ["English", "Oshiwambo", "Afrikaans"],
+          "currency": "Namibian dollar",
+          "motto": "Unity, Liberty, Justice",
+          "keyFacts": [
+            "Second least densely populated country",
+            "Home to the Namib Desert (world's oldest)",
+            "First country to include environmental protection in constitution",
+            "Major uranium producer"
+          ],
+          "regions": ["Namib Desert", "Kalahari", "Caprivi Strip"],
+          "geography": {
+            "area": "825,615 km²",
+            "climate": "Desert to semi-arid",
+            "highestPoint": "Königstein (2,606m)",
+            "majorRivers": ["Orange", "Kunene", "Okavango"]
+          },
+          "culture": {
+            "music": ["Oshiwambo", "Afrikaans folk", "Himba chants"],
+            "dances": ["Oshiwambo dances", "Nama stap", "Damara punch"],
+            "instruments": ["Oshakati drums", "Kora", "Vastrap"],
+            "festivals": ["Windhoek Karneval", "Hermanus Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Kapana", "Potjiekos", "Oshifima"],
+            "beverages": ["Oshikundu", "Namibian lager", "Rooibos tea"],
+            "ingredients": ["Mahangu", "Game meat", "Dried spinach"]
+          },
+          "arts": {
+            "crafts": ["Herero dolls", "Beadwork", "Wood carving"],
+            "materials": ["Ostrich eggshell", "Leather", "Ebony"],
+            "styles": ["Tribal patterns", "Wildlife themes"]
+          }
+        },
+        "LR": {
+          "name": "Liberia",
+          "fullName": "Republic of Liberia",
+          "nickname": "Land of the Free",
+          "capital": "Monrovia",
+          "population": "5.2 million",
+          "independence": "1847",
+          "flagColors": ["#002868", "#FFFFFF", "#C8102E"],
+          "languages": ["English", "Kpelle", "Bassa"],
+          "currency": "Liberian dollar",
+          "motto": "The Love of Liberty Brought Us Here",
+          "keyFacts": [
+            "Africa's first republic",
+            "Founded by freed American slaves",
+            "Home to the world's second largest shipping registry",
+            "Contains significant rainforest reserves"
+          ],
+          "regions": ["Coastal Plains", "Forested Uplands", "Northern Highlands"],
+          "geography": {
+            "area": "111,369 km²",
+            "climate": "Tropical monsoon",
+            "highestPoint": "Mount Wuteve (1,440m)",
+            "majorRivers": ["Mano", "Saint Paul", "Cestos"]
+          },
+          "culture": {
+            "music": ["Hipco", "Palm wine music", "Traditional drumming"],
+            "dances": ["Gbessay", "Dokomow", "Gumbe"],
+            "instruments": ["Sakara drum", "Balangi", "Kora"],
+            "festivals": ["Poro Festival", "National Unification Day"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Rice bread", "Palava sauce", "Fufu"],
+            "beverages": ["Ginger beer", "Palm wine", "Club beer"],
+            "ingredients": ["Cassava", "Bitterball", "Fish"]
+          },
+          "arts": {
+            "crafts": ["Mask carving", "Batik", "Basket weaving"],
+            "materials": ["Hardwood", "Cotton", "Raffia"],
+            "styles": ["Ancestral masks", "Narrative textiles"]
+          }
+        }
+      }
+      {
+        "TN": {
+          "name": "Tunisia",
+          "fullName": "Tunisian Republic",
+          "nickname": "Gateway to the Sahara",
+          "capital": "Tunis",
+          "population": "12 million",
+          "independence": "1956",
+          "flagColors": ["#E70013", "#FFFFFF", "#E70013"],
+          "languages": ["Arabic", "French", "Tamazight"],
+          "currency": "Tunisian dinar",
+          "motto": "Freedom, Order, Justice",
+          "keyFacts": [
+            "Birthplace of the Arab Spring",
+            "Home to ancient Carthage ruins",
+            "Africa's northernmost point (Cape Angela)",
+            "World's largest exporter of olive oil"
+          ],
+          "regions": ["Tell", "Sahel", "Sahara"],
+          "geography": {
+            "area": "163,610 km²",
+            "climate": "Mediterranean to desert",
+            "highestPoint": "Jebel ech Chambi (1,544m)",
+            "majorRivers": ["Medjerda", "Miliane"]
+          },
+          "culture": {
+            "music": ["Malouf", "Mezwed", "Jazz"],
+            "dances": ["Nuba", "Stambali", "Sahraoui"],
+            "instruments": ["Darbuka", "Oud", "Zukra"],
+            "festivals": ["Carthage International Festival", "Sahara Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Couscous", "Brik", "Lablabi"],
+            "beverages": ["Mint tea", "Boukha", "Khomsa"],
+            "ingredients": ["Semolina", "Harissa", "Olives"]
+          },
+          "arts": {
+            "crafts": ["Ceramics", "Carpet weaving", "Metal engraving"],
+            "materials": ["Clay", "Wool", "Copper"],
+            "styles": ["Islamic geometric", "Phoenician motifs"]
+          }
+        },
+        "ZM": {
+          "name": "Zambia",
+          "fullName": "Republic of Zambia",
+          "nickname": "Real Africa",
+          "capital": "Lusaka",
+          "population": "19 million",
+          "independence": "1964",
+          "flagColors": ["#198A00", "#EF7D00", "#000000", "#E2C82A"],
+          "languages": ["English", "Bemba", "Nyanja"],
+          "currency": "Zambian kwacha",
+          "motto": "One Zambia, One Nation",
+          "keyFacts": [
+            "Home to Victoria Falls (Mosi-oa-Tunya)",
+            "Over 70 ethnic groups",
+            "One of world's largest copper producers",
+            "19 national parks"
+          ],
+          "regions": ["Copperbelt", "Luangwa Valley", "Barotse Floodplain"],
+          "geography": {
+            "area": "752,618 km²",
+            "climate": "Tropical",
+            "highestPoint": "Mafinga Central (2,339m)",
+            "majorRivers": ["Zambezi", "Kafue", "Luangwa"]
+          },
+          "culture": {
+            "music": ["Zamrock", "Kalindula", "Traditional folk"],
+            "dances": ["Chikokoshi", "Nkolola", "Makishi"],
+            "instruments": ["Sansa", "Budima drums", "Kankobela"],
+            "festivals": ["Kuomboka", "Ncwala"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Nshima", "Ifisashi", "Chikanda"],
+            "beverages": ["Munkoyo", "Chibwantu", "Masese"],
+            "ingredients": ["Maize", "Cassava", "Groundnuts"]
+          },
+          "arts": {
+            "crafts": ["Basket weaving", "Wood carving", "Pottery"],
+            "materials": ["Raffia", "Mukwa wood", "Clay"],
+            "styles": ["Lozi baskets", "Chewa masks"]
+          }
+        },
+        "SL": {
+          "name": "Sierra Leone",
+          "fullName": "Republic of Sierra Leone",
+          "nickname": "Salone",
+          "capital": "Freetown",
+          "population": "8.5 million",
+          "independence": "1961",
+          "flagColors": ["#0072C6", "#FFFFFF", "#1EB53A"],
+          "languages": ["English", "Krio", "Mende"],
+          "currency": "Leone",
+          "motto": "Unity, Freedom, Justice",
+          "keyFacts": [
+            "Founded as home for freed slaves (Freetown)",
+            "Third largest natural harbor in the world",
+            "Home to rare blood diamonds",
+            "Tiwai Island Wildlife Sanctuary"
+          ],
+          "regions": ["Western Area", "Northern Province", "Southern Province"],
+          "geography": {
+            "area": "71,740 km²",
+            "climate": "Tropical monsoon",
+            "highestPoint": "Mount Bintumani (1,945m)",
+            "majorRivers": ["Rokel", "Moa", "Sewa"]
+          },
+          "culture": {
+            "music": ["Palm wine", "Gumbe", "Afropop"],
+            "dances": ["Bubu", "Sinte", "Gombe"],
+            "instruments": ["Balangi", "Kora", "Segubere"],
+            "festivals": ["Bintumani Festival", "Paddle Ceremony"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Cassava leaves", "Jollof rice", "Groundnut stew"],
+            "beverages": ["Poyo", "Ginger beer", "Star beer"],
+            "ingredients": ["Cassava", "Rice", "Palm oil"]
+          },
+          "arts": {
+            "crafts": ["Tie-dye", "Wood carving", "Basket weaving"],
+            "materials": ["Cotton", "Mahogany", "Raffia"],
+            "styles": ["Narrative cloth", "Ancestral figures"]
+          }
+        },
+        "BI": {
+          "name": "Burundi",
+          "fullName": "Republic of Burundi",
+          "nickname": "Heart of Africa",
+          "capital": "Gitega",
+          "population": "12 million",
+          "independence": "1962",
+          "flagColors": ["#CE1126", "#FFFFFF", "#00B140"],
+          "languages": ["Kirundi", "French", "Swahili"],
+          "currency": "Burundian franc",
+          "motto": "Unity, Work, Progress",
+          "keyFacts": [
+            "Source of the Nile River",
+            "Traditional drumming recognized by UNESCO",
+            "Coffee accounts for 80% of exports",
+            "Densely populated"
+          ],
+          "regions": ["Central Plateau", "Rift Valley", "Kumoso"],
+          "geography": {
+            "area": "27,834 km²",
+            "climate": "Equatorial",
+            "highestPoint": "Mount Heha (2,684m)",
+            "majorRivers": ["Ruvubu", "Rusizi", "Malagarasi"]
+          },
+          "culture": {
+            "music": ["Amakondera", "Inanga", "Traditional drumming"],
+            "dances": ["Abatimbo", "Umutambariko", "Igihugu"],
+            "instruments": ["Inanga", "Ikembe", "Amakondera"],
+            "festivals": ["Umuganuro", "Burundi Drum Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Ugali", "Ibiharage", "Isombe"],
+            "beverages": ["Urwarwa", "Ikivuguto", "Amata"],
+            "ingredients": ["Beans", "Bananas", "Cassava"]
+          },
+          "arts": {
+            "crafts": ["Basket weaving", "Pottery", "Drum making"],
+            "materials": ["Banana fibers", "Clay", "Cowhide"],
+            "styles": ["Intricate patterns", "Symbolic shapes"]
+          }
+        },
+        "NE": {
+          "name": "Niger",
+          "fullName": "Republic of Niger",
+          "nickname": "Frying Pan of the World",
+          "capital": "Niamey",
+          "population": "25 million",
+          "independence": "1960",
+          "flagColors": ["#0DB02B", "#FFFFFF", "#E05206"],
+          "languages": ["French", "Hausa", "Zarma"],
+          "currency": "West African CFA franc",
+          "motto": "Fraternity, Work, Progress",
+          "keyFacts": [
+            "World's highest fertility rate (7 children per woman)",
+            "80% covered by Sahara Desert",
+            "Major uranium producer",
+            "Home to W National Park"
+          ],
+          "regions": ["Sahel", "Aïr Mountains", "Niger River Valley"],
+          "geography": {
+            "area": "1,267,000 km²",
+            "climate": "Desert to semi-arid",
+            "highestPoint": "Mont Idoukal-n-Taghès (2,022m)",
+            "majorRivers": ["Niger", "Komadougou Yobe"]
+          },
+          "culture": {
+            "music": ["Tuareg blues", "Hausa traditions", "Griot music"],
+            "dances": ["Wodaabe dance", "Takai", "Gerewol"],
+            "instruments": ["Imzad", "Algaita", "Kakaki"],
+            "festivals": ["Cure Salée", "Festival of the Nomads"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Jollof rice", "Dambou", "Tuo zaafi"],
+            "beverages": ["Hibiscus tea", "Degue", "Fura"],
+            "ingredients": ["Millet", "Sorghum", "Okra"]
+          },
+          "arts": {
+            "crafts": ["Silver jewelry", "Leatherwork", "Pottery"],
+            "materials": ["Silver", "Goatskin", "Clay"],
+            "styles": ["Tuareg crosses", "Nomadic motifs"]
+          }
+        }
+      }
+      {
+        "GA": {
+          "name": "Gabon",
+          "fullName": "Gabonese Republic",
+          "nickname": "Africa's Last Eden",
+          "capital": "Libreville",
+          "population": "2.3 million",
+          "independence": "1960",
+          "flagColors": ["#009E60", "#FCD116", "#3A75C4"],
+          "languages": ["French", "Fang", "Myene"],
+          "currency": "Central African CFA franc",
+          "motto": "Union, Work, Justice",
+          "keyFacts": [
+            "88% forest coverage (2nd highest in world)",
+            "World's largest gorilla population",
+            "Oil-rich with high GDP per capita",
+            "13 national parks"
+          ],
+          "regions": ["Coastal Plains", "Mountainous Interior", "Forest Zone"],
+          "geography": {
+            "area": "267,668 km²",
+            "climate": "Equatorial",
+            "highestPoint": "Mont Bengoué (1,070m)",
+            "majorRivers": ["Ogooué", "Ivindo", "Ngounié"]
+          },
+          "culture": {
+            "music": ["Bikutsi", "Mvet", "Afro-zouk"],
+            "dances": ["Ingwala", "Mvett", "Ekomi"],
+            "instruments": ["Mvet harp", "Balafon", "Ngombi"],
+            "festivals": ["Ngondo Festival", "Festival des Cultures"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Poulet Nyembwe", "Atanga", "Cassava leaves"],
+            "beverages": ["Odong tea", "Palm wine", "D'jino"],
+            "ingredients": ["Palm nuts", "Cassava", "Bushmeat"]
+          },
+          "arts": {
+            "crafts": ["Fang masks", "Bwiti ritual art", "Wood carving"],
+            "materials": ["Ebony", "Raffia", "Iron"],
+            "styles": ["Geometric abstraction", "Ancestral figures"]
+          }
+        },
+        "ER": {
+          "name": "Eritrea",
+          "fullName": "State of Eritrea",
+          "nickname": "Africa's North Korea",
+          "capital": "Asmara",
+          "population": "3.6 million",
+          "independence": "1993",
+          "flagColors": ["#CE1126", "#5C8A31", "#4189DD", "#FCDD09"],
+          "languages": ["Tigrinya", "Arabic", "English"],
+          "currency": "Nakfa",
+          "motto": "Never Kneel Down",
+          "keyFacts": [
+            "UNESCO-listed Art Deco capital (Asmara)",
+            "Only African country with no official language",
+            "Dahlak Archipelago has 350+ islands",
+            "Mandatory national service"
+          ],
+          "regions": ["Red Sea Coast", "Highlands", "Western Lowlands"],
+          "geography": {
+            "area": "117,600 km²",
+            "climate": "Hot desert to cool highlands",
+            "highestPoint": "Emba Soira (3,018m)",
+            "majorRivers": ["Barka", "Anseba"]
+          },
+          "culture": {
+            "music": ["Guayla", "Zema", "Traditional Tigrinya"],
+            "dances": ["Swa", "Kuda", "Arada"],
+            "instruments": ["Krar", "Wata", "Kebero"],
+            "festivals": ["Festival Tour", "Independence Day"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Zigni", "Tsebhi", "Injera"],
+            "beverages": ["Sowa", "Mies", "Buna"],
+            "ingredients": ["Teff", "Lentils", "Berbere"]
+          },
+          "arts": {
+            "crafts": ["Basket weaving", "Silver jewelry", "Pottery"],
+            "materials": ["Palm fibers", "Clay", "Silver"],
+            "styles": ["Geometric patterns", "Cross motifs"]
+          }
+        },
+        "TD": {
+          "name": "Chad",
+          "fullName": "Republic of Chad",
+          "nickname": "Dead Heart of Africa",
+          "capital": "N'Djamena",
+          "population": "17 million",
+          "independence": "1960",
+          "flagColors": ["#002664", "#FECB00", "#C60C30"],
+          "languages": ["French", "Arabic", "Sara"],
+          "currency": "Central African CFA franc",
+          "motto": "Unity, Work, Progress",
+          "keyFacts": [
+            "Named after Lake Chad (shrunk by 90% since 1960s)",
+            "Over 200 ethnic groups",
+            "Toubou nomads of the Sahara",
+            "Oldest human skull found (7 million years)"
+          ],
+          "regions": ["Sahara", "Sahel", "Sudanian Zone"],
+          "geography": {
+            "area": "1,284,000 km²",
+            "climate": "Desert to tropical",
+            "highestPoint": "Emi Koussi (3,445m)",
+            "majorRivers": ["Chari", "Logone"]
+          },
+          "culture": {
+            "music": ["Sai", "Griot traditions", "Modern pop"],
+            "dances": ["Dagala", "Gorane", "Sara"],
+            "instruments": ["Kinde", "Kakaki", "Balafon"],
+            "festivals": ["Gerewol Festival", "N'Djamena Biennale"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Boule", "La Bouillie", "Daraba"],
+            "beverages": ["Carcaje", "Sharbat", "Bili-bili"],
+            "ingredients": ["Millet", "Okra", "Fish"]
+          },
+          "arts": {
+            "crafts": ["Woven mats", "Leatherwork", "Pottery"],
+            "materials": ["Palm leaves", "Goatskin", "Clay"],
+            "styles": ["Nomadic motifs", "Ancestral symbols"]
+          }
+        },
+        "BJ": {
+          "name": "Benin",
+          "fullName": "Republic of Benin",
+          "nickname": "Cradle of Voodoo",
+          "capital": "Porto-Novo",
+          "population": "13 million",
+          "independence": "1960",
+          "flagColors": ["#008751", "#FCD116", "#E8112D"],
+          "languages": ["French", "Fon", "Yoruba"],
+          "currency": "West African CFA franc",
+          "motto": "Fraternity, Justice, Labour",
+          "keyFacts": [
+            "Birthplace of Vodun (Voodoo)",
+            "UNESCO-listed stilt villages (Ganvié)",
+            "Former Dahomey Kingdom",
+            "Pendjari National Park (West Africa's best wildlife)"
+          ],
+          "regions": ["Coastal", "Plateau", "Northern Savannah"],
+          "geography": {
+            "area": "114,763 km²",
+            "climate": "Tropical to semi-arid",
+            "highestPoint": "Mont Sokbaro (658m)",
+            "majorRivers": ["Ouémé", "Mono", "Niger"]
+          },
+          "culture": {
+            "music": ["Tchinkoumé", "Agbadja", "Gospel"],
+            "dances": ["Zinli", "Tchébé", "Gogohoun"],
+            "instruments": ["Gankogui", "Akohoun", "Kakagbo"],
+            "festivals": ["Voodoo Day", "Gani Festival"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Pâte", "Amiwo", "Gboma Dessi"],
+            "beverages": ["Sodabi", "Tchoukoutou", "Hibiscus tea"],
+            "ingredients": ["Corn", "Yams", "Palm oil"]
+          },
+          "arts": {
+            "crafts": ["Bronze casting", "Appliqué cloth", "Wood carving"],
+            "materials": ["Lost-wax bronze", "Cotton", "Iroko wood"],
+            "styles": ["Dahomey Kingdom motifs", "Vodun symbolism"]
+          }
+        },
+        "ZW": {
+          "name": "Zimbabwe",
+          "fullName": "Republic of Zimbabwe",
+          "nickname": "Jewel of Africa",
+          "capital": "Harare",
+          "population": "15 million",
+          "independence": "1980",
+          "flagColors": ["#FFD200", "#000000", "#DE2010", "#FFFFFF", "#3989D4", "#396F4A"],
+          "languages": ["English", "Shona", "Ndebele"],
+          "currency": "Zimbabwean dollar (RTGS)",
+          "motto": "Unity, Freedom, Work",
+          "keyFacts": [
+            "Home to Victoria Falls (shared with Zambia)",
+            "Great Zimbabwe ruins (medieval stone city)",
+            "Hyperinflation crisis (2008)",
+            "90+% literacy rate (highest in Africa)"
+          ],
+          "regions": ["Highveld", "Midlands", "Lowveld"],
+          "geography": {
+            "area": "390,757 km²",
+            "climate": "Tropical to temperate",
+            "highestPoint": "Mount Nyangani (2,592m)",
+            "majorRivers": ["Zambezi", "Limpopo", "Save"]
+          },
+          "culture": {
+            "music": ["Mbira", "Chimurenga", "Zimdancehall"],
+            "dances": ["Muchongoyo", "Mhande", "Jerusarema"],
+            "instruments": ["Mbira", "Ngoma drums", "Hosho"],
+            "festivals": ["Harare International Festival", "Jikinya Dance"]
+          },
+          "gastronomy": {
+            "mainDishes": ["Sadza", "Mopane worms", "Murivo"],
+            "beverages": ["Maheu", "Chibuku", "Mukumbi"],
+            "ingredients": ["Maize", "Pumpkin leaves", "Game meat"]
+          },
+          "arts": {
+            "crafts": ["Soapstone carving", "Basket weaving", "Wire art"],
+            "materials": ["Springstone", "Ilala palm", "Recycled metal"],
+            "styles": ["Shona sculpture", "Ndebele patterns"]
+          }
+        }
+      }
+  }
