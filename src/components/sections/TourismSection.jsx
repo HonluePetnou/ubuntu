@@ -14,81 +14,24 @@ const TourismSection = ({ countryData, theme }) => {
     }
   };
 
-  // Sample tourism data - this would ideally come from your data files
-  const tourismCategories = [
-    'All', 'Camping tour', 'Forest', 'Randonnée', 'Water falling', 
-    'Exotic', 'Water', 'Kingdom', 'Trip', 'Lorem', 'ipsum'
-  ];
+  // Get tourism data from countryData
+  const tourismData = countryData?.tourism;
+  const destinations = tourismData?.destinations || [];
+  const imageMap = tourismData?.imageMap || {};
+  const countryCode = countryData?.code || countryData?.countryCode;
 
-  // Sample destinations - you can expand this with real data
-  const destinations = [
-    {
-      id: 1,
-      name: 'Chute de la lobe',
-      location: 'Dschang',
-      category: 'Water falling',
-      rating: 4.8,
-      duration: '2-3 hours',
-      groupSize: '2-15 people',
-      image: '/api/placeholder/300/200',
-      description: 'Beautiful waterfall with stunning natural scenery'
-    },
-    {
-      id: 2,
-      name: 'Mount Cameroon Trek',
-      location: 'Buea',
-      category: 'Randonnée',
-      rating: 4.9,
-      duration: '2-3 days',
-      groupSize: '5-20 people',
-      image: '/api/placeholder/300/200',
-      description: 'Challenging hike to the highest peak in West Africa'
-    },
-    {
-      id: 3,
-      name: 'Waza National Park',
-      location: 'Far North',
-      category: 'Forest',
-      rating: 4.7,
-      duration: '1-2 days',
-      groupSize: '4-12 people',
-      image: '/api/placeholder/300/200',
-      description: 'Wildlife safari in pristine natural habitat'
-    },
-    {
-      id: 4,
-      name: 'Kribi Beach Resort',
-      location: 'Kribi',
-      category: 'Water',
-      rating: 4.6,
-      duration: '3-7 days',
-      groupSize: '2-8 people',
-      image: '/api/placeholder/300/200',
-      description: 'Relaxing beach destination with crystal clear waters'
-    },
-    {
-      id: 5,
-      name: 'Foumban Royal Palace',
-      location: 'Foumban',
-      category: 'Kingdom',
-      rating: 4.5,
-      duration: '3-4 hours',
-      groupSize: '5-25 people',
-      image: '/api/placeholder/300/200',
-      description: 'Historic royal palace showcasing Bamoun culture'
-    },
-    {
-      id: 6,
-      name: 'Limbe Botanical Garden',
-      location: 'Limbe',
-      category: 'Exotic',
-      rating: 4.4,
-      duration: '2-3 hours',
-      groupSize: '2-20 people',
-      image: '/api/placeholder/300/200',
-      description: 'Diverse collection of tropical plants and flowers'
+  // Helper function to get image path for destinations
+  const getDestinationImage = (destinationName) => {
+    const imageFilename = imageMap[destinationName];
+    if (imageFilename && countryCode) {
+      const encodedFilename = encodeURIComponent(imageFilename);
+      return `/images/places/${countryCode.toLowerCase()}/${encodedFilename}`;
     }
-  ];
+    return '/api/placeholder/300/200'; // Fallback
+  };
+
+  // Extract unique categories from destinations
+  const tourismCategories = ['All', ...new Set(destinations.map(dest => dest.category))];
 
   const filteredDestinations = activeFilter === 'All' 
     ? destinations 
@@ -129,14 +72,22 @@ const TourismSection = ({ countryData, theme }) => {
 
         {/* Destinations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredDestinations.map((destination) => (
+          {filteredDestinations.map((destination, index) => (
             <div
-              key={destination.id}
+              key={destination.name || index}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
             >
               {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-300 to-blue-500 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-500 opacity-80"></div>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={getDestinationImage(destination.name)}
+                  alt={destination.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = '/api/placeholder/300/200';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-300/30 to-blue-500/30"></div>
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1">
                   <Star className="w-4 h-4 text-yellow-500 fill-current" />
                   <span className="text-sm font-medium text-[#222]">{destination.rating}</span>

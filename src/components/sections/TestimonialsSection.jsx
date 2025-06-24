@@ -32,6 +32,12 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
     ...themeOverrides
   };
 
+  // Helper function to get testimony avatar image
+  const getTestimonyAvatar = (testimonialId) => {
+    const imageIndex = ((testimonialId - 1) % 8) + 1;
+    return `/images/testimonies/person${imageIndex}.jpg`;
+  };
+
   // Sample testimonials data
   const getTestimonials = () => {
     const countryName = countryData?.name || 'this beautiful country';
@@ -43,7 +49,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
         rating: 5,
         text: `My journey to ${countryName} was absolutely transformative. The rich cultural heritage, warm hospitality, and breathtaking landscapes left me speechless. Every moment was filled with discovery and wonder.`,
         experience: 'Cultural Heritage Tour',
-        avatar: '/api/placeholder/60/60',
+        avatar: getTestimonyAvatar(1),
         visitDate: 'March 2024',
         highlight: 'Traditional ceremonies'
       },
@@ -54,7 +60,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
         rating: 5,
         text: `The authentic cultural experiences in ${countryName} exceeded all my expectations. From the vibrant markets to the traditional music performances, every day brought new adventures and insights into this incredible culture.`,
         experience: 'Arts & Crafts Workshop',
-        avatar: '/api/placeholder/60/60',
+        avatar: getTestimonyAvatar(2),
         visitDate: 'January 2024',
         highlight: 'Local artisan workshops'
       },
@@ -65,7 +71,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
         rating: 5,
         text: `What struck me most about ${countryName} was the genuine warmth of the people. Their stories, traditions, and way of life taught me so much about community and cultural preservation. Truly unforgettable!`,
         experience: 'Community Immersion',
-        avatar: '/api/placeholder/60/60',
+        avatar: getTestimonyAvatar(3),
         visitDate: 'February 2024',
         highlight: 'Village homestay'
       },
@@ -76,7 +82,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
         rating: 5,
         text: `The culinary journey through ${countryName} was phenomenal. Each dish told a story of tradition and innovation. The cooking classes with local chefs were the highlight of my entire trip.`,
         experience: 'Culinary Adventure',
-        avatar: '/api/placeholder/60/60',
+        avatar: getTestimonyAvatar(4),
         visitDate: 'April 2024',
         highlight: 'Traditional cooking classes'
       },
@@ -87,7 +93,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
         rating: 5,
         text: `Reconnecting with my roots in ${countryName} was an emotional and enlightening experience. The cultural festivals and traditional ceremonies helped me understand my heritage in a deeper way.`,
         experience: 'Heritage Discovery',
-        avatar: '/api/placeholder/60/60',
+        avatar: getTestimonyAvatar(5),
         visitDate: 'December 2023',
         highlight: 'Cultural festivals'
       },
@@ -98,7 +104,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
         rating: 5,
         text: `The artistic heritage of ${countryName} is simply magnificent. From ancient sculptures to contemporary art, every piece reflects the soul of this nation. The museum tours were incredibly insightful.`,
         experience: 'Art & History Tour',
-        avatar: '/api/placeholder/60/60',
+        avatar: getTestimonyAvatar(6),
         visitDate: 'May 2024',
         highlight: 'Museum collections'
       }
@@ -114,11 +120,11 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
     const maxIndex = Math.max(0, testimonials.length - itemsPerView);
 
     const nextSlide = () => {
-      setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
+      setCurrentIndex(prev => prev >= maxIndex ? 0 : prev + 1);
     };
 
     const prevSlide = () => {
-      setCurrentIndex(prev => Math.max(prev - 1, 0));
+      setCurrentIndex(prev => prev <= 0 ? maxIndex : prev - 1);
     };
 
     const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + itemsPerView);
@@ -130,15 +136,13 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
            <div className="flex items-center gap-2">
              <button
                onClick={prevSlide}
-               disabled={currentIndex === 0}
-               className="p-2 rounded-full bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+               className="p-2 rounded-full bg-white border border-gray-200 hover:bg-gray-50 transition-all duration-200"
              >
                <ChevronLeft className="w-5 h-5 text-gray-600" />
              </button>
              <button
                onClick={nextSlide}
-               disabled={currentIndex >= maxIndex}
-               className="p-2 rounded-full bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+               className="p-2 rounded-full bg-white border border-gray-200 hover:bg-gray-50 transition-all duration-200"
              >
                <ChevronRight className="w-5 h-5 text-gray-600" />
              </button>
@@ -147,14 +151,15 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
 
         {/* Testimonials Slider */}
         <div className="overflow-hidden">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out gap-6"
-            style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
-          >
+          <div className="px-4 md:px-6">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out gap-4 md:gap-6"
+              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
+            >
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="flex-shrink-0 w-full md:w-1/3 bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                className="flex-shrink-0 w-[calc(100%-1rem)] sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-lg p-4 md:p-6 border border-gray-100 min-h-[280px]"
               >
                 {/* User Info */}
                 <div className="flex items-center gap-3 mb-4">
@@ -162,6 +167,9 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover"
+                    onError={(e) => {
+                      e.target.src = '/api/placeholder/60/60';
+                    }}
                   />
                   <div>
                     <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
@@ -180,6 +188,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
 
@@ -226,7 +235,7 @@ const TestimonialsSection = ({ countryData, theme = 'blue', themeOverrides = {} 
 
   return (
     <section className="py-16 bg-gradient-to-br from-[#FAF3E0] to-[#F5E6D3]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-orange-500 text-sm font-medium mb-2">What our Customers say about us</p>

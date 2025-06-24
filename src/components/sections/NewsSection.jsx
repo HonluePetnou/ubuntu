@@ -41,6 +41,12 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
     ...themeOverrides
   };
 
+  // Helper function to get shared news image
+  const getNewsImage = (articleId) => {
+    const imageIndex = ((articleId - 1) % 4) + 1;
+    return `/images/news/news${imageIndex}.jpg`;
+  };
+
   // Cultural news data - adapted for cultural website
   const getNewsArticles = () => {
     const countryName = countryData?.name || 'Our Country';
@@ -53,7 +59,7 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         date: '2024-01-15',
         category: 'Heritage',
         readTime: '6 min read',
-        image: '/api/placeholder/400/250',
+        image: getNewsImage(1),
         featured: true,
         icon: 'Star'
       },
@@ -65,7 +71,7 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         date: '2024-01-12',
         category: 'Events',
         readTime: '4 min read',
-        image: '/api/placeholder/400/250',
+        image: getNewsImage(2),
         featured: false,
         icon: 'Heart'
       },
@@ -77,7 +83,7 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         date: '2024-01-10',
         category: 'Gastronomy',
         readTime: '5 min read',
-        image: '/api/placeholder/400/250',
+        image: getNewsImage(3),
         featured: false,
         icon: 'Globe'
       },
@@ -89,7 +95,7 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         date: '2024-01-08',
         category: 'Language',
         readTime: '7 min read',
-        image: '/api/placeholder/400/250',
+        image: getNewsImage(4),
         featured: false,
         icon: 'Newspaper'
       },
@@ -101,7 +107,7 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         date: '2024-01-05',
         category: 'Arts',
         readTime: '4 min read',
-        image: '/api/placeholder/400/250',
+        image: getNewsImage(1),
         featured: false,
         icon: 'Star'
       },
@@ -113,7 +119,7 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         date: '2024-01-03',
         category: 'Spirituality',
         readTime: '5 min read',
-        image: '/api/placeholder/400/250',
+        image: getNewsImage(2),
         featured: false,
         icon: 'Heart'
       }
@@ -194,24 +200,26 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
             {newsArticles.slice(0, 1).map((article) => (
               <div key={article.id} className="group cursor-pointer">
                 {/* Large Article Image */}
-                <div className="relative overflow-hidden h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-8 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
-                  <div className="w-full h-full bg-gradient-to-br from-[#A0522D]/10 via-[#8B4513]/5 to-[#654321]/10 flex items-center justify-center relative">
-                    {/* Decorative pattern overlay */}
-                    <div className="absolute inset-0 opacity-20">
-                      <div className="w-full h-full" style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23A0522D' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                        backgroundSize: '60px 60px'
-                      }}></div>
+                <div className="relative overflow-hidden h-96 rounded-2xl mb-8 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
+                  <img 
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = '/api/placeholder/400/250';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  
+                  {/* Article overlay content */}
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-white/20 backdrop-blur-sm text-white`}>
+                        {article.category}
+                      </span>
                     </div>
-                    <div className="text-center relative z-10">
-                      <div className="w-24 h-24 mx-auto mb-4 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 shadow-lg">
-                        <div className="w-12 h-12 bg-[#A0522D]/80 rounded-lg flex items-center justify-center">
-                          <Star className="w-6 h-6 text-white" />
-                        </div>
-                      </div>
-                      <p className="text-[#A0522D] font-semibold text-lg">Featured Story</p>
-                      <p className="text-gray-600 text-sm mt-1">Cultural Heritage</p>
-                    </div>
+                    <h3 className="text-2xl font-bold mb-2 line-clamp-2">{article.title}</h3>
+                    <p className="text-white/90 text-sm line-clamp-2">{article.excerpt}</p>
                   </div>
                   
                   {/* Featured badge */}
@@ -275,15 +283,15 @@ const NewsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
                 <div className="flex space-x-5">
                   {/* Small Article Image */}
                   <div className="flex-shrink-0">
-                    <div className={`w-20 h-20 rounded-xl flex items-center justify-center shadow-lg ${
-                      index === 0 ? 'bg-gradient-to-br from-emerald-400 to-teal-500' :
-                      index === 1 ? 'bg-gradient-to-br from-orange-400 to-red-500' :
-                      index === 2 ? 'bg-gradient-to-br from-purple-400 to-indigo-500' :
-                      'bg-gradient-to-br from-pink-400 to-rose-500'
-                    }`}>
-                      <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                        <div className="w-4 h-4 bg-white rounded"></div>
-                      </div>
+                    <div className="w-20 h-20 rounded-xl overflow-hidden shadow-lg">
+                      <img 
+                        src={article.image}
+                        alt={article.title}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.target.src = '/api/placeholder/80/80';
+                        }}
+                      />
                     </div>
                   </div>
 

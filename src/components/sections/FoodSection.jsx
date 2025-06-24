@@ -12,6 +12,9 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
       navigate(`/country/${countryCode.toLowerCase()}/food`);
     }
   };
+  // Get food descriptions and image mappings from country data
+  const foodDescriptions = countryData?.gastronomy?.descriptions || {};
+  const countryImageMap = countryData?.gastronomy?.imageMap || {};
 
   // Theme configurations matching site's design system
   const themes = {
@@ -50,24 +53,10 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
       return null;
     }
     
-    // Mapping for specific food names to image filenames (based on actual files)
+    // Food image mappings - use country-specific mappings or fallback to default
     const foodImageMap = {
-      'cm': {
-        'Ndolé': 'ndolet',
-        'Poulet DG': 'cornchaff',
-        'Koki': 'koki',
-        'Achu': 'achu',
-        'Eru': 'eru',
-        'Okok': 'okok',
-        'Sanga': 'sanga',
-        'Bil-bil': 'fufu',
-        'Matango': 'egusi pudding',
-        'Palm wine': 'fufu',
-        'Plantain': 'fufu',
-        'Cassava': 'fufu',
-        'Yam': 'achu',
-        'Peanuts': 'cornchaff'
-      }
+      [countryCode?.toLowerCase()]: countryImageMap
+      // Other countries will have their own mappings in countryDetails.js
     };
     
     const countryKey = countryCode.toLowerCase();
@@ -76,7 +65,7 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
     if (imageFilename) {
       // Properly encode the filename for URL
       const encodedFilename = encodeURIComponent(imageFilename);
-      return `/images/foods/${countryKey}/${encodedFilename}.jpg`;
+      return `/images/foods/${countryKey}/${encodedFilename}`;
     } else {
       // Fallback: convert food name to filename format (lowercase, replace spaces with nothing)
       const filename = foodName.toLowerCase().replace(/\s+/g, '');
@@ -97,7 +86,8 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
           name: dish, 
           icon: ChefHat, 
           category: 'Main Dish',
-          image: getFoodImage(dish, countryCode)
+          image: getFoodImage(dish, countryCode),
+          description: foodDescriptions[dish] || `A traditional ${dish} dish from ${countryData?.name || 'the region'}.`
         });
       });
     }
@@ -109,7 +99,8 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
           name: beverage, 
           icon: Coffee, 
           category: 'Beverage',
-          image: getFoodImage(beverage, countryCode)
+          image: getFoodImage(beverage, countryCode),
+          description: foodDescriptions[beverage] || `A traditional ${beverage} beverage from ${countryData?.name || 'the region'}.`
         });
       });
     }
@@ -121,7 +112,21 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
           name: ingredient, 
           icon: Wheat, 
           category: 'Ingredient',
-          image: getFoodImage(ingredient, countryCode)
+          image: getFoodImage(ingredient, countryCode),
+          description: foodDescriptions[ingredient] || `A key ${ingredient} ingredient used in ${countryData?.name || 'regional'} cuisine.`
+        });
+      });
+    }
+    
+    if (gastronomy?.snacks) {
+      gastronomy.snacks.forEach(snack => {
+        items.push({ 
+          type: 'snack', 
+          name: snack, 
+          icon: Coffee, 
+          category: 'Snack',
+          image: getFoodImage(snack, countryCode),
+          description: foodDescriptions[snack] || `A traditional ${snack} snack from ${countryData?.name || 'the region'}.`
         });
       });
     }
@@ -238,7 +243,7 @@ const FoodSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
                       </div>
                       <h3 className="text-xl font-bold text-gray-800 mb-2">{item.name}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Traditional {item.type} representing the rich culinary heritage of {countryData?.name}
+                        {item.description || `Traditional ${item.type} representing the rich culinary heritage of ${countryData?.name}`}
                       </p>
                     </div>
                   </div>
