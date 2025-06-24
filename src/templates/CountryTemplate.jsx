@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "../components/layout/Navbar";
-import HeroSection from "../components/HeroSection";
-import CulturalIdentitySection from "../components/CulturalIdentitySection";
-import ArtsSection from "../components/ArtsSection";
-import FoodSection from "../components/FoodSection";
-import EventsSection from "../components/EventsSection";
-import TourismSection from "../components/TourismSection";
-import NewsSection from "../components/NewsSection";
-import TestimonialsSection from "../components/TestimonialsSection";
+import {
+  HeroSection,
+  CulturalIdentitySection,
+  ArtsSection,
+  FoodSection,
+  EventsSection,
+  TourismSection,
+  NewsSection,
+  TestimonialsSection
+} from "../components/sections";
 import Footer from "../components/layout/Footer";
 import { useNavigate } from "react-router-dom";
 import { Compass } from "lucide-react";

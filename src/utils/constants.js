@@ -24,7 +24,7 @@ export const MAP_CONFIG = {
   MODAL_WIDTH: 350,
   MODAL_HEIGHT: 320,
   MARGIN: 10,
-  VIEW_BOX: '280 335 520 265'
+  VIEW_BOX: '200 280 680 380'
 };
 
 // African Regions

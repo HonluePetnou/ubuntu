@@ -1,199 +1,172 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Compass, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Globe, Users, MapPin, Calendar, Leaf } from 'lucide-react';
 
-export default function LandingPage() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const navigate = useNavigate();
-
-  const featuredCountries = [
-    { name: "Nigeria", culture: "Nollywood & Rich Traditions", flag: "🇳🇬" },
-    { name: "Egypt", culture: "Ancient Pyramids & History", flag: "🇪🇬" },
-    { name: "South Africa", culture: "Rainbow Nation Diversity", flag: "🇿🇦" },
-    { name: "Morocco", culture: "Berber Heritage & Arts", flag: "🇲🇦" },
-    { name: "Kenya", culture: "Safari & Maasai Culture", flag: "🇰🇪" }
-  ];
-
-  const stats = [
-    { number: "54", label: "Countries" },
-    { number: "2000+", label: "Languages" },
-    { number: "3000+", label: "Ethnic Groups" },
-    { number: "1.4B", label: "People" }
-  ];
-
-  // const culturalHighlights = [
-  //   {
-  //     icon: "🎭",
-  //     title: "Rich Traditions",
-  //     description: "Discover ancient customs, rituals, and ceremonies that have been passed down through generations."
-  //   },
-  //   {
-  //     icon: "🎨",
-  //     title: "Vibrant Arts",
-  //     description: "Explore diverse art forms from traditional sculptures to contemporary African cinema."
-  //   },
-  //   {
-  //     icon: "🎵",
-  //     title: "Musical Heritage",
-  //     description: "Experience the rhythms that gave birth to jazz, blues, and countless musical genres."
-  //   },
-  //   {
-  //     icon: "🍽️",
-  //     title: "Culinary Diversity",
-  //     description: "Taste the flavors of Africa through its rich and varied culinary traditions."
-  //   }
-  // ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredCountries.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [featuredCountries.length]);
-
-  const handleExploreMap = () => {
-    navigate('/map');
-  };
-
+const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FAF3E0] via-[#F5E6D3] to-[#E8D5B7] flex flex-col">
-      {/* Hero Section */}
-      <div className={`text-center py-12 px-4 transform transition-all duration-1000 ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-      }`}>
-        <div className="relative max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#A0522D] via-[#8B4513] to-[#D2691E] bg-clip-text text-transparent mb-6 animate-pulse">
-            Ubuntu Cultural Platform
-          </h1>
-          <div className="absolute -top-4 -right-4 text-6xl animate-bounce"></div>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-            Discover the vibrant tapestry of African culture. From ancient traditions to modern innovations, 
-            explore the continent that cradles humanity's heritage.
-          </p>
-          <button 
-            onClick={handleExploreMap}
-            className="bg-gradient-to-r from-[#A0522D] to-[#D2691E] text-white px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse flex items-center gap-3 mx-auto"
-          >
-            <Compass className="w-6 h-6" />
-            Explore Interactive Map
-            <ArrowRight className="w-6 h-6" />
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-[#FAF3E0] via-[#F5E6D3] to-[#E8D5B7] overflow-hidden">
+      {/* Header */}
+      <header className="relative z-10 px-6 py-4">
+        <nav className="flex items-center justify-between max-w-7xl mx-auto">
+          <div className="flex items-center space-x-3">
+             <div className="w-10 h-10 bg-gradient-to-r from-[#A0522D] to-[#D2691E] rounded-lg flex items-center justify-center">
+               <Leaf className="w-6 h-6 text-white" />
+             </div>
+             <span className="text-2xl font-bold bg-gradient-to-r from-[#A0522D] to-[#D2691E] bg-clip-text text-transparent">
+               Ubuntu Platform
+             </span>
+           </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
+               Home
+             </Link>
+             <Link to="/destinations" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
+               Destinations
+             </Link>
+             <Link to="/events" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
+               Events
+             </Link>
+             <Link to="/arts" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
+               Arts
+             </Link>
+          </div>
+        </nav>
+      </header>
 
-      {/* Cultural Stats */}
-      <div className="px-4 mb-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-10">
-            Africa by Numbers
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => {
-              // const icons = [Globe, Users, Heart, Star];
-              // const IconComponent = icons[index];
-              // const iconColors = ['text-blue-500', 'text-green-500', 'text-red-500', 'text-yellow-500'];
-              return (
-                <div key={index} className={`bg-white/80 backdrop-blur-sm rounded-2xl p-10 text-center shadow-xl transform transition-all duration-500 hover:scale-110 ${
-                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                  {/* <IconComponent className={`w-8 h-8 ${iconColors[index]} mx-auto mb-3`} /> */}
-                  <div className="text-3xl md:text-4xl font-bold text-[#A0522D] mb-2">{stat.number}</div>
-                  <div className="text-base md:text-lg text-gray-600 font-medium">{stat.label}</div>
+      {/* Main Content */}
+      <main className="px-6 py-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Hero Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                   <span className="bg-gradient-to-r from-[#A0522D] via-[#8B4513] to-[#D2691E] bg-clip-text text-transparent">
+                     Discover
+                   </span>
+                   <br />
+                   <span className="text-gray-800">African Culture</span>
+                 </h1>
+                 <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+                   Explore the rich heritage, vibrant traditions, and diverse cultures 
+                   of Africa through our interactive platform.
+                 </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link 
+                   to="/map"
+                   className="group px-8 py-4 bg-gradient-to-r from-[#A0522D] to-[#D2691E] text-white font-semibold rounded-xl hover:from-[#8B4513] hover:to-[#CD853F] transition-all duration-300 shadow-lg hover:shadow-xl text-center transform hover:scale-105 hover:-translate-y-1"
+                 >
+                   <span className="group-hover:tracking-wide transition-all duration-300">Explore Map</span>
+                 </Link>
+                 <Link 
+                   to="/destinations"
+                   className="group px-8 py-4 border-2 border-[#A0522D]/30 text-gray-700 font-semibold rounded-xl hover:border-[#A0522D] hover:text-[#A0522D] transition-all duration-300 text-center backdrop-blur-sm hover:bg-white/50 transform hover:scale-105 hover:-translate-y-1"
+                 >
+                   <span className="group-hover:tracking-wide transition-all duration-300">Learn More</span>
+                 </Link>
+              </div>
+
+              {/* Stats */}
+              <div className="flex items-center space-x-8 pt-4">
+                <div className="text-center">
+                   <div className="text-3xl font-bold text-gray-800">54</div>
+                   <div className="text-sm text-gray-600 font-medium">Countries</div>
+                 </div>
+                 <div className="text-center">
+                   <div className="text-3xl font-bold text-gray-800">2000+</div>
+                   <div className="text-sm text-gray-600 font-medium">Languages</div>
+                 </div>
+              </div>
+            </div>
+
+            {/* Right Column - Features & Philosophy */}
+            <div className="space-y-8">
+              {/* Platform Features Card */}
+               <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/30">
+                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Platform Features</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center space-y-3">
+                     <div className="w-12 h-12 bg-gradient-to-r from-[#A0522D] to-[#D2691E] rounded-xl flex items-center justify-center mx-auto">
+                       <Globe className="w-6 h-6 text-white" />
+                     </div>
+                     <div>
+                       <div className="font-semibold text-gray-800">54 Countries</div>
+                       <div className="text-sm text-gray-600">Complete African coverage</div>
+                     </div>
+                   </div>
+                   <div className="text-center space-y-3">
+                     <div className="w-12 h-12 bg-gradient-to-r from-[#8B4513] to-[#CD853F] rounded-xl flex items-center justify-center mx-auto">
+                       <Users className="w-6 h-6 text-white" />
+                     </div>
+                     <div>
+                       <div className="font-semibold text-gray-800">Rich Cultures</div>
+                       <div className="text-sm text-gray-600">Diverse traditions</div>
+                     </div>
+                   </div>
+                   <div className="text-center space-y-3">
+                     <div className="w-12 h-12 bg-gradient-to-r from-[#D2691E] to-[#DAA520] rounded-xl flex items-center justify-center mx-auto">
+                       <MapPin className="w-6 h-6 text-white" />
+                     </div>
+                     <div>
+                       <div className="font-semibold text-gray-800">Interactive Map</div>
+                       <div className="text-sm text-gray-600">Explore visually</div>
+                     </div>
+                   </div>
+                   <div className="text-center space-y-3">
+                     <div className="w-12 h-12 bg-gradient-to-r from-[#CD853F] to-[#FCD116] rounded-xl flex items-center justify-center mx-auto">
+                       <Calendar className="w-6 h-6 text-white" />
+                     </div>
+                     <div>
+                       <div className="font-semibold text-gray-800">Cultural Events</div>
+                       <div className="text-sm text-gray-600">Live experiences</div>
+                     </div>
+                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+              </div>
 
-      {/* Cultural Highlights */}
-      <div className="px-4 mb-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-10">
-            Cultural Treasures
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-[#A0522D] mb-4">Diverse Traditions</h3>
-              <p className="text-gray-700 leading-relaxed">
-                From ancient rituals to modern celebrations, every culture brings unique traditions that have been passed down through generations.
-              </p>
-            </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-[#A0522D] mb-4">Rich Heritage</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Explore architectural marvels, artistic expressions, and historical landmarks that tell the story of human civilization.
-              </p>
-            </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-[#A0522D] mb-4">Global Unity</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Despite our differences, we share common values of love, family, and community that unite us as one human family.
-              </p>
+              {/* Ubuntu Philosophy Card */}
+               <div className="bg-gradient-to-r from-[#A0522D] to-[#D2691E] rounded-3xl p-8 text-white shadow-2xl">
+                 <div className="space-y-4">
+                   <h3 className="text-2xl font-bold">Ubuntu Philosophy</h3>
+                   <blockquote className="text-lg italic leading-relaxed">
+                     "Ubuntu: I am because we are"
+                   </blockquote>
+                   <p className="text-orange-100 text-sm">
+                     — African Philosophy of Interconnectedness
+                   </p>
+                 </div>
+               </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Featured Countries Carousel */}
-      <div className="px-4 mb-12">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-10">
-            Featured Cultures
-          </h2>
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-            <div className="text-center">
-              <div className="text-6xl mb-4">{featuredCountries[currentSlide].flag}</div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#A0522D] mb-2">
-                {featuredCountries[currentSlide].name}
-              </h3>
-              <p className="text-lg text-gray-600 mb-6">{featuredCountries[currentSlide].culture}</p>
-            </div>
-            <div className="flex justify-center mt-6 space-x-3">
-              {featuredCountries.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-[#A0522D] w-8' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
-            </div>
+      {/* Footer */}
+      <footer className="absolute bottom-0 left-0 right-0 px-6 py-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600">
+             <div className="mb-2 sm:mb-0">
+               © 2024 Ubuntu Platform. All rights reserved.
+             </div>
+             <div className="flex items-center space-x-6">
+               <Link to="/" className="hover:text-[#A0522D] transition-colors">
+                 Privacy
+               </Link>
+               <Link to="/" className="hover:text-[#A0522D] transition-colors">
+                 Terms
+               </Link>
+               <Link to="/" className="hover:text-[#A0522D] transition-colors">
+                 Contact
+               </Link>
+             </div>
           </div>
         </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="px-4 mb-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-[#A0522D] to-[#D2691E] rounded-3xl p-8 text-white shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Explore?
-            </h2>
-            <p className="text-lg md:text-xl mb-6 opacity-90">
-              Click on any country in our interactive map to dive deep into its unique cultural heritage.
-            </p>
-            <button 
-              onClick={handleExploreMap}
-              className="bg-white text-[#A0522D] px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              🚀 Start Your Cultural Journey
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Ubuntu Philosophy Footer */}
-      <div className="text-center py-8 px-4">
-        <div className="max-w-3xl mx-auto">
-          <blockquote className="text-xl md:text-2xl italic text-gray-700 mb-4">
-            "Ubuntu: I am because we are. A philosophy that speaks to our interconnectedness."
-          </blockquote>
-          <p className="text-base text-gray-500">- African Philosophy</p>
-        </div>
-      </div>
+      </footer>
     </div>
   );
-}
+};
+
+export default LandingPage;
