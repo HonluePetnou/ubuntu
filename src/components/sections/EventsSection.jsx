@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Calendar, MapPin, Users, Star, Clock } from 'lucide-react';
 
 const EventsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
@@ -223,12 +223,12 @@ const EventsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => 
 
         {/* View All Events Button */}
         <div className="text-center mt-8">
-          <button
-            onClick={handleViewAllEvents}
+          <Link
+            to="/auth"
             className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
           >
             View All Events
-          </button>
+          </Link>
         </div>
       </div>
     </section>

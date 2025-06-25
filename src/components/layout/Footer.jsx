@@ -15,16 +15,16 @@ const Footer = () => {
               Experience authentic cultural journeys and connect with local communities.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+              <a href="/signup" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+              <a href="/signup" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+              <a href="/signup" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+              <a href="/signup" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -35,27 +35,27 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-200 hover:text-white transition-colors">
+                <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                   Cultural Heritage
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-200 hover:text-white transition-colors">
+                <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                   Arts & Crafts
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-200 hover:text-white transition-colors">
+                <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                   Traditional Food
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-200 hover:text-white transition-colors">
+                <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                   Cultural Events
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-200 hover:text-white transition-colors">
+                <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                   Tourism
                 </a>
               </li>
@@ -96,13 +96,13 @@ const Footer = () => {
               © 2024 Cultural Heritage. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-200 hover:text-white transition-colors">
+              <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-200 hover:text-white transition-colors">
+              <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-200 hover:text-white transition-colors">
+              <a href="/signup" className="text-gray-200 hover:text-white transition-colors">
                 Cookie Policy
               </a>
             </div>

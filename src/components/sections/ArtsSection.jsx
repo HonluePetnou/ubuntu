@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Palette, Music, Users } from 'lucide-react';
 
 const ArtsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
@@ -275,28 +275,28 @@ const ArtsSection = ({ countryData, theme = 'blue', themeOverrides = {} }) => {
         {/* View All Button */}
         <div className="text-center mt-8">
           {activeTab === 'art' && (
-            <button
-              onClick={handleViewAllArts}
+            <Link
+              to="/auth"
               className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
             >
               View All Arts & Crafts
-            </button>
+            </Link>
           )}
           {activeTab === 'dance' && (
-            <button
-              onClick={handleViewAllDances}
+            <Link
+              to="/signup"
               className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
             >
               View All Dances
-            </button>
+            </Link>
           )}
           {activeTab === 'music' && (
-            <button
-              onClick={handleViewAllMusic}
+            <Link
+              to="/signup"
               className={`px-8 py-3 ${currentTheme.primary} text-white rounded-lg hover:opacity-90 transition-opacity font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200`}
             >
               View All Music
-            </button>
+            </Link>
           )}
         </div>
 

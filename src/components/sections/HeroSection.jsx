@@ -119,10 +119,10 @@ export default function HeroSection({ countryData, theme = 'blue' }) {
 
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className={`flex items-center justify-center gap-2 px-8 py-4 ${currentTheme.buttonPrimary} text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg`}>
+              <Link to="/auth" className={`flex items-center justify-center gap-2 px-8 py-4 ${currentTheme.buttonPrimary} text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg`}>
                 <Play size={20} />
                 Explore Culture
-              </button>
+              </Link>
               <button className={`flex items-center justify-center gap-2 px-8 py-4 bg-white backdrop-blur-sm border-2 ${currentTheme.buttonSecondary} rounded-xl font-semibold transition-all duration-300 hover:scale-105`}>
                 <Download size={20} />
                 Travel Guide

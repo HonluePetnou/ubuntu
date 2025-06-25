@@ -16,7 +16,7 @@ export default function HomePage() {
   };
 
   const handleViewDestinations = () => {
-    navigate('/destinations');
+    navigate('/auth');
   };
 
   return (

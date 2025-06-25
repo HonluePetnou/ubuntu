@@ -136,7 +136,7 @@ export default function CulturalIdentitySection({ countryData, theme = 'blue' })
             {/* More History Button */}
             <div className="pt-6">
               <Link 
-                to={`/country/${countryCode ? countryCode.toLowerCase() : 'cameroon'}/history`}
+                to="/auth"
                 className="group relative bg-gradient-to-r from-[#A0522D] to-[#D2691E] text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden inline-flex items-center"
               >
                 <span className="relative z-10 flex items-center">

@@ -13,22 +13,22 @@ const LandingPage = () => {
                <Leaf className="w-6 h-6 text-white" />
              </div>
              <span className="text-2xl font-bold bg-gradient-to-r from-[#A0522D] to-[#D2691E] bg-clip-text text-transparent">
-               Ubuntu Platform
+               Ubuntu 
              </span>
            </div>
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
                Home
              </Link>
-             <Link to="/destinations" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
-               Destinations
-             </Link>
-             <Link to="/events" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
-               Events
-             </Link>
-             <Link to="/arts" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
-               Arts
-             </Link>
+             <Link to="/auth" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
+              Destinations
+            </Link>
+            <Link to="/auth" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
+              Events
+            </Link>
+            <Link to="/auth" className="text-gray-700 hover:text-[#A0522D] transition-colors font-medium">
+              Arts
+            </Link>
           </div>
         </nav>
       </header>
@@ -62,7 +62,7 @@ const LandingPage = () => {
                    <span className="group-hover:tracking-wide transition-all duration-300">Explore Map</span>
                  </Link>
                  <Link 
-                   to="/destinations"
+                   to="/auth"
                    className="group px-8 py-4 border-2 border-[#A0522D]/30 text-gray-700 font-semibold rounded-xl hover:border-[#A0522D] hover:text-[#A0522D] transition-all duration-300 text-center backdrop-blur-sm hover:bg-white/50 transform hover:scale-105 hover:-translate-y-1"
                  >
                    <span className="group-hover:tracking-wide transition-all duration-300">Learn More</span>

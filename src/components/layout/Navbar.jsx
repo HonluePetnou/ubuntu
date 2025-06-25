@@ -67,37 +67,37 @@ export default function Navbar() {
 
           {cultureOpen && (
             <div className="absolute top-10 left-0 bg-[#FAF3E0] border border-gray-200 shadow-lg rounded-md w-52 py-2 space-y-1 z-50">
-              <Link to={getCountryLink('history')} className="block px-4 py-2 hover:bg-gray-100">
-                History & Origins
-              </Link>
-              <Link to={getCountryLink('arts')} className="block px-4 py-2 hover:bg-gray-100">
-                Arts & Craft
-              </Link>
-              <Link to={getCountryLink('music')} className="block px-4 py-2 hover:bg-gray-100">
-                Music
-              </Link>
-              <Link to={getCountryLink('dance')} className="block px-4 py-2 hover:bg-gray-100">
-                Dance
-              </Link>
-              <Link to={getCountryLink('food')} className="block px-4 py-2 hover:bg-gray-100">
-                Food & Gastronomy
-              </Link>
-              <Link to={getCountryLink('news')} className="block px-4 py-2 hover:bg-gray-100">
-                News
-              </Link>
+              <Link to="/auth" className="block px-4 py-2 hover:bg-gray-100">
+                    History & Origins
+                  </Link>
+                  <Link to="/auth" className="block px-4 py-2 hover:bg-gray-100">
+                    Arts & Craft
+                  </Link>
+                  <Link to="/auth" className="block px-4 py-2 hover:bg-gray-100">
+                    Music
+                  </Link>
+                  <Link to="/auth" className="block px-4 py-2 hover:bg-gray-100">
+                    Dance
+                  </Link>
+                  <Link to="/auth" className="block px-4 py-2 hover:bg-gray-100">
+                    Food & Gastronomy
+                  </Link>
+                  <Link to="/auth" className="block px-4 py-2 hover:bg-gray-100">
+                    News
+                  </Link>
             </div>
           )}
         </div>
 
         <Link
-          to={getCountryLink('events')}
+          to="/auth"
           className="hover:text-[#A0522D] border-b-2 border-transparent hover:border-[#A0522D] pb-1"
         >
           Events
         </Link>
         
         <Link
-          to={getCountryLink('destinations')}
+          to="/auth"
           className="hover:text-[#A0522D] border-b-2 border-transparent hover:border-[#A0522D] pb-1"
         >
           Destinations
@@ -107,9 +107,9 @@ export default function Navbar() {
       {/* Actions */}
       <div className="hidden md:flex items-center space-x-4">
         <span className="text-sm font-semibold text-[#222]">ENG</span>
-        <button className="bg-[#A0522D] text-white px-4 py-2 rounded-lg hover:bg-[#22543D] transition duration-200">
-          Join Community
-        </button>
+        <Link to="/auth" className="bg-[#A0522D] text-white px-4 py-2 rounded-lg hover:bg-[#22543D] transition duration-200">
+              Sign Up
+            </Link>
       </div>
 
       {/* Mobile Burger */}
@@ -152,37 +152,37 @@ export default function Navbar() {
             </button>
             {cultureOpen && (
               <div className="flex flex-col pl-4 space-y-2">
-                <Link to={getCountryLink('history')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
-                  History & Origins
-                </Link>
-                <Link to={getCountryLink('arts')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
-                  Arts & Craft
-                </Link>
-                <Link to={getCountryLink('music')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
-                  Music
-                </Link>
-                <Link to={getCountryLink('dance')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
-                  Dance
-                </Link>
-                <Link to={getCountryLink('food')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
-                  Food & Gastronomy
-                </Link>
-                <Link to={getCountryLink('news')} className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
-                  News
-                </Link>
+                <Link to="/auth" className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+              History & Origins
+            </Link>
+            <Link to="/auth" className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+              Arts & Craft
+            </Link>
+            <Link to="/auth" className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+              Music
+            </Link>
+            <Link to="/auth" className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+              Dance
+            </Link>
+            <Link to="/auth" className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+              Food & Gastronomy
+            </Link>
+            <Link to="/auth" className="text-[#222] hover:text-[#A0522D]" onClick={() => setMobileMenuOpen(false)}>
+              News
+            </Link>
               </div>
             )}
           </div>
 
           <Link
-            to={getCountryLink('events')}
+            to="/auth"
             className="text-lg font-medium text-[#222] hover:text-[#A0522D]"
             onClick={() => setMobileMenuOpen(false)}
           >
             Events
           </Link>
           <Link
-            to={getCountryLink('destinations')}
+            to="/auth"
             className="text-lg font-medium text-[#222] hover:text-[#A0522D]"
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -192,9 +192,9 @@ export default function Navbar() {
           <div className="pt-4 border-t border-gray-300">
             <div className="flex items-center space-x-4">
               <span className="text-sm font-semibold text-[#222]">ENG</span>
-              <button className="bg-[#A0522D] text-white px-4 py-2 rounded-lg hover:bg-[#22543D] transition duration-200">
-                Join Community
-              </button>
+              <Link to="/auth" className="bg-[#A0522D] text-white px-4 py-2 rounded-lg hover:bg-[#22543D] transition duration-200" onClick={() => setMobileMenuOpen(false)}>
+              Join Community
+            </Link>
             </div>
           </div>
         </div>
