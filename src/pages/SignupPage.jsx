@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import countries from '../data/countries';
 
 const SignupPage = () => {
-  const { signup, addKnownEmail, markSignupFormCompleted } = useAuth();
+  const { signup, addKnownEmail, markSignupFormCompleted, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   
@@ -194,6 +194,34 @@ const SignupPage = () => {
         errorMessage = 'Password is too weak. Please choose a stronger password.';
       } else if (error.code === 'auth/operation-not-allowed') {
         errorMessage = 'Email/password accounts are not enabled. Please contact support.';
+      }
+      
+      setErrors({ submit: errorMessage });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleGoogleSignup = async () => {
+    setIsLoading(true);
+    setErrors({});
+    
+    try {
+      await signInWithGoogle();
+      
+      // Navigate to intended destination
+      navigate(returnTo, { replace: true });
+    } catch (error) {
+      console.error('Google signup error:', error);
+      
+      let errorMessage = 'Google signup failed. Please try again.';
+      
+      if (error.code === 'auth/popup-closed-by-user') {
+        errorMessage = 'Signup was cancelled. Please try again.';
+      } else if (error.code === 'auth/popup-blocked') {
+        errorMessage = 'Popup was blocked. Please allow popups and try again.';
+      } else if (error.code === 'auth/cancelled-popup-request') {
+        errorMessage = 'Signup was cancelled. Please try again.';
       }
       
       setErrors({ submit: errorMessage });
@@ -616,7 +644,10 @@ const SignupPage = () => {
 
             {/* Social Signup */}
             <div className="mt-6">
-              <button className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#A0522D] focus:ring-offset-2 transition-colors">
+              <button 
+                onClick={handleGoogleSignup}
+                disabled={isLoading}
+                className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#A0522D] focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                 <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                   <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
