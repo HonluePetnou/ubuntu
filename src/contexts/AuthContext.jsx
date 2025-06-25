@@ -1,15 +1,16 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import {
+import { 
   onAuthStateChanged,
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
   updateProfile,
   signInWithPopup
 } from 'firebase/auth';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore';
 import { auth, db, googleProvider } from '../firebase/config';
+import useAuthPreferences from '../hooks/useAuthPreferences';
 
 const AuthContext = createContext();
 
@@ -25,6 +26,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [userProfile, setUserProfile] = useState(null);
+  const authPrefs = useAuthPreferences();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -51,6 +53,11 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (email, password, additionalData = {}) => {
     try {
+      // Set user preferences for signup flow
+      authPrefs.setLastAttemptedEmail(email);
+      authPrefs.setPreferredAuthFlow('signup');
+      authPrefs.setPreferredLoginMethod('email');
+      
       const { user } = await createUserWithEmailAndPassword(auth, email, password);
       
       // Update display name if provided
@@ -71,6 +78,9 @@ export const AuthProvider = ({ children }) => {
       await setDoc(doc(db, 'users', user.uid), userData);
       setUserProfile(userData);
       
+      // Mark onboarding as completed for new users
+      authPrefs.completeOnboarding();
+      
       return user;
     } catch (error) {
       throw error;
@@ -79,8 +89,11 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      // Store email for smart redirect logic
-      localStorage.setItem('lastAttemptedEmail', email);
+      // Store email for smart redirect logic and set preferred auth flow
+      authPrefs.setLastAttemptedEmail(email);
+      authPrefs.setPreferredAuthFlow('login');
+      authPrefs.setPreferredLoginMethod('email');
+      
       const result = await signInWithEmailAndPassword(auth, email, password);
       return result;
     } catch (error) {
@@ -91,8 +104,9 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       await signOut(auth);
-      // Clear any stored data
-      localStorage.removeItem('lastAttemptedEmail');
+      // Clear any stored data but keep user preferences for better UX
+      authPrefs.clearLastAttemptedEmail();
+      authPrefs.clearIntendedDestination();
     } catch (error) {
       throw error;
     }
@@ -108,6 +122,10 @@ export const AuthProvider = ({ children }) => {
 
   const signInWithGoogle = async () => {
     try {
+      // Set preferred login method
+      authPrefs.setPreferredLoginMethod('google');
+      authPrefs.setPreferredAuthFlow('login');
+      
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
       

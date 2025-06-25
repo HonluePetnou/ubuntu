@@ -1,0 +1,14 @@
+[33m7fbd68d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m feat(auth): implement Firebase authentication and protected routes
+[33m7261bbd[m feat: add food, tourism and news images with dynamic loading
+[33m9396854[m feat: add food images and improve food section component
+[33mf796260[m refactor(components): reorganize sections into dedicated directory
+[33m3b6e426[m feat(country): add navigation to country-specific pages and enhance UI
+[33m75eb6d1[m feat(history): add comprehensive history page with timeline and figures
+[33m7dc959d[m feat: Update Navbar for improved accessibility; refine HomePage layout and visibility transitions; enhance LandingPage content and structure; adjust CountryTemplate for better user navigation; modify constants for map configuration
+[33m5d7939d[m feat: Enhance HeroSection with a welcoming description and key facts; update NewsSection with new articles and improved layout; add TestimonialsSection and Footer components to CountryTemplate
+[33m4a6223f[m feat: implement country template system and add Cameroon page
+[33m606037a[m feat: implement comprehensive cultural platform with interactive map and country pages
+[33m006067e[m Useless commit
+[33m9e9fc00[m Add interactive map component
+[33m3a7aaa2[m feat: implement cultural showcase with hero section and navigation
+[33mcf60796[m feat: initialize React project with Vite and Tailwind CSS

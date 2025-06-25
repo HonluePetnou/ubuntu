@@ -50,19 +50,35 @@ const SocialMediaApp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100">
       <Navbar />
       
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
+      <div className="container mx-auto px-4 py-12 max-w-2xl relative z-10">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5 -z-10">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-amber-500 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-orange-400 rounded-full blur-2xl"></div>
+        </div>
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Ubuntu Social</h1>
-          <p className="text-gray-600">Connect with the African community worldwide</p>
-          <div className="mt-4 flex items-center justify-between">
-            <span className="text-sm text-gray-500">Welcome, {user?.email}</span>
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-amber-500 rounded-lg flex items-center justify-center shadow-md">
+              <span className="text-white font-bold text-xl">U</span>
+            </div>
+            <span className="ml-3 text-2xl font-bold text-gray-900">Ubuntu Social</span>
+          </div>
+          <p className="text-center text-gray-600 mb-6">Connect with the African community worldwide</p>
+          <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center shadow-sm">
+                <span className="text-white font-medium text-sm">{user?.email?.charAt(0).toUpperCase()}</span>
+              </div>
+              <span className="text-sm font-medium text-gray-700">{user?.email}</span>
+            </div>
             <button 
               onClick={logout}
-              className="text-sm text-red-600 hover:text-red-800 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-orange-600 hover:text-orange-700 hover:bg-orange-50 rounded-lg transition-colors"
             >
               Logout
             </button>
@@ -70,22 +86,28 @@ const SocialMediaApp = () => {
         </div>
 
         {/* Create Post */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <form onSubmit={handleCreatePost}>
-            <textarea
-              value={newPost}
-              onChange={(e) => setNewPost(e.target.value)}
-              placeholder="What's on your mind?"
-              className="w-full p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              rows="3"
-            />
-            <div className="mt-3 flex justify-end">
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
+          <form onSubmit={handleCreatePost} className="space-y-4">
+            <div>
+              <label htmlFor="post-content" className="block text-sm font-medium text-gray-700 mb-2">
+                Share your thoughts
+              </label>
+              <textarea
+                id="post-content"
+                value={newPost}
+                onChange={(e) => setNewPost(e.target.value)}
+                placeholder="What's on your mind?"
+                className="w-full p-4 border border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
+                rows="3"
+              />
+            </div>
+            <div className="flex justify-end">
               <button
                 type="submit"
                 disabled={!newPost.trim()}
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+                className="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-medium hover:from-orange-600 hover:to-amber-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-md hover:shadow-lg"
               >
-                Post
+                Share Post
               </button>
             </div>
           </form>
@@ -94,20 +116,20 @@ const SocialMediaApp = () => {
         {/* Posts Feed */}
         <div className="space-y-6">
           {posts.map((post) => (
-            <div key={post.id} className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+            <div key={post.id} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-200">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center text-white font-semibold shadow-md">
                   {post.author.charAt(0).toUpperCase()}
                 </div>
-                <div className="ml-3">
-                  <h3 className="font-semibold text-gray-800">{post.author}</h3>
+                <div className="ml-4">
+                  <h3 className="font-medium text-gray-900">{post.author}</h3>
                   <p className="text-sm text-gray-500">{post.timestamp}</p>
                 </div>
               </div>
               
-              <p className="text-gray-700 mb-4">{post.content}</p>
+              <p className="text-gray-700 mb-6 leading-relaxed">{post.content}</p>
               
-              <div className="flex items-center space-x-6 text-gray-500">
+              <div className="flex items-center space-x-6 pt-4 border-t border-gray-100 text-gray-500">
                 <button 
                   onClick={() => handleLike(post.id)}
                   className="flex items-center space-x-2 hover:text-blue-600 transition-colors"
