@@ -16,6 +16,7 @@ import KenyaPage from './pages/KenyaPage';
 import SouthAfricaPage from './pages/SouthAfricaPage';
 import UserProfile from './components/UserProfile';
 import AdminDashboard from './components/AdminDashboard';
+import SocialMediaApp from './social media/social';
 
 
 function App() {
@@ -133,6 +134,16 @@ function App() {
             element={
               <ProtectedRoute requireAuth={true} redirectTo="/auth">
                 <AdminDashboard />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* Social Media - protected */}
+          <Route 
+            path="/social" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <SocialMediaApp />
               </ProtectedRoute>
             } 
           />
