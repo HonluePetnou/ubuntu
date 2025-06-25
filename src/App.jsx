@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import SmartRedirect from './components/SmartRedirect';
 import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
 import CountryPage from './pages/CountryPage';
@@ -15,25 +18,105 @@ import SouthAfricaPage from './pages/SouthAfricaPage';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/map" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-
-        {/* Dynamic country page */}
-        <Route path="/country/:countryCode" element={<CountryPage />} />
-        
-        {/* Country-specific pages */}
-        <Route path="/cameroon" element={<CameroonPage />} />
-        <Route path="/nigeria" element={<NigeriaPage />} />
-        <Route path="/ghana" element={<GhanaPage />} />
-        <Route path="/egypt" element={<EgyptPage />} />
-        <Route path="/kenya" element={<KenyaPage />} />
-        <Route path="/south-africa" element={<SouthAfricaPage />} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/* Public landing page */}
+          <Route path="/" element={<LandingPage />} />
+          
+          {/* Smart redirection route for auth */}
+          <Route path="/auth" element={<SmartRedirect />} />
+          
+          {/* Auth pages - redirect to /map if already authenticated */}
+          <Route 
+            path="/login" 
+            element={
+              <ProtectedRoute requireAuth={false}>
+                <LoginPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/signup" 
+            element={
+              <ProtectedRoute requireAuth={false}>
+                <SignupPage />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* Protected routes - require authentication */}
+          <Route 
+            path="/map" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <HomePage />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* Dynamic country page - protected */}
+          <Route 
+            path="/country/:countryCode" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <CountryPage />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* Country-specific pages - protected */}
+          <Route 
+            path="/cameroon" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <CameroonPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/nigeria" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <NigeriaPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/ghana" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <GhanaPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/egypt" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <EgyptPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/kenya" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <KenyaPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/south-africa" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <SouthAfricaPage />
+              </ProtectedRoute>
+            } 
+          />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 

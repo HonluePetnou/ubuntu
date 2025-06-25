@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
 const LoginPage = () => {
+  const { login, addKnownEmail } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Get smart redirection data from location state
+  const suggestedEmail = location.state?.suggestedEmail || '';
+  const welcomeMessage = location.state?.message || 'Welcome back! Please sign in to continue.';
+  const returnTo = location.state?.returnTo || '/map';
+  
   const [formData, setFormData] = useState({
-    email: '',
+    email: suggestedEmail,
     password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [currentQuote, setCurrentQuote] = useState(0);
+  const [showWelcomeMessage, setShowWelcomeMessage] = useState(!!suggestedEmail);
 
   const quotes = [
     {
@@ -85,14 +96,61 @@ const LoginPage = () => {
     }
     
     setIsLoading(true);
+    setErrors({});
+    
     try {
-      // TODO: Implement actual login logic
-      console.log('Login attempt:', formData);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      alert('Login successful!');
+      await login(formData.email, formData.password);
+      
+      // Add email to known emails for future smart redirection
+      addKnownEmail(formData.email);
+      
+      // Navigate to intended destination
+      navigate(returnTo, { replace: true });
     } catch (error) {
-      setErrors({ general: 'Login failed. Please try again.' });
+      console.error('Login error:', error);
+      
+      // Handle specific Firebase auth errors
+      let errorMessage = 'Login failed. Please try again.';
+      
+      if (error.code === 'auth/user-not-found') {
+        errorMessage = 'No account found with this email. Would you like to sign up instead?';
+      } else if (error.code === 'auth/wrong-password') {
+        errorMessage = 'Incorrect password. Please try again.';
+      } else if (error.code === 'auth/invalid-email') {
+        errorMessage = 'Please enter a valid email address.';
+      } else if (error.code === 'auth/too-many-requests') {
+        errorMessage = 'Too many failed attempts. Please try again later.';
+      }
+      
+      setErrors({ general: errorMessage });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    setIsLoading(true);
+    setErrors({});
+    
+    try {
+      await signInWithGoogle();
+      
+      // Navigate to intended destination
+      navigate(returnTo, { replace: true });
+    } catch (error) {
+      console.error('Google login error:', error);
+      
+      let errorMessage = 'Google login failed. Please try again.';
+      
+      if (error.code === 'auth/popup-closed-by-user') {
+        errorMessage = 'Login cancelled. Please try again.';
+      } else if (error.code === 'auth/popup-blocked') {
+        errorMessage = 'Popup blocked. Please allow popups and try again.';
+      } else if (error.code === 'auth/cancelled-popup-request') {
+        errorMessage = 'Login cancelled. Please try again.';
+      }
+      
+      setErrors({ general: errorMessage });
     } finally {
       setIsLoading(false);
     }
@@ -146,6 +204,22 @@ const LoginPage = () => {
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h1>
             <p className="text-gray-600">Sign in to your Ubuntu account</p>
           </div>
+
+          {/* Smart Redirection Welcome Message */}
+          {showWelcomeMessage && (
+            <div className="mb-6 p-4 bg-gradient-to-r from-[#A0522D]/10 to-[#D2691E]/10 border border-[#A0522D]/20 rounded-xl">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-[#A0522D] rounded-full animate-pulse"></div>
+                <p className="text-[#A0522D] font-medium text-sm">{welcomeMessage}</p>
+              </div>
+              <button
+                onClick={() => setShowWelcomeMessage(false)}
+                className="mt-2 text-xs text-[#8B4513] hover:text-[#A0522D] transition-colors"
+              >
+                Dismiss
+              </button>
+            </div>
+          )}
 
           {/* Login Form */}
           <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/30 p-8">
@@ -272,7 +346,11 @@ const LoginPage = () => {
 
             {/* Social Login */}
             <div className="mt-6">
-              <button className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#A0522D] focus:ring-offset-2 transition-colors">
+              <button 
+                onClick={handleGoogleLogin}
+                disabled={isLoading}
+                className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#A0522D] focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
                 <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                   <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
