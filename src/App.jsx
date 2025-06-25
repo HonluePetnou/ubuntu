@@ -14,6 +14,8 @@ import GhanaPage from './pages/GhanaPage';
 import EgyptPage from './pages/EgyptPage';
 import KenyaPage from './pages/KenyaPage';
 import SouthAfricaPage from './pages/SouthAfricaPage';
+import UserProfile from './components/UserProfile';
+import AdminDashboard from './components/AdminDashboard';
 
 
 function App() {
@@ -111,6 +113,26 @@ function App() {
             element={
               <ProtectedRoute requireAuth={true} redirectTo="/auth">
                 <SouthAfricaPage />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* User Profile - protected */}
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <UserProfile />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* Admin Dashboard - protected */}
+          <Route 
+            path="/admin" 
+            element={
+              <ProtectedRoute requireAuth={true} redirectTo="/auth">
+                <AdminDashboard />
               </ProtectedRoute>
             } 
           />

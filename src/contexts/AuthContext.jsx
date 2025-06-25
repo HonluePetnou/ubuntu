@@ -67,16 +67,39 @@ export const AuthProvider = ({ children }) => {
         });
       }
 
-      // Save additional user data to Firestore
+      // Create comprehensive user document in Firestore
       const userData = {
+        uid: user.uid,
         email: user.email,
-        displayName: user.displayName,
+        displayName: user.displayName || `${additionalData.firstName || ''} ${additionalData.lastName || ''}`.trim(),
+        firstName: additionalData.firstName || '',
+        lastName: additionalData.lastName || '',
+        phone: additionalData.phone || '',
+        country: additionalData.country || '',
+        photoURL: user.photoURL || '',
+        provider: 'email',
+        emailVerified: user.emailVerified,
+        isActive: true,
+        lastLoginAt: new Date().toISOString(),
         createdAt: new Date().toISOString(),
-        ...additionalData
+        updatedAt: new Date().toISOString(),
+        preferences: {
+          language: 'en',
+          notifications: true,
+          theme: 'light'
+        },
+        profile: {
+          bio: '',
+          interests: [],
+          favoriteCountries: []
+        }
       };
 
       await setDoc(doc(db, 'users', user.uid), userData);
       setUserProfile(userData);
+      
+      // Add email to known emails
+      addKnownEmail(email);
       
       // Mark onboarding as completed for new users
       authPrefs.completeOnboarding();
@@ -95,6 +118,74 @@ export const AuthProvider = ({ children }) => {
       authPrefs.setPreferredLoginMethod('email');
       
       const result = await signInWithEmailAndPassword(auth, email, password);
+      const user = result.user;
+      
+      // Check if user document exists and validate information
+      const userDoc = await getDoc(doc(db, 'users', user.uid));
+      
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
+        
+        // Validate user information
+        if (userData.email !== user.email) {
+          throw new Error('User information mismatch. Please contact support.');
+        }
+        
+        if (!userData.isActive) {
+          throw new Error('Account is deactivated. Please contact support.');
+        }
+        
+        // Update last login timestamp
+        const updatedUserData = {
+          ...userData,
+          lastLoginAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          emailVerified: user.emailVerified
+        };
+        
+        await updateDoc(doc(db, 'users', user.uid), {
+          lastLoginAt: updatedUserData.lastLoginAt,
+          updatedAt: updatedUserData.updatedAt,
+          emailVerified: updatedUserData.emailVerified
+        });
+        
+        setUserProfile(updatedUserData);
+      } else {
+        // If user document doesn't exist, create it (for existing Firebase Auth users)
+        const userData = {
+          uid: user.uid,
+          email: user.email,
+          displayName: user.displayName || '',
+          firstName: '',
+          lastName: '',
+          phone: '',
+          country: '',
+          photoURL: user.photoURL || '',
+          provider: 'email',
+          emailVerified: user.emailVerified,
+          isActive: true,
+          lastLoginAt: new Date().toISOString(),
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          preferences: {
+            language: 'en',
+            notifications: true,
+            theme: 'light'
+          },
+          profile: {
+            bio: '',
+            interests: [],
+            favoriteCountries: []
+          }
+        };
+        
+        await setDoc(doc(db, 'users', user.uid), userData);
+        setUserProfile(userData);
+      }
+      
+      // Add email to known emails
+      addKnownEmail(email);
+      
       return result;
     } catch (error) {
       throw error;
@@ -132,14 +223,65 @@ export const AuthProvider = ({ children }) => {
       // Check if user document exists in Firestore
       const userDoc = await getDoc(doc(db, 'users', user.uid));
       
-      if (!userDoc.exists()) {
-        // Create user document if it doesn't exist
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
+        
+        // Validate user information
+        if (userData.email !== user.email) {
+          throw new Error('User information mismatch. Please contact support.');
+        }
+        
+        if (!userData.isActive) {
+          throw new Error('Account is deactivated. Please contact support.');
+        }
+        
+        // Update last login timestamp and Google profile info
+        const updatedUserData = {
+          ...userData,
+          displayName: user.displayName || userData.displayName,
+          photoURL: user.photoURL || userData.photoURL,
+          emailVerified: user.emailVerified,
+          lastLoginAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        };
+        
+        await updateDoc(doc(db, 'users', user.uid), {
+          displayName: updatedUserData.displayName,
+          photoURL: updatedUserData.photoURL,
+          emailVerified: updatedUserData.emailVerified,
+          lastLoginAt: updatedUserData.lastLoginAt,
+          updatedAt: updatedUserData.updatedAt
+        });
+        
+        setUserProfile(updatedUserData);
+      } else {
+        // Create comprehensive user document for new Google users
+        const nameParts = user.displayName ? user.displayName.split(' ') : ['', ''];
         const userData = {
+          uid: user.uid,
           email: user.email,
-          displayName: user.displayName,
-          photoURL: user.photoURL,
+          displayName: user.displayName || '',
+          firstName: nameParts[0] || '',
+          lastName: nameParts.slice(1).join(' ') || '',
+          phone: '',
+          country: '',
+          photoURL: user.photoURL || '',
+          provider: 'google',
+          emailVerified: user.emailVerified,
+          isActive: true,
+          lastLoginAt: new Date().toISOString(),
           createdAt: new Date().toISOString(),
-          provider: 'google'
+          updatedAt: new Date().toISOString(),
+          preferences: {
+            language: 'en',
+            notifications: true,
+            theme: 'light'
+          },
+          profile: {
+            bio: '',
+            interests: [],
+            favoriteCountries: []
+          }
         };
         
         await setDoc(doc(db, 'users', user.uid), userData);
@@ -164,6 +306,75 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       console.error('Error checking user existence:', error);
       return false;
+    }
+  };
+
+  const validateUserInformation = async (userId) => {
+    try {
+      if (!userId) return { isValid: false, message: 'User ID is required' };
+      
+      const userDoc = await getDoc(doc(db, 'users', userId));
+      
+      if (!userDoc.exists()) {
+        return { isValid: false, message: 'User document not found' };
+      }
+      
+      const userData = userDoc.data();
+      
+      // Check if user is active
+      if (!userData.isActive) {
+        return { isValid: false, message: 'Account is deactivated' };
+      }
+      
+      // Check if required fields are present
+      if (!userData.email) {
+        return { isValid: false, message: 'Email is missing from user profile' };
+      }
+      
+      return { isValid: true, userData };
+    } catch (error) {
+      console.error('Error validating user information:', error);
+      return { isValid: false, message: 'Error validating user information' };
+    }
+  };
+
+  const updateUserProfile = async (userId, updates) => {
+    try {
+      if (!userId) throw new Error('User ID is required');
+      
+      const updateData = {
+        ...updates,
+        updatedAt: new Date().toISOString()
+      };
+      
+      await updateDoc(doc(db, 'users', userId), updateData);
+      
+      // Update local user profile state
+      if (userProfile && userProfile.uid === userId) {
+        setUserProfile(prev => ({ ...prev, ...updateData }));
+      }
+      
+      return { success: true };
+    } catch (error) {
+      console.error('Error updating user profile:', error);
+      throw error;
+    }
+  };
+
+  const getUserProfile = async (userId) => {
+    try {
+      if (!userId) throw new Error('User ID is required');
+      
+      const userDoc = await getDoc(doc(db, 'users', userId));
+      
+      if (!userDoc.exists()) {
+        throw new Error('User not found');
+      }
+      
+      return userDoc.data();
+    } catch (error) {
+      console.error('Error fetching user profile:', error);
+      throw error;
     }
   };
 
@@ -235,7 +446,10 @@ export const AuthProvider = ({ children }) => {
     markSignupFormCompleted,
     shouldSuggestLogin,
     getSuggestedLoginEmail,
-    clearLoginSuggestion
+    clearLoginSuggestion,
+    validateUserInformation,
+    updateUserProfile,
+    getUserProfile
   };
 
   return (
